@@ -1,0 +1,247 @@
+/* 预告片样式 */
+/*-----------公共部分开始---------*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td
+{ margin:0; padding:0;}/*css 重置*/
+body{ 
+	font:12px/1.62 Helvetica,Arial,sans-serif;
+	text-align:center;
+}
+ul{ list-style:none;}
+img{ border:0 none;}
+.nav{
+	clear:both;
+	width:100%;
+	height:8px;
+	overflow:hidden;
+	/* border:1px solid black; */
+}
+/*-----------公共部分结束---------*/
+#bodyheight{
+	height:1000px;
+}
+/* 主体部分开始 */
+#prevue_main{
+	position:relative;
+	width:1000px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	height:600px;
+	/* background:url("../images/content-bg1.jpg") repeat-y 0; */
+	background:url("../images/videobg.jpg") no-repeat -190px -180px;
+	border:1px solid #67A2FF;
+	opacity:0.9;
+	border-radius:7px;
+	filter:Alpha(opacity=90);
+	margin:0 auto;
+	margin-top:20px;
+	margin-bottom:50px;
+}
+#video{
+	width:683px;
+	height:400px;
+	/* margin:0 auto; */
+}
+#prevue_main img{	
+	position:absolute;
+	top:80px;
+	right:0px;
+}
+#prevue_main .left_top{
+	width:683px;
+	height:57px;
+	margin-top:80px;
+	margin-left:30px;
+}
+#prevue_main .left_top .top{
+	width:683px;
+	height:16px;
+	background:url("../images/box-top.png") no-repeat 0;
+	
+}
+#prevue_main .left_top .center{
+	width:683px;
+	height:25px;
+	line-height:25px;
+	color:#67A2FF;
+	text-align:center;
+	font-size:18px;
+	
+	background:url("../images/box-bg.png") repeat 0;
+	
+}
+#prevue_main .left_top .bottom{
+	width:683px;
+	height:16px;
+	background:url("../images/box-bot.png") no-repeat 0;
+	
+}
+#prevue_main .left_down{
+	width:683px;
+	height:490px;
+	margin-top:5px;
+	margin-left:30px;
+}
+#prevue_main .left_down .top{
+	width:683px;
+	height:10px;
+	background:url("../images/box-top.png") no-repeat 0;
+	
+}
+#prevue_main .left_down .center{
+	width:683px;
+	height:400px;
+	background:url("../images/box-bg.png") repeat 0;
+	/* background-color:#000; */
+	
+}
+#prevue_main .left_down .bottom{
+	width:683px;
+	height:10px;
+	background:url("../images/box-bot.png") no-repeat 0;
+	
+} 
+
+/* js css */
+a[rel=prettyPhoto] {float:left;position:relative}
+
+.tumbvr {height:337px;width:100%;position:relative;left:0;z-index:100;cursor:pointer;}
+.tumbvr li {float:left}
+.tumbvr li a {display:block;position:relative}
+
+
+/* 预告片列表 */
+.tumbvr .mask{
+	position:absolute;
+	width:100%;
+	height:337px;
+	text-align:center;
+	z-index:102;
+}
+.tumbvr .mask img{
+	margin:0 auto;
+}
+#main{
+	width:960px;
+	margin:10px auto;
+	text-align:left;
+	
+}
+#main .video_top{
+	width:100%;
+	height:30px;
+	margin:10px 0;
+	
+}
+#main .video_top a{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	display:block;
+	float:left;
+	color:#fff;
+	font-size:13px;
+	text-align:center;
+	text-decoration:none;
+	background-color:#67A2FF;
+	border-radius:5px;
+	margin-left:10px;
+}
+#main .video_top a:hover{
+	background-color:#C5D5FC;
+}
+#main .video_list{
+	width:100%;
+	margin-top:10px;
+	border-top:1px solid #ccc;
+}
+#main .video_list .video_item{
+	float:left;
+	margin-top:10px;
+	margin-left:45px;
+	@margin-left:40px;
+	width:260px;
+	height:230px;
+	
+}
+#main .video_list .video_item .t{
+	width:260px;
+	height:30px;
+	line-height:30px;	
+}
+#main .video_list .video_item .t a{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	display:block;
+	float:left;
+	color:#fff;
+	font-size:13px;
+	text-align:center;
+	text-decoration:none;
+	background-color:#67A2FF;
+	border-radius:3px;
+}
+#main .video_list .video_item .t a:hover{
+	background-color:#A4C7FF;
+}
+
+#main .video_list .video_item .c{
+	position:relative;
+	width:260px;
+	height:170px;
+}
+#main .video_list .video_item .play{
+	position:absolute;
+	left:105px;
+	top:70px;
+	opacity:0.6;
+	filter:Alpha(opacity=60);
+}
+#main .video_list .video_item .play:hover{
+	opacity:0.8;
+	filter:Alpha(opacity=80);
+}
+#main .video_list .video_item .c .gk{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	display:block;
+	color:#fff;
+	z-index:2px;
+	font-size:13px;
+	text-align:center;
+	text-decoration:none;
+	background-color:#333;
+	border-radius:5px;
+	letter-spacing:1px;
+}
+#main .video_list .video_item .c .gk:hover{
+	background-color:#555;
+}
+
+#main .video_fy{
+	width:960px;
+	height:30px;
+	color:#67A2FF;
+	text-align:right;
+	line-height:30px;
+	
+}
+#main .video_fy span{
+	color:#666666;
+	float:right;
+	margin-right:50px;
+}
+
+#main .video_fy span a{
+	margin-left:10px;
+	color:#67A2FF;
+}
+
+
+
+

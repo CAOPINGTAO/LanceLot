@@ -1,0 +1,938 @@
+[ 2016-05-01T13:30:23+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005586s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000382s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000218s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000632s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000328s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000259s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000187s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000304s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.060140s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000263s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000086s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000063s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000239s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000124s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000329s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000089s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000260s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000122s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000066s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000079s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000059s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./Application/Runtime/Cache/d5c4efec70a0a967b5684ac66a58dba13edd61fd.file.index.html.php /var/www/html/LanceLot/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+ERR: Syntax Error in template "./Application/Home/View/Index/index.html"  on line 208 "node_ul.animate({&quot;left&quot;:_left},_speed); //滑入大图"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2016-05-01T13:31:54+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003514s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000303s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000081s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000202s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000192s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000181s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000529s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000218s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000214s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000079s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000058s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000202s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000063s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000227s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000056s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000001s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000062s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000060s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000058s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.001603s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./Application/Runtime/Cache/d5c4efec70a0a967b5684ac66a58dba13edd61fd.file.index.html.php /var/www/html/LanceLot/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+ERR: Syntax Error in template "./Application/Home/View/Index/index.html"  on line 208 "node_ul.animate({&quot;left&quot;:_left},_speed); //滑入大图"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2016-05-01T13:36:37+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002580s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000277s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000112s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000100s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000212s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000187s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000184s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000180s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000221s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000058s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000219s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000063s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000189s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000057s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000062s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000069s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000060s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000062s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000067s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002947s ]
+
+[ 2016-05-01T13:37:37+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003467s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000269s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000121s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000099s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000159s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000187s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000862s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000280s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000194s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000099s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000067s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000181s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000093s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000202s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000081s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000060s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000060s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000057s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000065s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000057s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004471s ]
+
+[ 2016-05-01T13:38:03+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002647s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000213s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000105s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000177s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000631s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000589s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000263s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000184s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000209s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000124s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000059s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000265s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000104s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000215s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000152s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000071s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000090s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000059s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000124s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000084s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002568s ]
+
+[ 2016-05-01T16:04:36+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004409s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000299s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000096s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000804s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000205s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000271s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000186s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000183s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000203s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000097s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000143s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000290s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000072s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000231s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000054s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000505s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000079s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000065s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000054s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000074s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000247s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004078s ]
+
+[ 2016-05-01T18:01:25+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003024s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000288s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000367s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000339s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000219s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000184s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000196s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000217s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000244s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000078s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000059s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000355s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000069s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000260s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000083s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000072s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000100s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000094s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000080s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000067s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004875s ]
+
+[ 2016-05-01T18:08:31+08:00 ] 10.0.2.2 /LanceLot/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003250s ]
+SQL: SHOW COLUMNS FROM `llppt` [ RunTime:0.000264s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llppt`
+SQL: SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000724s ]
+ERR: 1146:Table 'lancelot.llppt' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llppt` WHERE ( state=1 ) LIMIT 7  
+SQL: SHOW COLUMNS FROM `llmovie` [ RunTime:0.000185s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie`
+SQL: SHOW COLUMNS FROM `llmovie_actor` [ RunTime:0.000210s ]
+ERR: 1146:Table 'lancelot.llmovie_actor' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_actor`
+SQL: SHOW COLUMNS FROM `llactors` [ RunTime:0.000210s ]
+ERR: 1146:Table 'lancelot.llactors' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llactors`
+SQL: SHOW COLUMNS FROM `llmovie_type` [ RunTime:0.000193s ]
+ERR: 1146:Table 'lancelot.llmovie_type' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llmovie_type`
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000045s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/IndexController.class.php 第 44 行.
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `lldialogue` [ RunTime:0.000269s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lldialogue`
+SQL: SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000073s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `lldialogue` WHERE ( status=1 ) LIMIT 1  
+SQL: SELECT * FROM `lldialogue` WHERE ( status=1 )  [ RunTime:0.000062s ]
+ERR: 1146:Table 'lancelot.lldialogue' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lldialogue` WHERE ( status=1 ) 
+SQL: SHOW COLUMNS FROM `lltype` [ RunTime:0.000188s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lltype`
+SQL: SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000000s ]
+ERR: 1146:Table 'lancelot.lltype' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `lltype` WHERE ( fid=1 ) ORDER BY id LIMIT 30  
+SQL: SHOW COLUMNS FROM `llfriendlink` [ RunTime:0.000178s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `llfriendlink`
+SQL: SELECT * FROM `llfriendlink`  [ RunTime:0.000055s ]
+ERR: 1146:Table 'lancelot.llfriendlink' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `llfriendlink` 
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000059s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 0,4  
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000030s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`rate` FROM `llmovie` ORDER BY id asc LIMIT 4,4  
+SQL: SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000058s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname` FROM `llmovie` ORDER BY addtime desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000055s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`replynum` FROM `llmovie` ORDER BY replynum desc LIMIT 10  
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000056s ]
+ERR: 1146:Table 'lancelot.llmovie' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`filmname`,`picname`,`clicknum` FROM `llmovie` ORDER BY clicknum desc LIMIT 8  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: smarty /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 268 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 275 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 277 行.
+NOTIC: [8] Undefined variable: tv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 279 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 281 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 282 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 283 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 284 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: pv /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 294 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 417 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 418 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 425 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 426 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 427 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 451 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 468 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 472 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 475 行.
+NOTIC: [8] Undefined variable: v /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 478 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 529 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 531 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 549 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: vo /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 550 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+NOTIC: [8] Undefined variable: l /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003966s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004511s ]
+

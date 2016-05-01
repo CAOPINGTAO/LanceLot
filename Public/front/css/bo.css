@@ -1,0 +1,1958 @@
+
+/* 主体部分开始 */
+#pmain{
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+	text-align:left;
+}
+
+#pmain_left{
+	float:left;
+	width:720px;
+}
+
+#pmain_right{
+	float:right;
+	width:230px;
+	border:0px solid black;
+	background:url("../images/homebg.png");
+	border-radius:5px;
+}
+
+
+/* 主体部分结束 */
+
+/*==============================个人中心首页开始==============================*/
+
+/* 个人签名部分 */
+#psign{
+	width:100z%;
+	height:160px;
+	margin:10px auto;
+}
+
+/* 个人签名图片部分 */
+#psign #psmallimg{
+	width:140px;
+	height:140px;
+	line-height:140px;
+	margin:5px 10px 0px 2px;
+	float:left;
+}
+
+#psmallimg img{
+	margin:10px;
+}
+
+/* 个人签名文字输入框部分 */
+#mytext{
+	width:530px;
+	margin-top:20px;
+}
+
+#mytext #mytexttitle{
+	color:red;
+	font-size:14px;
+	display:block;
+}
+
+#mytext #mytextcontent{
+	display:block;
+	margin:5px 0 5px 50px;
+	font-size:14px;
+}
+
+#ptext{
+	width:530px;
+	height:140px;
+	float:right;
+	margin:5px 30px 0px 2px;
+}
+
+#psignarea{
+	width:490px;
+	height:65px;
+	background:yellow;
+	margin:5px 0px 2px 5px;
+	background:url("../images/textarea.png") no-repeat;
+}
+
+#psignarea textarea{
+	margin:3px 5px;;
+	resize:none;
+	font-size:14px;
+	border:0px;
+}
+
+#psignbut{
+	width:490px;
+	height:30px;
+	background:white;
+	padding-left:350px;
+}
+
+
+
+#ptext #js_message_p{
+    color: #0080FF;
+}
+
+
+.nothing{
+	text-align:center;
+	color:#cccccc;
+	font-size:14px;
+}
+
+/* 首页影评，短评，恢复，日志部分样式 */
+.plist{
+	width:100%;
+	margin:3px auto;
+
+}
+
+.plist_title{
+	width:100%;
+	height:20px;
+	margin:0 auto;
+}
+
+.plist_content_pic{
+	width:88%;
+	margin:5px auto;
+	text-align:left;
+	padding:3px;
+	border-bottom:1px solid #EAEAEA;
+}
+
+/*  最受欢迎影评  */
+
+
+.review_list{
+	width:660px;
+	height:180px;
+	margin-top:25px;
+	margin-left:20px;
+	border-bottom:1px solid #EAEAEA;
+}
+
+.review_list .rl{
+	width:100px;
+	height:100px;
+	float:left;
+}
+.review_list .rr{
+	width:560px;
+	height:100px;
+	float:left;
+	margin-left:0px;
+	
+}
+.review_list .rr .title{
+	width:560px;
+	height:30px;
+	line-height:30px;
+	background-color:#F0F3F5;
+}
+
+.review_list .rr .title a{
+	font-size:15px;
+	font-weight:bold;
+	color:#3377AA;
+	text-decoration:none;
+	margin-left:10px;
+}
+.review_list .rr .title a:hover{
+	color:#fff;
+	background-color:#3377AA;
+}
+
+.review_list .rr .title span{
+	color:red;
+	float:right;
+	margin-right:30px;
+}
+
+.review_list .rr .acthor{
+	width:560px;
+	height:30px;
+	line-height:30px;
+	color:#666666;
+}
+.review_list .rr .acthor a{
+	color:#666666;
+	text-decoration:none;
+}
+.review_list .rr .acthor a:hover{
+	color:#fff;
+	background-color:#666666;
+}
+.review_list .rr .content{
+	width:560px;
+	height:95px;
+	margin-left:5px;
+	overflow:hidden;
+}
+.review_list .rr .point{
+	width:560px;
+	height:25px;
+}
+.review_list .rr .point span{
+	color:red;
+}
+.review_list .rr .point a{
+	color:#3377AA;
+	margin-left:5px;
+}
+
+
+/* 首页好友显示部分样式 */
+.plist_content img{
+	width:70px;
+	height:70px;
+	margin:3px 5px 3px 5px;
+}
+
+/* 首页右侧显示部分样式 */
+
+.pinfoboxtop{
+	width:200px;
+	padding: 15px 15px 5px;
+	margin-bottom: 10px;
+	border-bottom:1px solid #EAEAEA;
+}
+
+.pinfoboxtop #rpic{
+	width:100%;
+	padding: 15px 0px 5px;
+	margin-bottom: 10px;
+	text-align:center;
+}
+
+
+.pinfoboxtop #rpic #psmallimg {
+    height: 140px;
+    line-height: 140px;
+    margin: 5px auto;
+    width: 140px;
+}
+
+
+
+.pinfobox{
+	width:200px;
+	height:160px;
+	padding: 15px 15px 5px;
+	margin-bottom: 10px;
+	text-align:left;
+	border-bottom:1px solid #EAEAEA;
+}
+
+.prighttitle{
+	margin-bottom:10px;
+	color: #333333;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.prightcc{
+	clear: both;
+    display: block;
+    height: 0;
+    margin: 0 0 25px -8px;
+}
+
+.prightcc li {
+    float: left;
+    line-height: 14px;
+    padding: 0 9px;
+    white-space: nowrap;
+    width: 22%;
+    border-right:1px solid #ccc;
+}
+
+.prightcc li em {
+	color: #0E6CAA;
+	display: block;
+    font: bold 18px/20px Arial;
+    margin-bottom: 5px;
+}
+
+.pinfobox li.mytag{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #0000FF;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    width: 50px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+
+}
+
+.pinfobox li.mytag a{
+	text-decoration:none;	
+}
+
+.pinfobox li.mytag:hover{
+	background-color: #cccccc;
+}
+
+.ucaozuo{
+	border-bottom: 1px solid #EAEAEA;
+	height: 160px;
+	margin-bottom: 10px;
+	padding: 15px 15px 5px;
+	text-align: left;
+	width: 200px;
+}
+
+.ucaozuo .caozuotitle{
+	color: #333333;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+.ucaozuo ul li{
+    background-color: white;
+    border-radius: 5px;
+    color: blue;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    width: 50px;
+	float:left;
+	margin-top:5px;
+	display:block;
+}
+
+.ucaozuo ul li a{
+	text-decoration:none;
+}
+
+.ucaozuo ul li:hover{
+    background-color: #cccccc;
+}
+
+
+
+
+
+/*==============================个人中心首页结束==============================*/
+
+/*==============================个人中心用户空间新鲜事开始==============================*/
+.pnlist{
+	width:100%;
+	height:150px;
+	border:1px solid blue;
+	margin:3px auto;
+
+}
+
+.pnlist_title{
+	width:90%;
+	height:20px;
+	margin:0 auto;
+	background:#B4D6FF;
+}
+
+.pnlist_content{
+	width:88%;
+	height:76px;
+	margin:5px auto;
+	text-align:left;
+	padding:3px;
+}
+
+/*==============================个人中心用户空间新鲜事结束==============================*/
+
+/*==============================个人中心用户空间影评，日志等开始==============================*/
+.prlist{
+	width:100%;
+	margin:3px auto;
+
+}
+
+.prlist_title{
+    background-color: #F6F3D3;
+    border-radius: 4px;
+    color: #777777;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 97%;
+}
+
+.prlist_title .btn-submit {
+	margin-left:400px;
+	cursor: pointer;
+	color: #ffffff;
+	background: #3fa156; 
+	border: 1px solid #528641; 
+	font-size: 14px; 
+	font-weight: bold; 
+	padding:6px 26px;
+    border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    *width: 100px;
+    *height:30px; 
+}
+
+.prlist_title .btn-submit:hover { 
+	background-color:#4fca6c;
+	border-color:#6aad54; 
+}
+
+.prlist_title .btn-submit:active { 
+	background-color:#3fa156;
+	border-color:#528641; 
+}
+
+.prlist_content{
+	width:88%;
+	height:120px;
+	margin:5px auto;
+	padding:3px;
+}
+
+.prlistpic{
+	width:80px;
+	height:80px;
+	border:1px solid blue;
+	margin:5px;
+	float:left;
+}
+
+
+.prlistpic img{
+	width:60px;
+	height:60px;
+	margin:10px;
+}
+
+.prlist_content .prlistcontent{
+	width:200px;
+	height:100px;
+
+	float:left;
+}
+
+
+/*日志部分样式*/
+/* 编辑器样式 */
+#alert_review_bg{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#000;
+	opacity:0.3;
+	filter:Alpha(opacity=30);
+	display:none;
+	z-index:999998;
+}
+
+#words_edit{
+	text-align:left;
+	position:absolute;
+	top:100;
+	left:0;
+	width:900px;
+	height:400px;
+	color:#7F9DB9;
+	font-size:14px;
+	background-color: #FCEFE3;
+	border:5px solid #7F9DB9;
+	border-radius:15px;
+	margin-left:200px;
+	display:none;
+	z-index:999999;
+}
+#words_edit img{
+	position:absolute;
+	right:3px;
+	top:3px;
+	cursor:pointer;
+}
+#words_edit .atitle{
+	margin-top:50px;
+	margin-left:50px;
+}
+#words_edit .acon{
+	margin:0px 50px;
+}
+
+#words_edit .acon .winput{
+	width:500px;
+	height:20px;
+	margin:10px;
+}
+#words_edit .acon .wsub{
+	width:200px;
+	height:30px;
+	margin:10px;
+	border:none;
+	border-radius:5px;
+	color:#fff;
+	cursor:pointer;
+	background-color:#00BDFA;
+	
+}
+
+
+#words_edit .acon textarea{
+	margin:10px 0px;
+}
+
+
+
+
+
+
+
+
+/*==============================个人中心用户空间影评，日志等结束==============================*/
+
+/*==============================个人中心用户空间留言板开始==============================*/
+#plmess{
+	width:100%;
+	height:160px;
+	border:2px solid blue;
+	background:yellow;
+}
+
+#plmesstitle{
+	height:30px;
+    background: none repeat scroll 0 0 #F1F6FA;
+    border-bottom: 1px solid #CCE2ED;
+    color: #666666;
+}
+
+#plmessbut input{
+	float:left;
+	margin-top:75px;
+	width:50px;
+	height:30px;
+	background:url("./images/button.png");
+	color: #FFFFFF;
+	font-size: 14px;
+    font-weight: 700;
+    height: 27px;
+    line-height: 28px;
+	
+}
+
+
+/*==============================个人中心用户空间留言板结束==============================*/
+
+/*==============================个人中心用户影视推荐开始==============================*/
+
+/* 影视推荐部分样式 
+.plist{
+	width:100%;
+	margin:3px auto;
+
+}
+
+.plist_title{
+	width:90%;
+	height:20px;
+	margin:0 auto;
+	background:#B4D6FF;
+	
+}
+
+.plist_content{
+	width:88%;
+	margin:5px auto;
+	text-align:left;
+	padding:3px;
+}
+
+
+.plist_content img{
+	width:100px;
+	height:100px;
+	margin:3px 5px 3px 5px;
+}
+*/
+
+/*==============================个人中心用户影视推荐结束==============================*/
+
+
+/*==============================个人中心公告开始==============================*/
+
+.notice_list{
+	width:660px;
+	height:130px;
+	margin-top:25px;
+	margin-left:20px;
+	border-bottom:1px solid #EAEAEA;
+}
+.notice_list .rl{
+	width:100px;
+	height:100px;
+	float:left;
+}
+.notice_list  .rr{
+	width:560px;
+	height:100px;
+	float:left;
+	margin-left:0px;
+	
+}
+.notice_list .rr .title{
+	width:560px;
+	height:30px;
+	line-height:30px;
+	background-color:#F0F3F5;
+}
+.notice_list .rr .title a{
+	font-size:15px;
+	font-weight:bold;
+	color:#3377AA;
+	text-decoration:none;
+	margin-left:10px;
+}
+.notice_list .rr .title a:hover{
+	color:#fff;
+	background-color:#3377AA;
+}
+
+.notice_list .rr .acthor{
+	width:560px;
+	height:30px;
+	line-height:30px;
+	color:#666666;
+}
+.notice_list .rr .acthor a{
+	color:#666666;
+	text-decoration:none;
+}
+.notice_list .rr .acthor a:hover{
+	color:#fff;
+	background-color:#666666;
+}
+.notice_list .rr .content{
+	width:560px;
+	height:60px;
+	margin-left:5px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.notice_list .rr .point{
+	width:560px;
+	height:25px;
+}
+.notice_list .rr .point span{
+	color:red;
+}
+.notice_list .rr .point a{
+	color:#3377AA;
+	margin-left:5px;
+}
+
+.notice_detail {
+    overflow: hidden;
+    width: 590px;
+}
+
+.prlist_title span {
+    color: #666666;
+    float: right;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+#ntime{
+	float:right;
+	margin-right:60px;
+	font-size:14px;
+}
+
+.notice_detail{
+	margin-top:5px;
+	width:97%;
+	height:700px;
+	background: #F6F3D3;
+	border-radius: 5px;
+	padding:10px;
+}
+
+/*==============================个人中心公告结束==============================*/
+
+
+/*==============================个人中心日志内容页开始==============================*/
+
+.message {
+    border-bottom: 1px dashed #CCCCCC;
+    height: 200px;
+    line-height: 25px;
+    margin: 10px 0;
+    text-align: left;
+    width: 590px;
+}
+
+.message span {
+    background-color: #FAE9DA;
+    border: medium none;
+    border-radius: 5px;
+    color: #CA6445;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 0;
+    width: 80px;
+}
+
+.message .sub {
+    background-color: #FAE9DA;
+    border: medium none;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 0;
+    width: 80px;
+}
+
+.movie_review_reply {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.movie_review_reply .review_head {
+    border-bottom: 1px dashed #DDDDDD;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+}
+
+.movie_review_reply .review_head span {
+    color: #008000;
+    font: 14px/200% Arial,Helvetica,sans-serif;
+}
+
+.movie_review_reply .review_head .post {
+    background-color: #FAE9DA;
+    border-radius: 5px;
+    color: #CA6445;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 15px;
+    text-decoration: none;
+    width: 110px;
+}
+
+.movie_review_reply .review_head a {
+    margin-left: 10px;
+}
+
+.movie_review_reply .diary_list {
+    margin: 10px 0;
+    width: 590px;
+}
+
+.movie_review_reply .diary_list .acthor {
+    background-color: #F0F3F5;
+    color: #3377AA;
+    height: 30px;
+    line-height: 30px;
+    width: 590px;
+}
+
+.movie_review_reply .diary_list .acthor .l {
+    float: left;
+    padding-left:5px;
+    width: 300px;
+}
+
+.movie_review_reply .diary_list .acthor .l a {
+    color: #3377AA;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.movie_review_reply .diary_list .acthor .r {
+    float: right;
+    width: 50px;
+}
+
+.movie_review_reply .diary_list .acthor .r a {
+    color: #3377AA;
+    text-decoration: none;
+}
+
+.movie_review_reply .diary_list .content {
+    font-size: 13px;
+    height: 80px;
+    width: 590px;
+}
+
+.diary_detail{
+	margin-top:5px;
+	width:97%;
+	background: #F6F3D3;
+	border-radius: 5px;
+	padding:10px;
+}
+
+.diary_message {
+    border-bottom: 1px dashed #666666;
+    height: 220px;
+    line-height: 25px;
+    margin: 10px 0;
+    text-align: left;
+    width: 590px;
+}
+
+.diary_message span{
+
+}
+
+.diary_message textarea{
+	resize:none;
+}
+
+.diary_message .sub{
+	background-color: #FAE9DA;
+    border: medium none;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 0 0 460px;
+    width: 80px;
+}
+
+.diary_message .sub:hover{
+	background-color: #ccc;
+}
+
+.diaryreply_list{
+	width:100%;
+	margin-top:10px;
+}
+
+.diaryreply_list .diaryreply_head{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	border-bottom:1px dashed #ddd;
+}
+
+.diaryreply_list .diaryreply_head span{
+	color: #008000;
+    font: 14px/200% Arial,Helvetica,sans-serif;
+	float:left;
+}
+
+.diaryreply_list .diaryreply_head .say{
+    background-color: #FAE9DA;
+    border-radius: 5px;
+    color: #CA6445;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    width: 150px;
+    margin-right:150px;
+	text-align:center;
+}
+
+
+
+.diaryreply_content {
+	background: none repeat scroll 0 0 #F6F3D3;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 97%;
+}
+
+.diaryreply_content .diaryreply_content_list {
+    margin: 10px 0;
+    width: 590px;
+    border-bottom:1px solid #ccc;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor {
+    color: #3377AA;
+    height: 50px;
+    line-height: 50px;
+    width: 590px;
+    border-bottom:1px dashed #ccc;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .l {
+    float: left;
+    width: 350px;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .l .user_pic{
+    float: left;
+    height: 40px;
+    margin-right: 20px;
+    width: 40px;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .l a {
+    color: #3377AA;
+    margin-right: 10px;
+    text-decoration: none;
+	float:left;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .l span {
+    color:red;
+}
+
+
+.diaryreply_content .diaryreply_content_list .acthor .r {
+    float: right;
+    width: 240px;
+    height:50px;
+    line-height:50px;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .r a {
+  	background-color: white;
+    border-radius: 5px;
+    color: #CA6445;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 30px;
+    margin-top:10px;
+    text-decoration: none;
+    width:50px;
+	cursor:pointer;
+	text-align:center;
+}
+
+.diaryreply_content .diaryreply_content_list .acthor .r a:hover{
+  	background-color: #ccc;
+}
+
+.diaryreply_content .diaryreply_content_list .content {
+    font-size: 13px;
+    height: 80px;
+    width: 590px;
+    background-color:white;
+    margin:10px 0;
+    border-radius:5px;
+    padding-left:5px;
+}
+
+.diaryreply_content .diaryreply_content_list .rcontent{
+    font-size: 12px;
+    width: 590px;
+    margin:10px 0;
+	border-bottom:1px dashed #ddd;
+    border-radius:5px;
+    padding-left:5px;
+}
+
+.diaryreply_content .diaryreply_content_list .rcontent a{
+	float:right;
+	text-decoration:none;
+	margin-right:10px;
+}
+
+.seereply a {
+	text-decoration:none;
+	color:red;
+	margin-left:560px;
+}
+
+.replydivdis {
+	width:100%;
+	display:none;
+}
+
+.replydivdis .nobody{
+	color:red;
+	font-size:14px;
+	text-align:center;
+}
+
+.fenye{
+	margin-top:5px;
+	width:590px;
+}
+
+.fenye span{
+	float:right;
+	margin-right:10px;
+}
+
+.fenye a{
+	margin-right:10px;
+	text-decoration:none;
+	background-color:#FAE9DA;
+	border-radius:5px;
+	color:#ca6445;
+	dispaly:block;
+	float:right;
+	font-size:12px;
+	height:20px;
+	line-height:20px;
+	width:40px;
+	padding-left:3px;
+}
+
+.fenye a:hover{
+	background-color:#ccc;
+}
+
+.re_detail #deldiary,.re_detail #editdiary{
+	float:right;
+	height:25px;
+	line-height:25px;
+	background-color:#3FA156;
+	border:medium none;
+	border-radius:5px;
+	color:white;
+	cursor:pointer;
+	font-size:14px;
+	margin:5px 10px 0px 0;
+	width:50px;
+	
+}
+
+.re_detail #deldiary a,.re_detail #editdiary a {
+	color:white;
+	text-decoration:none;
+	margin:10px;
+}
+
+.re_detail #deldiary:hover,.re_detail #editdiary:hover{
+	background-color:#4FCA6C;
+}
+
+/*日记编辑页面*/
+
+#diary_edit{
+	background-color: #FCEFE3;
+    border: 5px solid #7F9DB9;
+    border-radius: 15px;
+    color: #7F9DB9;
+    font-size: 14px;
+    height: 400px;
+    text-align: left;
+    width: 98%;
+}
+
+#diary_edit .atitle{
+	margin-left: 50px;
+    margin-top: 50px;
+}
+
+#diary_edit .acon{
+	margin: 0 50px;
+}
+
+#diary_edit .acon .winput {
+    height: 20px;
+    margin: 10px;
+    width: 500px;
+}
+
+#diary_edit .acon textarea {
+    margin: 10px 0;
+}
+
+
+#diary_edit .acon .wsub {
+    background-color: #00BDFA;
+    border: medium none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 30px;
+    margin: 10px;
+    width: 200px;
+}
+
+
+
+
+
+
+/*==============================个人中心日志内容页结束==============================*/
+
+/*==============================个人中心用户资料修改页开始==============================*/
+
+/* form */
+.myinfo{
+	margin-top:10px;
+	width:100%;
+	float:left;
+	width:100%;
+	border-bottom:1px dashed #ccc;
+}
+
+.item { 
+	clear:both;
+	margin:5px 0;
+	zoom:1;
+	float:left;
+	width:80%;
+	border-bottom:1px dashed #ccc;
+}
+.labelinp { 
+	display: inline-block; 
+	float:left; 
+	margin-right: 6px; 
+	text-align: left; 
+	width: 150px; 
+	font-size: 14px; 
+	line-height: 30px; 
+	vertical-align: baseline 
+}
+
+.basic-input { 
+	width: 200px; 
+	padding: 5px; 
+	height: 18px; 
+	font-size: 14px;
+	vertical-align:middle; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	border: 1px solid #c9c9c9
+}
+
+.basic-input2 { 
+	width: 300px; 
+	padding: 5px; 
+	height: 18px; 
+	font-size: 14px;
+	vertical-align:middle; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	border: 1px solid #c9c9c9 
+}
+
+.btn-submit { 
+	cursor: pointer;
+	color: #ffffff;
+	background: #3fa156; 
+	border: 1px solid #528641; 
+	font-size: 14px; 
+	font-weight: bold; 
+	padding:6px 26px;
+    border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    *width: 100px;
+    *height:30px; 
+}
+
+.btn-submit:hover { 
+	background-color:#4fca6c;
+	border-color:#6aad54; 
+}
+
+.btn-submit:active { 
+	background-color:#3fa156;
+	border-color:#528641; 
+}
+
+#item-error { 
+	padding-left:75px; 
+}
+
+.recom_list .filmtype{
+    background-color: #FAE9DA;
+    border-radius: 5px;
+    color: #CA6445;
+    font-size: 14px;
+    height: 30px;
+    margin:5px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    width: 60px;
+	float:left;
+	text-align:center;
+}
+
+.recom_list .filmtype:hover{
+    background-color: #ccc;
+}
+
+.recom_list .filmtype a{
+    text-decoration:none;
+}
+
+.recom_list .filmtype a:hover{
+    color: #fff;
+}
+
+.recom_list .title #changmytype a{
+    background-color: white;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 30px;
+    padding-left: 5px;
+    text-decoration: none;
+    width: 120px;
+}
+
+.recom_list .title #changmytype a:hover{
+    background-color: #ccc;
+}
+
+#changepiclink{
+	text-align:center;
+}
+
+#changepiclink a{
+    background-color: #F6F3D3;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+    padding-left: 5px;
+    text-decoration: none;
+    width: 120px;
+}
+
+#changepiclink a:hover{
+    background-color: #ccc;
+}
+
+#changemyinfolink {
+	text-align:center;
+}
+
+#changemyinfolink a {
+    background-color: white;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+    padding-left: 5px;
+    text-decoration: none;
+    width: 120px;
+}
+
+#changemyinfolink a:hover{
+    background-color: #ccc;
+}
+
+.myinfotag {
+    background-color: #F6F3D3;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+/*喜欢电影类型选择页样式*/
+.typechoose{
+	width:100%;
+	margin-top:20px;
+	height:300px;
+}
+
+.typechoose #typectitle{
+	text-align:center;
+	color:red;
+	margin-bottom:10px;
+}
+
+.typechoose #typelist{
+	float:left;
+	margin-left:200px;
+}
+
+.typechoose #typemiddle{
+	float:left;
+	text-align:center;
+	margin:0 50px;
+}
+
+
+
+
+/*==============================个人中心用户资料修改页结束==============================*/
+
+/*==============================个人中心用户影视推荐开始==============================*/
+
+.recom_list{
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 97%;
+	margin-bottom:10px;
+}
+
+.recom_list .title{
+	width:100%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	background:url("../images/homebg.png");
+	text-align:center;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+}
+
+.recom_list .title a{
+	text-decoration:none;
+}
+
+.recom_list .recontent{
+	border-bottom:2px dashed #ccc;
+	width:100%;
+	height:220px;
+	
+}
+
+.recom_list .recontent #fy span{
+	margin-left:450px;
+}
+
+.recom_list .recontent #fy a{
+	text-decoration:none;
+}
+
+div.unonehere{
+	height:190px;
+	line-height:190px;
+	text-align:center;
+	color:#ccc;
+}
+
+.recom_list .recontent .recommovie{
+	float:left;
+	margin:6px;
+	text-align:center;
+}
+
+.recom_list .recontent .recommovie a{
+	text-decoration:none;
+}
+
+.recom_list .recontent .recommovie a:hover{
+	color:red;
+}
+
+.recom_list .recontent .nomovie{
+	text-align:center;
+	margin-top:110px;
+	color:#ccc;
+	font-size:14px;
+}
+
+.recom_list .recontent .recommovie span{
+    display: block;
+    height: 25px;
+    line-height: 25px;
+	font-size:12px;
+	width:100px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+
+}
+
+/*==============================个人中心用户影视推荐结束==============================*/
+
+
+/*==============================个人中心好友新鲜事开始==============================*/
+
+.news_list{
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 97%;
+}
+
+.news_list .title{
+	width:100%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	background:url("../images/homebg.png");
+	text-align:center;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+}
+
+.news_list .title a{
+	text-decoration:none;
+}
+
+.news_list .newscontent{
+	border-bottom:2px dashed #ccc;
+	width:100%;
+	height:190px;
+	
+}
+
+.news_list .newscontent li{
+	border-bottom:1px solid #ddd;
+	height:25px;
+	line-height:25px;
+	margin-bottom:5px;
+}
+
+.news_list .newscontent .lcontent{
+	color:blue;
+	border-right:1px solid #ccc;
+	margin:5px;
+}
+
+.news_list .newscontent li .rcontent{
+	float:right;
+	color:blue;
+	border-left:1px solid #ccc;
+	margin:0 5px;
+	padding-left:2px;
+}
+
+.news_list .newscontent li .ccontent a{
+	text-decoration:none;
+	
+}
+
+/*==============================个人中心好友新鲜事结束==============================*/
+
+/*==============================个人中心头像修改页开始==============================*/
+#changemypic{
+	width:100%;
+	height:100px;
+	border-bottom:2px dashed #ccc;
+}
+
+
+
+
+
+/*==============================个人中心头像修改页结束==============================*/
+
+/*==============================个人中心收藏页开始==============================*/
+#delstore{
+	float:right;
+	margin-right:10px;
+}
+
+#delstore a{
+	background-color: #FAE9DA;
+    border-radius: 5px;
+    color: #CA6445;
+	font-weight:normal;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 30px;
+    margin-top: 3px;
+    padding-left: 5px;
+    text-decoration: none;
+    width: 30px;
+}
+
+#delstore a:hover{
+	background-color: #ccc;
+}
+
+
+/*==============================个人中心收藏页结束==============================*/
+
+/*==============================个人中心关注列表页开始==============================*/
+
+.content .titlestyle{
+	color:#ccc;
+	margin-left:10px;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+}
+
+.content .contentstyle{
+	color:black;
+	margin-left:10px;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+}
+
+.content .fripmood{
+	width:96%;
+	height:30px;
+	line-height:30px;
+	background-color: #FAE9DA;
+    border-radius: 4px;
+	padding-left:5px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+
+}
+
+.guanzhuchoose{
+	text-align:center;
+	float:right;
+}
+
+.titletime{
+	color:red;
+}
+
+.guanzhuchoose a{
+	background: none repeat scroll 0 0 #67A2FF;
+	border-radius: 4px;
+    color: #FFFFFF;
+    height: 30px;
+    line-height: 30px;
+    margin-left:10px;;;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 140px;
+	display:block;
+	float:left;
+	font-size:14px;
+}
+
+.guanzhuchoose a:hover{
+	background-color:white;
+	color: #67A2FF;
+}
+
+/*==============================个人中心关注列表页结束==============================*/
+
+
+/*==============================个人中心相册开始==============================*/
+
+#buttonforchoose{
+	width: 180px; 
+	height: 18px;
+    border: 1px solid #528641;
+    background: none repeat scroll 0 0 #3FA156;
+	padding: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+    font-weight: bold;
+}
+
+#buttonforchoose:hover{
+    background: #ccc;
+}
+
+#thumbnails .imgdiv{
+	width:98%;
+	height:150px;
+	border-bottom:2px dashed #ccc;
+}
+
+#thumbnails .img{
+	border:1px solid blue;
+}
+
+#thumbnails .divright{
+	width:550px;
+	height:150px;
+	float:right;
+}
+
+
+#thumbnails .pictextarea{
+	resize:none;
+}
+
+#thumbnails .divright span{
+	float:left;
+	font-size:14px;
+	margin-top:10px;
+	margin-bottom:20px;
+	margin-left:30px;
+}
+
+#thumbnails .divright .picdel{
+	float:right;
+	margin-right:50px;
+}
+
+#xctijiao{
+    background: none repeat scroll 0 0 #3FA156;
+    border: 1px solid #528641;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 400px;
+    padding: 6px 26px;
+}
+
+#thumbnails .picdel{
+	background-color: #F6F3D3;
+    border-radius: 5px;
+    color: #CA6445;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+
+}
+
+.review_list .picrl{
+	width:140px;
+	height:100px;
+	float:left;
+}
+.review_list .picrr{
+	width:520px;
+	height:100px;
+	float:left;
+	margin-left:0px;
+	
+}
+.review_list .picrr .title{
+	width:520px;
+	height:30px;
+	line-height:30px;
+	background-color:#F0F3F5;
+}
+
+.review_list .picrr .title a{
+	font-size:15px;
+	font-weight:bold;
+	color:#3377AA;
+	text-decoration:none;
+	margin-left:10px;
+}
+.review_list .picrr .title a:hover{
+	color:#fff;
+	background-color:#3377AA;
+}
+
+.review_list .picrr .title span{
+	color:red;
+	float:right;
+	margin-right:30px;
+}
+
+.review_list .picrr .acthor{
+	width:520px;
+	height:30px;
+	line-height:30px;
+	color:#666666;
+}
+.review_list .picrr .acthor a{
+	color:#666666;
+	text-decoration:none;
+}
+.review_list .picrr .acthor a:hover{
+	color:#fff;
+	background-color:#666666;
+}
+.review_list .picrr .content{
+	width:520px;
+	height:95px;
+	margin-left:5px;
+	overflow:hidden;
+}
+.review_list .picrr .point{
+	width:520px;
+	height:25px;
+}
+.review_list .picrr .point span{
+	color:red;
+}
+.review_list .picrr .point a{
+	color:#3377AA;
+	margin-left:5px;
+}
+
+/*相册内容页开始*/
+
+#pmain #albtitle{
+    background-color: #F6F3D3;
+	border-radius: 4px;
+	color: #777777;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+	width:96%;
+}
+
+#pmain #albdes{
+	width:98%;
+	height:200px;
+	border-bottom:2px dashed #ccc;
+}
+
+#pmain #albdes span{
+    background-color: #FAE9DA;
+    border: medium none;
+    border-radius: 5px;
+    color: #CA6445;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 0;
+    padding-left: 5px;
+    width: 80px;
+	text-align:center;
+}
+
+#pmain #albdes .albcontent{
+    border: 1px solid #CCCCCC;
+	border-radius: 4px;
+    margin: 10px 100px;
+    width: 760px;
+	background:none repeat scroll 0 0 #F6F3D3;
+}
+
+#pmain #albdes .albcontent .acthor{
+	border-bottom: 1px dashed #CCCCCC;
+    color: #3377AA;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+
+}
+
+#pmain #albdes .albcontent .acthor .l{
+    float: left;
+    width: 350px;
+	margin-left:10px;
+	margin-top:5px;
+}
+
+#pmain #albdes .albcontent .acthor .l .user_pic{
+	float: left;
+    height: 40px;
+    margin-right: 20px;
+    width: 40px;
+}
+
+#pmain #albdes .albcontent .acthor .l a{
+    color: #3377AA;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+#pmain #albdes .albcontent .content{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 80px;
+    margin: 10px 48px;
+    padding-left: 5px;
+    width: 660px;
+}
+
+#pmain #albpics{
+	width:98%;
+	height:600px;
+}
+
+/*相册内容页列表部分*/
+
+div.thumb{
+	float:left;						/* 向左浮动 */
+	height:160px; width:160px;		/* 每幅图片块的大小 */
+	margin:6px 10px;
+
+	padding:0px;
+}
+div.thumb img{
+	border:1px solid #82c3ff;
+}
+div.ls{
+	background:url(../images/framels.jpg) no-repeat center;	/* 水平图片的背景 */
+}
+
+div.ls img{											/* 水平图片 */
+	margin:0px;
+	height:135px; width:135px;
+}
+
+div.ls a{
+	display:block;					/* 定义为块元素 */
+	padding:10px 14px 10px 11px;	/* 将超链接区域扩大到整个背景块 */
+}
+div.pt a{
+	display:block;
+	padding:11px 36px 14px 34px;	/* 将超链接区域扩大到整个背景块 */
+}
+div.ls a:hover{						/* 鼠标经过时修改背景图片 */
+	background:url(../images/framels_hover.jpg) no-repeat center;
+}
+
+#showPhoto{
+	position:absolute;
+	width:620px; height:570px;
+	z-index:200;
+}
+#showPhoto img#close{
+	position:absolute;
+	right:10px; top:10px;
+	cursor:pointer;
+	z-index:2;
+}
+#showPic{
+	width:454px; height:454px;	/* 正方形的块 */
+	position:absolute;
+	left:81px; top:40px;
+	text-align:center;
+	vertical-align:middle;
+}
+#bgblack{
+	width:620px; height:570px;
+	position:absolute;
+	left:0px; top:0px;
+	background:#000000;
+	z-index:-1;
+}
+#showPic img{
+	padding:1px; border:1px solid #FFFFFF;
+	z-index:1; position:relative;
+}
+#picdescr{
+	position:absolute;
+	z-index:3; 
+	color:#FFFFFF;
+	bottom:40px; 
+	left:25px;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#picdescr span{
+	color:red;
+	font-size:14px;
+	margin-right:20px;
+}
+
+
+
+
+
+
+/*==============================个人中心相册结束==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

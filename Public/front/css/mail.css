@@ -1,0 +1,184 @@
+	#mbox {
+		width : 872px;
+		height: 537px;
+		background-color: #c2c2c2;
+		padding: 8px;
+		display: none;
+		position: absolute;
+	}
+	#mhouse {
+		width : 870px;
+		height: 535px;
+		border: 1px solid #c2c2c2;
+		border-radius: 5px;
+		background-color: #fff;
+	}
+	#main {
+		padding: 10px;
+		font-size: 12px;
+	}
+	#main .header {
+		width: 850px;
+		height: 50px;
+		padding: 0px;
+		margin:0px;
+	}
+	#main .header h2{
+		height: 50px;
+		line-height: 50px;
+		font-style: normal;
+		font-weight: normal;
+		float: left;
+		font-size: 20px;
+		margin: 0px;
+		padding: 0px;
+	}
+	#main .add{
+		margin-left: 10px;
+		display: inline-block;
+		height: 50px;
+		line-height: 50px;
+		float: left;
+	}
+	#main .add img {
+		padding-top: 22px;
+	}
+	
+	#main .close {
+		cursor: pointer;
+		float: right;
+	}
+	.clear {
+		height: 0px;
+		line-height: 0px;
+		width: 100%;
+		clear: both;
+	}
+	#main .mainbox {
+		height: 475px;
+		width: 850px;
+	}
+	#main .intro {
+		height: 475px;
+		width: 228px;
+		float: left;
+	}
+	#main .area {
+		height: 460px;
+		width:340px;
+		float:left;
+		margin-left: 8px;
+		border: 1px solid #77818B;
+		border: 0px 1px 1px 1px;
+	}
+	#main .play {
+		height: 460px;
+		width: 260px;
+		float: left;
+		border:1px solid #ccc;
+		margin-left: 8px;
+	}
+	#main .introtitle {
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+		background-color: #77818B;
+	}
+	#main .contentbox {
+		background-color: #f1f1f1;
+		border-right: 1px solid #DDDDDD;
+		height: 445px;
+	}
+	#main .content {
+		padding: 10px;
+		height: 390px;
+		white-space:wrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	#main .content img {
+		float: left;
+		margin-right: 10px;
+	}
+	#main .content h3 {
+		padding: 0px;
+		margin: 0px;
+		font-size: 16px;
+		height: 20px;
+		line-height: 20px;
+		font-weight: normal;
+	}
+	#main .content p {
+		padding: 0px;
+		margin: 0px;
+		height: 20px;
+		line-height: 20px;
+		color: #666;
+	}
+	#main .more {
+		float: left;
+		height: 35px;
+		line-height: 35px;
+		padding-left:10px;
+	}
+	#main .more a {
+		color: #3377AA;
+		text-decoration: none;
+	}
+	/* ui */
+	.ui-widget-content {
+		border:0;
+	}
+	.ui-tabs{
+		padding:0px;
+	}
+	.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0px;
+	}
+	.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+	    border-bottom-left-radius: 0px;
+	}
+	.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+	    border-top-right-radius: 0px;
+	}
+	.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+	    border-top-left-radius: 0px;
+	}
+	.ui-widget {
+		font-size: 12px;
+	}
+	.ui-widget-header {
+		border:0px;
+		background:#77818B;
+	}
+	.ui-tabs .ui-tabs-nav {
+    	margin: 0px;
+    	padding: 0px;
+	}
+	#tabs li {
+		margin: 1px 0px 0px 30px;
+		height: 26px;
+	}
+	#tabs2 li {
+		margin: 1px 0px 0px 5px;
+		height: 26px;
+	}
+
+	.ui-tabs .ui-tabs-nav li {
+	    list-style: none outside none;
+	    float: left;
+	    position: relative;
+	    top: 0px;
+	    border-bottom-width: 0px;
+	    padding: 0px;
+	    white-space: nowrap;
+	}
+	.ui-tabs .ui-tabs-panel {
+	    display: block;
+	    border-width: 0px;
+	    padding: 0;
+	    background: none repeat scroll 0% 0% transparent;
+	    overflow: auto;
+		height: 430px;
+	}

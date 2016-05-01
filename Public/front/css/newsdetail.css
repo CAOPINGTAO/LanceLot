@@ -1,0 +1,316 @@
+a{ text-decoration:none;}
+a:link { color:blue;text-decoration:none; }
+a:visited { color:#67a2ff;text-decoration:none; }
+/* 主体部分开始 */
+#main{
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+	
+}
+#m_top{
+	width:950px;
+	height:30px;
+	text-align:left;
+	margin-top:20px;
+	margin-left:10px;
+	margin-bottom:10px;
+	border-bottom-color:#333;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+}
+#main_left{
+	float:left;
+	width:630px;
+	border-right-color:#333;
+	border-right-width:1px;
+	border-right-style:dotted;
+	
+}
+#mlb_top{
+	width:580px;
+	margin:auto;
+	border-bottom-color:#333;
+	border-bottom-width:1px;
+	border-bottom-style:dotted;
+	margin-top:10px;
+}
+#mlb_top1{
+	font-size:20px;
+	font-weight:bold;
+}
+#mlb_top2{
+	margin-top:10px;
+}
+#mlb_bottom{
+	margin-top:30px;
+	margin-right:20px;
+}
+#mlb_bottom2{
+	margin-left:20px;
+	margin-top:20px;
+	float:left;
+}
+#main_left_bottom{
+	width:610px;
+	margin-left:10px;
+	float:left;
+}
+#main_right{
+	float:right;
+	width:310px;
+}
+#mmr{
+	float:right;
+	height:250px;
+	width:300px;
+}
+#mr1{
+	width:300px;
+	float:right;
+}
+#mrt{
+	background-color:#2a6881;
+	float:left;
+	width:300px;
+	height:30px;
+}
+#mrt1{
+	color:#fff;
+	font-size:16px;
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+}
+#mrt2{
+	color:#fff;
+	float:right;
+	font-size:15px;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	background-color:#eee;
+	color:#02bcf5;
+}
+#mrt3{
+	color:#fff;
+	float:right;
+	font-size:15px;
+	width:80px;
+	height:30px;
+	line-height:30px;
+}
+#mrb{
+	float:left;
+	width:300px;
+}
+#mrp{
+	float:left;
+	width:300px;
+}
+.mrb1{
+	width:280px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	border-bottom-color:#333;
+	border-bottom-width:1px;
+	border-bottom-style:dotted;
+}
+.mrb1 span{
+	
+	float:left;
+	font-size:15px;
+	color:333;
+	margin-bottom:10px;
+}
+.mrb2{
+	color:#00a6f4;
+	float:left;
+	margin-bottom:10px;
+	margin-left:10px;
+	
+}
+#mr2{
+	width:300px;
+	float:right;
+}
+.mr_l{
+	width:300px;
+	text-align:left;
+	font-size:16px;
+	float:left;
+	margin-top:20px;
+	font-weight:bold;
+}
+.mr_center{
+	width:130px;
+	margin-top:10px;
+	margin-left:5px;
+	text-align:left;
+	float:left;
+}
+.mrc1{
+	width:130px;
+	height:100px;
+	float:left;
+}
+.mrc2{
+	float:left;
+	font-size:15px;
+	color:#00a6f4;
+}
+.mrc3{
+	float:left;
+}
+
+/* 主体部分结束 */
+/* =详情页短评列表= */
+#main_left .movie_short_review{
+	width:100%;
+	margin:10px 0;
+}
+#main_left .movie_short_review .review_head{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	border-bottom:1px dashed #DDDDDD;
+	
+}
+#main_left .movie_short_review .review_head span{
+	font:14px/200% Arial,Helvetica,sans-serif;
+	color:green;
+}
+
+#main_left .movie_short_review .review_head a{
+	text-decoration:none;
+	color:#3377AA;
+	font-size:12px;
+	margin-left:10px;	
+}
+#main_left .movie_short_review .review_head a:hover{
+	color:#fff;
+	background:#3377AA;
+}
+#main_left .movie_short_review .review_head .post{
+	text-decoration:none;
+	float:right;
+	display:block;
+	width:110px;
+	height:25px;
+	line-height:25px;
+	color:#CA6445;
+	font-size:12px;
+	border-radius:5px;
+	padding-left:15px;
+	background-color:#FAE9DA;
+}
+#main_left .movie_short_review .review_head a:hover{
+	color:#D9896A;
+	background:#FCEFE3;
+}
+#main_left .movie_short_review .review_list{
+	width:590px;
+	
+	margin-top:10px;
+	border-bottom:1px dashed #DDDDDD;
+}
+
+#main_left .movie_short_review .review_list .acthor{
+	width:590px;
+	height:30px;
+	line-height:30px;
+	color:#3377AA;
+}
+#main_left .movie_short_review .review_list .acthor .l{
+	float:left;
+	width:300px;
+	text-align:left;
+}
+#main_left .movie_short_review .review_list .acthor .l a{
+	color:#3377AA;
+	margin-right:10px;
+	text-decoration:none;
+}
+#main_left .movie_short_review .review_list .acthor .l a:hover{
+	color:#fff;
+	background-color:#666666;
+}
+
+#main_left .movie_short_review .review_list .acthor .r{
+	float:right;
+	width:80px;
+}
+#main_left .movie_short_review .review_list .acthor .r span{
+	color:#666666;
+}
+#main_left .movie_short_review .review_list .acthor .r a{
+	color:#3377AA;
+	margin-left:10px;
+	text-decoration:none;
+}
+#main_left .movie_short_review .review_list .acthor .r a:hover{
+	color:#fff;
+	background-color:#3377AA;
+}
+#main_left .movie_short_review .review_list .content{
+	width:590px;
+	height:80px;
+	margin-top:5px;
+	text-align:left;
+	font-size:13px;
+}
+#main_left .movie_short_review .fy{
+	width:590px;
+	height:25px;
+	line-height:25px;
+	margin-top:5px;
+	text-align:right;
+	display:none;
+	color:#666666;
+}
+#main_left .movie_short_review .fy a{
+	margin-right:10px;
+	color:#3377AA;
+}
+
+#main_left .movie_short_review .message{
+	width:590px;
+	height:200px;
+	line-height:25px;
+	margin-top:5px;
+	text-align:left;
+	border-bottom:1px solid #ccc;
+}
+#main_left .movie_short_review .message p{
+	color:#0080FF;
+}
+#main_left .movie_short_review .nobody{
+	height:200px;
+	line-height:200px;
+	color:#67A2FF;
+	font-size:14px;
+	margin-top:10px;
+	background-color:#E8E8FF;
+	border-radius:10px;
+	text-align:center;
+}
+
+#button{
+	display:block;
+	list-style:none;
+	width:80px;
+	height:25px;
+	line-height:25px;
+	color:#CA6445;
+	font-size:12px;
+	border-radius:5px;
+	margin-top:10px;
+	background-color:#FAE9DA;
+	border:none;
+	cursor:pointer;
+}
+#message_button{
+	background-color:#67A2FF;
+	color:#fff;
+}
