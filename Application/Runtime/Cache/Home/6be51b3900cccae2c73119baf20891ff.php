@@ -45,13 +45,11 @@
                 <li><a href="/LanceLot/index.php/Index/index" class="title">笃 学 力 行 守 正 求 新</a></li>
             </ul>
             <ul class="right">
-                {if empty($smarty.session.loginuser)}
-                <li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
+                <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
                 <li><a href="/LanceLot/index.php/Register/register">注册</a></li>
-                {else}
-                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($smarty["session"]["loginuser"]["id"]); ?>" style="color:#fff;"><?php echo ($smarty["session"]["loginuser"]["username"]); ?></a></li>
-                <li><a href="/LanceLot/index.php/Login/loginout">退出</a></li>
-                {/if}
+                <?php else: ?>
+                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($smarty["session"]["loginuser"]["id"]); ?>" style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
+                <li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>u
             </ul>
         </div>
     </div>
@@ -347,11 +345,14 @@
             <div class="foot_link">
                 <a href="" target="_blank">公司简介</a> |
                 <a href="" target="_blank">合作伙伴</a> |
+                <a href="" target="_blank">诚聘英才</a> |
+                <a href="" target="_blank">广告服务</a> |
                 <a href="/LanceLot/index.php/Map/map" target="_blank">网站地图</a> |
                 <a href="" target="_blank">保护隐私</a> |
                 <a href="" target="_blank">版权信息</a> |
                 <a href="" target="_blank">客户服务</a> |
                 <a href="" target="_blank">联系我们</a> |
+                <a href="" target="_blank">电影之家</a>
             </div>
         </div>
         <div class="foot_content">

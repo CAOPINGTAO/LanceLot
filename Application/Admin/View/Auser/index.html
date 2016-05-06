@@ -1,0 +1,137 @@
+<form id="pagerForm" action="__CONTROLLER__/index" method="post">
+    <input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+    <input type="hidden" name="numPerPage" value="{$numPerPage}" />
+    <input type="hidden" name="_order" value="{$Think.request._order}" />
+    <input type="hidden" name="_sort" value="{$Think.request._sort}" />
+</form>
+
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__CONTROLLER__/index2" method="post">
+        <div class="searchBar">
+            <table class="searchContent">
+                <tr>
+                    <td>
+                        <label style="width:60px;">搜索用户：</label>
+                        <input type="text" name="keyword" value="{$Think.post.keyword}" /> [关键字：用户名、姓名]
+                    </td>
+                    <td>
+                        <label style="width:60px;">状 态：</label>
+                        <select name="status" class="required combox">
+                            <option value="">请选择</option>
+                            <option value="0" selected>开启</option>
+                            <option value="1">禁用</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="__CONTROLLER__/add" target="dialog"width="480" height="360" rel="user_msg" title="添加用户信息"><span>添加用户</span></a></li>
+
+            <li class="line">line</li>
+            <li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listuser" target="ajaxTodo" title="确定要删除吗?"><span>删除用户</span></a></li>
+
+            <li class="line">line</li>
+            <li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="480" height="360" target="dialog"><span>修改用户信息</span></a></li>
+
+            <li class="line">line</li>
+            <li><a class="add" href="__CONTROLLER__/setRole/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="480" height="360" target="dialog"><span>分配角色</span></a></li>
+
+            <li class="line">line</li>
+            <li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+        </ul>
+    </div>
+
+    <div id="w_list_print">
+        <table class="list" width="100%" targetType="navTab" layoutH="116">
+            <thead>
+                <tr>
+                    <if condition="$Think.request._order eq 'id'">
+                    <th orderField="id" class="{$Think.request._sort}">ID</th>
+                    <else />
+                    <th orderField="id">ID</th>
+                    </if>
+                    <th>用户名</th>
+                    <th>姓名</th>
+                    <th>Email</th>
+                    <th>电话</th>
+                    <th>登录时间</th>
+                    <th>登录IP</th>
+                    <if condition="$Think.request._order eq 'status'">
+                    <th orderField="status" class="{$Think.request._sort}">状态</th>
+                    <else />
+                    <th orderField="status">状态</th>
+                    </if>
+                    <th>用户所属组</th>
+                </tr>
+            </thead>
+            <tbody>
+                <volist name="list" id="vo">
+                <tr target="item_id" rel="{$vo.id}">
+                    <td>{$vo.id}</td>
+                    <td>{$vo.username}</td>
+                    <td>{$vo.fullname}</td>
+                    <td>{$vo.email}</td>
+                    <td>{$vo.phone}</td>
+                    <td>{$vo.login_time|date="Y-m-d H:i:s",###}</td>
+                    <td>{$vo.login_ip}</td>
+                    <if condition="$vo.status eq 0">
+                    <td>开启</td>
+                    <else />
+                    <td>禁用</td>
+                    </if>
+                    <td>
+                        <ul>
+                            <if condition="$vo['username'] eq C('RBAC_SUPERADMIN')">
+                            超级管理员
+                            <else />
+                            <volist name="vo['role']" id="v">
+                            <li style="padding: 3px;">{$v.name} [ {$v.title} ]</li>
+                            </volist>
+                            </if>
+                        </ul>
+                    </td>
+                </tr>
+                </volist>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 分页显示 -->
+    <div class="panelBar">
+        <div class="pages">
+            <span>显示</span>
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({l$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+                <switch name="numPerPage">
+                    <case value="10">
+                        <option value="10">10</option>
+                    </case>
+                    <case value="15">
+                        <option value="15">15</option>
+                    </case>
+                    <case>
+                        <option value="20">20</option>
+                    </case>
+                    <case>
+                        <option value="25">25</option>
+                    </case>
+                    <case>
+                        <option value="30">30</option>
+                    </case>
+                </switch> 
+            </select>
+            <span>共{$totalCount}条</span>
+        </div> 
+
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumshow="10" currentPage="{$currentPage}">
+    </div>
+</div>

@@ -1,104 +1,106 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <title>LanceLot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
 
-    <script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.core.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.widget.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.tabs.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery.ui.tabs.js"></script>
 
-    <link href="__PUBLIC__/front/css/jquery.ui.core.css" rel="stylesheet" type="text/css" />
-    <link href="__PUBLIC__/front/css/jquery.ui.theme.css" rel="stylesheet" type="text/css" />
-    <link href="__PUBLIC__/front/css/jquery.ui.tabs.css" rel="stylesheet" type="text/css" />
-    <title>LanceLot</title>
-    <style type="text/css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/css/jquery.ui.core.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/css/jquery.ui.theme.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/css/jquery.ui.tabs.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/css/mail.css" />
+		<style type="text/css">
+		
 
-        /* focusbox */
-        .focusbox{ width:960px;height:405px;position:relative;margin:5px auto;overflow:hidden; border-radius:10px;}
-        .arrowbtn{ background:#ddd;width:60px;height:60px;cursor:pointer;position:absolute;top:100px;}
-        .prebtn{ left:0;}
-        .nextbtn{ right:0;}
-        .contentimg{ position:absolute;top:0;left:0;width:7000px;}
-        .contentimg li{ width:960px;height:340px;float:left;margin-right:10px;overflow:hidden;}
-        .contentimg li img{ width:960px;height:340px;}
-        .contentdesc{
-            position:absolute;top:0;right:0;width:260px;height:340px;background:rgba(0,0,0,0.7);overflow:hidden;
-            filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#B2000000', endColorstr='#B2000000');
-        }
-        .contentdesc .desc{ color:#dadada;}
-        .contentdesc .desc h4{ font-size:15px;font-weight:bold;color:#fff;}
-        .contentdesc .desc strong{ color:#e4007f;}
-        .contentdesc .desc .def_ico{ display:inline-block;*display:inline;zoom:1;width:68px;height:18px;overflow:hidden;background:url(__ROOT__/Uploads/News/mypic/T193mCXnRQXXXXXXXX-300-300.png) no-repeat -112px -129px;vertical-align:middle;}
-        .contentdesc .desc .stars{ display:inline-block;width:53px;height:10px;background:url(__ROOT__/Uploads/News/mypic/T1t2aCXnVZXXXXXXXX-53-10.png) no-repeat;}
-        .contentdesc .desc_btn{ display:block;width:119px;height:38px;background:url(__ROOT__/Uploads/News/mypic/T1t2aCXnVZXXXXXXXX-102-26.png) no-repeat;margin-top:12px;}
-        .contentdesc li{ width:262px;height:320px;padding:20px 0 0 20px;}
-        .focusbox .navbox{ width:990px;overflow:hidden;position:absolute;right:0px;left:0px;bottom:0;}
-        .focusbox .navbox li{ width:134px;height:55px;overflow:hidden;float:left;margin-right:2px;border:1px solid #fff;}
-        .focusbox .navbox li img{ width:134px;height:55px;}
-        .focusbox .navbox li.selected{ width:134px;height:53px;border:1px solid #ff32a5;}
-        .focusbox .navbox li.selected img{ width:134px;height:53px;}
+			/* focusbox */
+			.focusbox{ width:960px;height:405px;position:relative;margin:5px auto;overflow:hidden; border-radius:10px;}
+			.arrowbtn{ background:#ddd;width:60px;height:60px;cursor:pointer;position:absolute;top:100px;}
+			.prebtn{ left:0;}
+			.nextbtn{ right:0;}
+			.contentimg{ position:absolute;top:0;left:0;width:7000px;}
+			.contentimg li{ width:960px;height:340px;float:left;margin-right:10px;overflow:hidden;}
+			.contentimg li img{ width:960px;height:340px;}
+			.contentdesc{
+				position:absolute;top:0;right:0;width:260px;height:340px;background:rgba(0,0,0,0.7);overflow:hidden;
+				filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#B2000000', endColorstr='#B2000000');
+			}
+			.contentdesc .desc{ color:#dadada;}
+			.contentdesc .desc h4{ font-size:15px;font-weight:bold;color:#fff;}
+			.contentdesc .desc strong{ color:#e4007f;}
+			.contentdesc .desc .def_ico{ display:inline-block;*display:inline;zoom:1;width:68px;height:18px;overflow:hidden;background:url(__ROOT__/Uploads/News/mypic/T193mCXnRQXXXXXXXX-300-300.png) no-repeat -112px -129px;vertical-align:middle;}
+			.contentdesc .desc .stars{ display:inline-block;width:53px;height:10px;background:url(__ROOT__/Uploads/News/mypic/T1t2aCXnVZXXXXXXXX-53-10.png) no-repeat;}
+			.contentdesc .desc_btn{ display:block;width:119px;height:38px;background:url(__ROOT__/Uploads/News/mypic/T1t2aCXnVZXXXXXXXX-102-26.png) no-repeat;margin-top:12px;}
+			.contentdesc li{ width:262px;height:320px;padding:20px 0 0 20px;}
+			.focusbox .navbox{ width:990px;overflow:hidden;position:absolute;right:0px;left:0px;bottom:0;}
+			.focusbox .navbox li{ width:134px;height:55px;overflow:hidden;float:left;margin-right:2px;border:1px solid #fff;}
+			.focusbox .navbox li img{ width:134px;height:55px;}
+			.focusbox .navbox li.selected{ width:134px;height:53px;border:1px solid #ff32a5;}
+			.focusbox .navbox li.selected img{ width:134px;height:53px;}
 
 
-        /**/
-        #main_left span.btn {
-            display: inline-block;
-            float: right;
-            width:120px;
-            height: 30px;
-            line-height: 30px;
-            background-color: #CCFFCC;
-            border-radius:5px;
-            text-align: center;
-        }
-        #main_left .btn a{
-            display: inline-block;
-            float: right;
-            width:120px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            border-radius:5px;
-            cursor: pointer;
-        }
-        #main_left .hide {
-            display: none;
-        }
-        /**/
-        span.buy {
-            width:130px;
-            height: 25px;
-            line-height: 25px;
-            border-radius:5px;
-            text-align: center;
-        }
-        span.buy a{
-            display: inline-block;
-            background-color: #CCFFCC;
-            width:130px;
-            height: 25px;
-            line-height: 25px;
-            font-size: 12px;
-            text-align: center;
-            border-radius:3px;
-            cursor: pointer;
-        }
-    </style>
-    <script type="text/javascript">
-        $(function(){
-            $(".btn").click(function(){
-                //如果hide类所在元素可见，则隐藏掉该元素
-                if($(".hide").is(":visible")){
-                    $(".hide").hide();
-                } else {
-                    $(".hide").show();
-                }
-            });
-        });
+			/**/
+			#main_left span.btn {
+				display: inline-block;
+				float: right;
+				width:120px;
+				height: 30px;
+				line-height: 30px;
+				background-color: #CCFFCC; 
+				border-radius:5px;
+				text-align: center;
+			}
+			#main_left .btn a{
+				display: inline-block;
+				float: right;
+				width:120px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border-radius:5px;
+				cursor: pointer;
+			}
+			#main_left .hide {
+				display: none;
+			}
+			/**/
+			span.buy {
+				width:130px;
+				height: 25px;
+				line-height: 25px; 
+				border-radius:5px;
+				text-align: center;
+			}
+			span.buy a{
+				display: inline-block;
+				background-color: #CCFFCC;
+				width:130px;
+				height: 25px;
+				line-height: 25px;
+				font-size: 12px;
+				text-align: center;
+				border-radius:3px;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$(".btn").click(function(){	
+					if ($(".hide").is(":visible")) {
+						$(".hide").hide();
+					} else{
+						$(".hide").show();
+					}
+				});
+			});
+
     </script>
 </head>
 <body>
@@ -110,57 +112,58 @@
     <div class="focusbox">
         <div class="contentbox">
             <ul class="contentimg">
-                {foreach $ppt as $pv}
-                <li><a href="__APP__/Detail/index/id/{$pv.mid}" target="_blank"><img src="__ROOT__/Uploads/News/mypic/b_{$pv.picname}" width="960" height="340" title="{$pv.title}" /></a></li>
-                {/foreach}
+                <volist name="ppt" id="pv">
+                <li><a href="__APP__/Detail/index/id/{$pv.mid}" target="_blank"><img width="960" height="340" src="__ROOT__/Uploads/News/mypic/b_{$pv.picname}" title="{$pv.title}"></a></li>
+                </volist>
             </ul>
             <ul class="contentdesc">
-                {foreach $ppt as $pv}
+                <volist name="ppt" id="pv">
                 <li>
                     <div class="desc">
                         <h4>{$pv.title}</h4>
-                        <p style="padding-top: 10px">演员：{$pv.cname[0]}</p>
-                        <p style="text-indent: 3em">{$pv.cname[1]}</p>
-                        <p>类型：{foreach $pv.typename as $tv}
+                        <p style="padding-top: 10px">演员：{$pv['cname'][0]}</p>
+                        <p style="text-indent: 3em">{$pv['cname'][1]}</p>
+                        <p>类型：<volist name="pv['typename']" id="tv">
                             {$tv}&nbsp;
-                            {/foreach}</p>
-                        <p>上映时间： {$pv.showtime}</p>
+                            </volist></p>
+                        <p>上映时间： {$pv.showtime|date="Y-m-d",###}</p>
                         <p>国家：{$pv.nation}</p>
                         <p>评价：<span class="stars"></span>（已有{$pv.replynum}条评论）</p>
                         <a class="desc_btn" href="__APP__/Detail/index/id/{$pv.mid}" title="去评论"></a>
                     </div>
                 </li>
-                {/foreach}
+                </volist>
             </ul>
         </div>
+
         <div class="navbox">
             <ul class="mfoc_nav">
                 {$i=1}
-                {foreach $ppt as $pv}
-                <li _index="{$i++}" class="selected"><img width="134" height="53" src="__ROOT__/Uploads/News/mypic/c_{$pv.picname}" alt="{$pv.title}" /></li>
-                {/foreach}
+                <volist name="ppt" id="pv">
+                    <!--注意这里的volist自带了自增变量$i，不想smarty模版中的foreach没有，所以_index不需要自增了-->
+                <li _index="{$i}" class="selected"><img width="134" height="53" src="__ROOT__/Uploads/News/mypic/c_{$pv.picname}" alt="{$pv.title}" /></li>
+                </volist>
             </ul>
         </div>
     </div>
-    //图片轮播
     <script type="text/javascript">
         (function(jQuery){
-            jQuery.fn.th_focus_swing = function(options){
+            jQuery.fn.th_focus_swing = function(options)
+            {
                 var defaults = {
-                    time     :3500,  //轮换秒数
-                    index    :1,     //默认第几张
-                    speed    :500,   //切换时间
-                    dis      :970,
-                    splits   :1      //总标签
+                    time		:3500,		//轮换秒数
+                    index		:1,			//默认第几张
+                    speed		:500,		//切换时间
+                    dis			:970,
+                    splits 		:1			//总标签
                 };
-                //合并options到defaults，如果有相同项覆盖之
                 var opts = jQuery.extend(defaults, options);
+
                 var _index = opts.index;
                 var _time = opts.time;
                 var _speed = opts.speed;
                 var _dis = opts.dis;
                 var _splits = opts.splits;
-
                 var _this = jQuery(this);
 
                 var node_ul = _this.find(".contentimg");
@@ -170,70 +173,61 @@
 
                 var li_len = node_li.length;
 
-                var _countIndex = (node_li.length / opts.split - 1);
-                var _start_left =  node_ul.css("left");
-
-                //定义并实例化_timer，供init()调用
+                var _countIndex = (node_li.length/opts.split - 1);
+                var _start_left = node_ul.css("left");
                 var _timer = setInterval(show, _time);
 
                 init();
-
-                function init(){
-                    //当鼠标悬停在上方大图的某张时,停止调用_timer;移开的时候继续调用_timer
-                    node_ul.mouseover(function(){
+                //alert(1);
+                function init() {
+                    node_ul.mouseover(function() {
                         _timer = clearInterval(_timer);
-                    }).mouseout(function(){
+                    }).mouseout(function() {
                         _timer = setInterval(show, _time);
                     });
-                    node_li_desc.mouseover(function(){
+                    node_li_desc.mouseover(function() {
                         _timer = clearInterval(_timer);
-                    }).mouseout(function(){
+                    }).mouseout(function() {
                         _timer = setInterval(show, _time);
                     });
 
-                    //当鼠标悬停在下方小图片nav时
-                    node_li_nav.mouseover(function(){
-                        //假如现在看的是第6张，接下来我们要去看第二张，此时_index为6
-                        //注意eq()方法的index是从0开始的，而我们HTML标签中的_index属性是从1开始的
-                        node_ul.stop(true, true);    //停止上方大图的轮播
-                        node_li_desc.stop(true, true); //停止上方详情的轮播
-                        node_li_desc.eq(_index-1).css("display","none");    //将第6张的详情（_index=5）隐藏起来
-                        node_li_nav.eq(_index-1).removeClass("selected"); //移除下方小图片第6张（_index=5）selected类
-
-                        //接着上面，现在我们看到的是第二个，此时_index=2
+                    node_li_nav.mouseover(function() {
+                        node_ul.stop(true, true);
+                        node_li_desc.stop(true, true);
+                        node_li_desc.eq(_index-1).css("display", "none");
+                        node_li_nav.eq(_index-1).removeClass("selected");
                         _index = parseInt(jQuery(this).attr("_index"));
-                        node_li_desc.eq(_index-1).fadeIn(_speed);    //第二张详情（_index=1）淡入
-                        node_li_nav.eq(_index-1).addClass("selected"); //展示第二张图片
-                        _left = -_dis*(_index-1);    //计算移动的距离
-                        node_ul.animate({"left":_left},_speed); //滑入大图
+                        node_li_desc.eq(_index-1).fadeIn(_speed);
+                        node_li_nav.eq(_index-1).addClass("selected");
+                        _left = -_dis*(_index - 1);
+                        node_ul.animate({ "left": _left}, _speed);
                         _timer = clearInterval(_timer);
-                    }).mouseout(function(){
-                        _timer = setInterval(show,_time);
+                    }).mouseout(function() {
+                        _timer = setInterval(show, _time);
                     });
                 }
 
                 function show() {
-                    node_ul.stop(true,true);
+                    //alert(2);
+                    node_ul.stop(true, true);
                     node_li_nav.eq(_index-1).removeClass("selected");
-                    node_li_desc.eq(_index-1).css("display","none");
+                    node_li_desc.eq(_index-1).css("display", "none");
                     _index++;
                     if(_index > li_len) {
-                        node_ul.append(node_ul.find("li:lt(1)")); //重新选择第一张图片
-                        //滑动到第一张,通过设置css的left属性实现，注意第一张left：0px，第二章left:-970,所以从最后一张
-                        //滑到第一张的距离=最后一张的left-每张的大小（970），应为每张的left<0,而_dis>0,所以相加就行
+                        node_ul.append(node_ul.find("li:lt(1)"));
                         node_ul.css("left", parseInt(node_ul.css("left")) + _dis);
                         node_li_nav.eq(0).addClass("selected");
                         node_li_desc.eq(0).fadeIn(_speed);
-                    } else {
-                        //滑动小图片和展示详情
-                        node_li_nav.eq(_index).addClass("selected");
-                        node_li_desc.eq(_index).fadeIn(_speed);
                     }
-                    var _left = parseInt(node_ul.css("left")) - _dis;    //计算当前的图片的后一张图片的left（注意left<0,所以+变-）
-                    node_ul.animate({"left": _left}, _speed, function(){ //开始滑动到后一张图片
-                        if(_index > li_len){//如果已滑动到最后一张，那么滑动到第一张并重置_index
+                    else {
+                        node_li_nav.eq(_index-1).addClass("selected");
+                        node_li_desc.eq(_index-1).fadeIn(_speed);
+                    }
+                    var _left = parseInt(node_ul.css("left")) - _dis;
+                    node_ul.animate({ "left": _left}, _speed, function() {
+                        if(_index > li_len) {
                             node_ul.prepend(node_ul.find("li:gt("+(li_len-_splits-1)+")"));
-                            node_ul.css("left",0);
+                            node_ul.css("left", 0);
                             _index = 1;
                         }
                     });
@@ -241,19 +235,20 @@
             }
         })(jQuery);
     </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
-           $(".focusbox").th_focus_swing();
+            $(".focusbox").th_focus_swing();
         });
     </script>
     <!--ppt和电影相关信息结束-->
-
     <div class="nav"></div>
     <!--主体部分开始-->
     <div id="main">
+
         <!--左侧内容-->
         <div id="main_left">
-            <!--正在热映   -->
+            <!--正在热映 -->
             <div class="movie_hot">
                 <div class="hot_head">
                     <span>正在热映</span>
@@ -261,22 +256,27 @@
                 </div>
                 <div class="hot_list">
                     <ul>
-                        {foreach $hot as $vo}
+                        <volist name="hot" id="vo">
                         <li>
-                            <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/d_{$vo.picname}" alt=""/></a>
+                            <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/d_{$vo.picname}" alt="" /></a>
+
                             <span><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
-                            <span>综合评分：{$vo.rate}</span>
+                            <span>
+                                综合评分：{$vo.rate}
+                            </span>
                         </li>
-                        {/foreach}
+                        </volist>
                     </ul>
                     <ul class="hide">
-                        {foreach $hide as $vo}
+                        <volist name="hide" id="vo">
                         <li>
                             <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/d_{$vo.picname}" alt="" /></a>
                             <span><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
-                            <span>综合评分：{$vo.rate}</span>
+                            <span>
+                                综合评分：{$vo.rate}
+                            </span>
                         </li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -284,7 +284,7 @@
 
             <!--电影大图间隔图片-->
             <div class="movie_bpic">
-                <img src="__PUBLIC__/front/images/movie_sz.jqg" alt="" />
+                <img src="__PUBLIC__/front/images/movie_sz.jpg" alt="" />
             </div>
             <div class="nav"></div>
 
@@ -295,12 +295,12 @@
                 </div>
                 <div class="recent_list">
                     <ul>
-                        {foreach $recent as $vo}
+                        <volist name="recent" id="vo">
                         <li>
                             <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/c_{$vo.picname}" alt="" /></a>
-                            <span style="height: 36px;"><a style="font-size: 12px;" href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
+                            <span style="height: 36px;"><a style="font-size: 12px" href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
                         </li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -312,24 +312,26 @@
                     <span>最受欢迎影评</span>
                     <span style="float: right;padding-top: 8px;"><a href="__APP__/List/index">更多热门影评>>></a></span>
                 </div>
-                {foreach $reviewlist as $v}
+                <volist name="reviewlist" id="v">
                 <div class="review_list">
                     <div class="rl">
                         <a href="__APP__/Detail/index/id/{$v.fid}"><img src="__ROOT__/Uploads/Movie/Cover/b_{$v.picname}" alt="{$v.filmname}" /></a>
                     </div>
                     <div class="rr">
                         <div class="title">
-                            <a href="__APP__/Review/index/id/{$v.id}">{$v.title}</a>
+                            <a href="__APP__/Review/index/id/{$v.id}">
+                                {$v.title}
+                            </a>
                         </div>
                         <div class="acthor">
-                            {$v.username} 评论：<a href="__APP__/Detail/index/id/{$v.id}">《{$v.filmname}》</a>
+                            {$v.username} 评论:<a href="__APP__/Detail/index/id/{$v.fid}">《{$v.filmname}》</a>
                         </div>
                         <div class="content">
                             {$v.content}
                         </div>
                     </div>
                 </div>
-                {/foreach}
+                </volist>
             </div>
         </div>
         <!--左侧内容END-->
@@ -359,9 +361,9 @@
                 </div>
                 <div class="sort_list">
                     <ul>
-                        {foreach $mtype as $vo}
+                        <volist name="mtype" id="vo">
                             <li><a href="__APP__/Typelist/tags/id/{$vo.id}">{$vo['typename']}</a></li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -374,13 +376,13 @@
                 </div>
                 <div class="rank_list">
                     <ul>
-                        {foreach $num as $vo}
+                        <volist name="num" id="vo">
                             <li>
-                                <span style="display: inline-block;width: 200px"><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
-                                <span style="display: inline-block;width: 50px;color: #8CB5C3;">评论数：</span>
-                                <span style="color:#8CB5C3">{$vo.replynum}</span>
+                                <span style="display: inline-block;width: 200px;"><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
+                                <span style="display: inline-block;width: 50px; color: #8CB5C3;">评论数：</span>
+                                <span style="color:#8CB5C3;">{$vo.replynum}</span>
                             </li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -394,12 +396,12 @@
                 </div>
                 <div class="top_list">
                     <ul>
-                        {foreach $clicknum as $vo}
+                        <volist name="clicknum" id="vo">
                         <li style="height: 140px;">
                             <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/b_{$vo.picname}" alt="" /></a>
                             <a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a>
                         </li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -412,9 +414,9 @@
                 </div>
                 <div class="link_list">
                     <ul>
-                        {foreach $link as $l}
+                        <volist name="link" id="l">
                         <li><a href="{$l.url}"><img src="__ROOT__/Uploads/News/mypic/c_{$l.picname}" /></a></li>
-                        {/foreach}
+                        </volist>
                     </ul>
                 </div>
             </div>
@@ -422,11 +424,11 @@
         </div>
         <!--右侧内容END-->
         <!--主题部分END-->
-
-
     </div>
     <!--主体部分结束-->
+    <div class="nav"></div>
 
+    <!--导入页脚部分-->
     <include file="Public/foot" />
 </body>
 </html>

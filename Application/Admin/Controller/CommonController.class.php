@@ -24,7 +24,7 @@ class CommonController extends Controller{
 
         if (C('USER_AUTH_ON') && !$notAuth) {
             import('ORG.Util.RBAC');
-            \RBAC::AccessDecision() || $this->error("没有权限");
+            \Org\Util\Rbac::AccessDecision() || $this->error("没有权限");
         }
     }
 
@@ -68,12 +68,13 @@ class CommonController extends Controller{
                 $model->id = $result;
                 $this->_tigger_insert($model);
             }
-
+            var_dump($result);
             //成功提示
-            $this->success(L('新增成功'));
+            $this->success('新增成功');
         } else {
             //失败提示
-            $this->error(L('新增失败').$model->getLastSql());
+            var_dump($result);
+            $this->error('新增失败'.$model->getLastSql());
         }
 
     }
@@ -115,9 +116,9 @@ class CommonController extends Controller{
             if (isset($id)) {   //如果设置了主键给予删除，否则为非法操作
                 $condition = array($pk => array('in', explode(',', $id))); //设置删除条件
                 if ($model->where($condition)->delete() !== false) {
-                    $this->success(L('删除成功'));
+                    $this->success('删除成功');
                 } else {
-                    $this->error(L('删除失败'));
+                    $this->error('删除失败');
                 }
             } else { //没有设置主键，则为非法操作
                 $this->error('非法操作');

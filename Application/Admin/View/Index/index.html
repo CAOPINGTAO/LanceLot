@@ -15,34 +15,38 @@
     <link href="__PUBLIC__/dwz/themes/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
     <![endif]-->
 
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/speedup.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/jquery.validate.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/jquery.bgiframe.js"></script>
+<script src="__PUBLIC__/dwz/js/speedup.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.validate.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.bgiframe.js" type="text/javascript"></script>
 
-    <script type="text/javascript" src="__PUBLIC__/dwz/xheditor-1.1.12-zh-cn.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/uploadify/scripts/swfobject.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/uploadify/scripts/jquery.uploadify.v2.1.0.js"></script>
+<script src="__PUBLIC__/dwz/xheditor/xheditor-1.1.12-zh-cn.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/uploadify/scripts/swfobject.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/uploadify/scripts/jquery.uploadify.v2.1.0.js" type="text/javascript"></script>
 
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/dwz.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/dwz/js/dwz.regional.zh.js"></script>
 
-    <script type="text/javascript">
-        $(function(){
-            DWZ.init("__PUBLIC__/dwz/dwz.frag.xml",{
-                statusCode:{ OK:200, error:300, timeout:301},
-                pageInfo:{ pageNum:"pageNum", numPerPage:"numPerPage", orderField:"_order", orderDirection:"_sort"},
-                debug:false,
-                callback:function(){
-                    initEnv();
-                    $("#themeList").theme({
-                        themeBase:"__PUBLIC__/dwz/themes"
-                    });//相对于index，页面的主题的路径
-                }
-            });
-        });
-    </script>
+<script src="__PUBLIC__/dwz/js/dwz.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/dwz.regional.zh.js" type="text/javascript"></script>
+
+<!-- uploadify -->
+<!-- uploadify -->
+
+<script type="text/javascript">
+$(function(){
+	DWZ.init("__PUBLIC__/dwz/dwz.frag.xml", {
+		//loginUrl:"login_dialog.html", loginTitle:"登录",	// 弹出登录对话框
+		//loginUrl:"login.html",	// 跳到登录页面
+		statusCode:{ ok:200, error:300, timeout:301}, //【可选】
+		pageInfo:{ pageNum:"pageNum", numPerPage:"numPerPage", orderField:"_order", orderDirection:"_sort"}, //【可选】
+		debug:false,	// 调试模式 【true|false】
+		callback:function(){
+			initEnv();
+			$("#themeList").theme({ themeBase:"__PUBLIC__/dwz/themes"}); // themeBase 相对于index页面的主题base路径
+		}
+	});
+});
+</script>
 </head>
 
 <body scroll="no">
@@ -139,7 +143,7 @@
                         <ul class="tree treeFolder">
                             <li><span>影片管理</span>
                                 <ul>
-                                    <li><a href="__APP__/Movie/index" target="nvaTab" rel="listmovie" title="浏览影片信息">浏览影片信息</a></li>
+                                    <li><a href="__APP__/Movie/index" target="navTab" rel="listmovie" title="浏览影片信息">浏览影片信息</a></li>
                                     <li><a href="__APP__/Movie/add" class="add" target="navTab" rel="addmovie" title="添加影片"><span>添加影片信息</span></a></li>
                                 </ul>
                             </li>

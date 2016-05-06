@@ -1,0 +1,53 @@
+#wrap {
+	width:95%;
+	height: auto;
+	padding: 5px;
+	overflow: hidden;
+	margin: 5px auto;
+	border:1px solid #ccc;
+	font-weight: normal; 
+}
+
+#wrap .app{
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #f6f6f6;
+	border-radius: 4px;
+}
+
+#wrap .app p{
+	height: 20px;
+	line-height: 20px;
+}
+
+#wrap .app p span {
+	font-size: 20px;
+	color:#0b99d8;
+}
+
+#wrap .app dl{
+
+	margin: 10px 0;
+	border: 1px solid #dcdcdc;
+	height: auto;
+	overflow: hidden;
+}
+
+#wrap .app dl dt{
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	background-color: #e6e6fa;
+	text-indent: 10px;
+}
+
+#wrap .app dl dt span{
+	font-size: 16px;
+	color: #61a1fa;
+}
+
+#wrap .app dl dd{
+	padding: 10px;
+	float:left;
+}
+
