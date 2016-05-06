@@ -1,0 +1,51 @@
+<style type="text/css">
+	select {
+		font-size: 12px;
+	}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		$(".addRole").click(function(){
+
+			var obj = $(this).parent('p').clone();
+			obj.find('.addRole').remove();
+			$('#last').before(obj);
+		});
+	});
+</script>
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/setRoleHandle/navTabId/listuser/callbackType/closerCurrent" class="pageForm required-validate" onsubmit="rerturn validateCallback(this,dialogAjaxDone);">
+
+	<input type="hidden" name="uid" value="{$user.id}" />
+	<div class="pageFormContent" layoutH="56">
+		<p>
+			<label>用 户 名：</label>	
+			<input type="text" size="30" value="{$user.username}" readonly="readonly" />
+		</p>
+		<p>
+			<label>真实姓名：</label>
+			<input readonly="readonly" type="text" size="30" value="{$user.fullname}" />
+		</p>
+
+		<p>
+			<label>分配角色：</label>
+			<select name="role_id[]">
+				<option value="">请选择</option>
+				<volist name="role" id="v">
+					<option value="{$v.id}">{$v.name} &nbsp;[&nbsp; {$v.title} &nbsp;]</option>
+				</volist>
+			</select>
+			<button type="button" class="addRole">添加角色</button>
+		</p>
+		<p id="last"></p>
+	</div>
+	<div class="formBar">
+		<ul>
+			<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+		</ul>
+	</div>
+	</form>
+</div>

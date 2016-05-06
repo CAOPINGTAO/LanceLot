@@ -29,7 +29,7 @@ class CommonController extends Controller{
     }
 
     public function index(){
-        //列表过滤器，生成查询Map对象
+        //列表过滤器，生成查询Map对象(该数据对象的全部字段信息)
         $map = $this->_search();
         if(method_exists($this,'_filter')) {
             $this->_filter($map);
@@ -41,6 +41,7 @@ class CommonController extends Controller{
             $model = M(CONTROLLER_NAME);
         }
 
+        //根据条件进行查询，然后分配到视图模版中
         if(!empty($model)){
             $this->_list($model, $map);
         }
@@ -158,6 +159,7 @@ class CommonController extends Controller{
         }
         $model = M($name);
         $map = array();
+        //对当前数据对象的全部字段进行条件封装
         foreach ($model->getDbFields() as $key => $val) {
             if (substr($key, 0, 1) == '_')
                 continue;
@@ -169,7 +171,7 @@ class CommonController extends Controller{
     }
 
     /**
-     * 根据表单生成查询条件
+     * 根据查询条件进行查询并分配变量到视图模板
      * 进行列表过滤
      * @param $model            数据对象
      * @param array $map        过滤条件

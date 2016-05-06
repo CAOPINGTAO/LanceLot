@@ -1,0 +1,116 @@
+<form id="pageForm" action="__CONTROLLER__/index" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}" />
+	<input type="hidden" name="_sort" value="{$Think.request._sort}" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pageForm" obsubmit="return navTabSearch(this);" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索角色：</label>
+						<input type="text" name="keyword" value="{$Think.post.keyword}" />[关键字：角色、角色名称]
+					</td>
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" width="480" height="270" rel="user_msg" title="添加角色"><span>添加角色</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listrole" target="ajaxTodo" title="确定要删除吗?"><span>删除角色</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="480" height="270" target="dialog" title="修改角色"><span>修改角色</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" height="480" width="800" title="配置权限信息" max="true" target="dialog" href="__CONTROLLER__/access/rid/{$Think.LDELIM}item_id{$Think.RDELIM}"><span>配置权限</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" height="480" width="800" title="查看权限信息" target="dialog" href="__CONTROLLER__/showAccess/rid/{$Think.LDELIM}item_id{$Think.RDELIM}"><span>查看权限信息</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+	<table class="table" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="116">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th orderField="id">ID</th>
+				</if>
+				<if condition="$Think.request._order eq 'name'">
+				<th orderField="name" class="{$Think.request._sort}">角色</th>
+				<else />
+				<th orderField="name">角色</th>
+				</if>
+				<th>角色名称</th>
+				<th>角色描述</th>
+				<if condition="$Think.request._order eq 'status'">
+				<th orderField="status" class="{$Think.request._sort}">开启状态</th>
+				<else />
+				<th orderField="status">开启状态</th>
+				</if>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.name}</td>
+				<td>{$vo.title}</td>
+				<td>{$vo.remark}</td>
+				<td>
+					<if condition="$vo['status']">开启
+					<else />禁用
+					</if>
+				</td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+	</div>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numperPage:this.value{$Think.RDELIM})">
+				<switch name="numPerPage">
+					<case value="10">
+						<option value="10">10</option>
+					</case>
+					<case value="15">
+						<option value="15">15</option>
+					</case>
+					<case value="20">
+						<option value="20">20</option>
+					</case>
+					<case value="25">
+						<option value="25">25</option>
+					</case>
+					<case value="50">
+						<option value="50">50</option>
+					</case>
+				</switch>
+			</select>
+			<span>共{$totalCount}条</span>
+		</div>
+
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShow="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>

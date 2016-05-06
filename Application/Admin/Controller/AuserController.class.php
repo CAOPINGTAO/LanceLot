@@ -105,12 +105,15 @@ class AuserController extends CommonController{
     }
 
     //分配角色处理
-    public function setRoleHandler(){
+    public function setRoleHandle(){
 
         $uid = $_POST['uid'];   //用户id
 
+        var_dump($_POST);
+        // die();
         //删除用户原有角色
-        M('role_User')->where(array('user_id'=>$uid))->delete();
+        M('Role_user')->where(array('user_id'=>$uid))->delete();
+
         $role = array();
         foreach ($_POST['role_id'] as $v) {
             $role[] = array(
@@ -119,7 +122,7 @@ class AuserController extends CommonController{
             );
         }
 
-        if (M('role_user')->addAll($role)) {
+        if (M('Role_user')->addAll($role)) {
             $this->success('设置成功');
         } else {
             $this->error('设置失败');

@@ -98,7 +98,7 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({l$Think.LDELIM}numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
                 <?php switch($numPerPage): case "10": ?><option value="10">10</option><?php break;?>
                     <?php case "15": ?><option value="15">15</option><?php break;?>
                     <case>
