@@ -1,0 +1,81 @@
+<style type="text/css">
+	.com {
+		border:1px solid #B8D0D6;
+		border-bottom: 0px;
+		padding: 5px;
+		margin:  5px 5px 0 5px; 
+		background-color: #C0C0C0;
+	}
+	.mcom {
+		border:1px solid #B8D0D6;
+		padding: 3px;
+		margin:  0px 5px 5px 5px; 
+		
+	}
+	.method {
+		display: inline-block;
+		padding-left:3px; 
+		width: 145px;
+		height:18px;
+		line-height: 18px;
+		margin: 3px 3px 3px 15px;
+		background-color: #ccffcc;
+	}
+
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		$("input").attr("disabled", "disabled");
+	});
+</script>
+
+<form class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+	<div class="pageFormContent" layoutH="98">
+		<input type="hidden" name="rid" value="{$rid}" />
+
+		<volist name="list" id="app">
+			<fieldset style="border:1px solid #D8D8D6;margin:5px;padding:5px" class="app">
+				<legend style="border:1px solid #B8D0D6; padding:5px;">
+					<if condition="$app['access'] eq 1">
+					<input type="checkbox" name="access[]" value="{$app.id}_1" level="1" checked="checked" />
+					<else />
+					<input type="checkbox" name="access[]" value="{$app.id}_1" level="1" />
+					</if>
+					{$app.title}
+				</legend>
+
+				<volist name="app['child']" id="action">
+					<div class="action">
+						<div class="com">
+							<if condition="$action['access'] eq 1">
+							<input type="checkbox" name="access[]" value="{$action.id}_2" level="2" checked="checked" />
+							<else />
+							<input type="checkbox" name="access[]" value="{$action.id}_2" level="2" />
+							</if>
+							{$action.title}
+						</div>
+						<div class="mcom">
+							<volist name="action['child']" id="method">
+								<span class="method">
+									<if condition="$method['access'] eq 1">
+									<input type="checkbox" name="access[]" value="{$method.id}_3" level="3" checked="checked" />
+									<else />
+									<input type="checkbox" name="access[]" value="{$method.id}_3"
+									level="3" />
+									</if>
+									{$method.title}
+								</span>
+							</volist>
+						</div>
+					</div>
+				</volist>
+			</fieldset>
+		</volist>
+	</div>
+	<div class="formBar">
+		<ul>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="close">确定</button></div></div></li>
+		</ul>
+	</div>
+</form>

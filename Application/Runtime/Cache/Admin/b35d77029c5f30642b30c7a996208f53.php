@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><form id="pageForm" action="/LanceLot/admin.php/Role/index" method="post">
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/LanceLot/admin.php/Role/index" method="post">
 	<input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
 	<input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
 	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>" />
@@ -6,7 +6,7 @@
 </form>
 
 <div class="pageHeader">
-	<form rel="pageForm" obsubmit="return navTabSearch(this);" method="post">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
 		<div class="searchBar">
 			<table class="searchContent">
 				<tr>
@@ -81,11 +81,21 @@
 		<div class="pages">
 			<span>显示</span>
 			<select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numperPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
-				<?php switch($numPerPage): case "10": ?><option value="10">10</option><?php break;?>
-					<?php case "15": ?><option value="15">15</option><?php break;?>
-					<?php case "20": ?><option value="20">20</option><?php break;?>
-					<?php case "25": ?><option value="25">25</option><?php break;?>
-					<?php case "50": ?><option value="50">50</option><?php break; endswitch;?>
+				<?php if($numPerPage == 10): ?><option value="10" selected>10</option>
+                <?php else: ?>
+                <option value="10">10</option><?php endif; ?>
+                <?php if($numPerPage == 15): ?><option value="15" selected>15</option>
+                <?php else: ?>
+                <option value="15">15</option><?php endif; ?>
+                <?php if($numPerPage == 20): ?><option value="20" selected>20</option>
+                <?php else: ?>
+                <option value="20">20</option><?php endif; ?>
+                <?php if($numPerPage == 25): ?><option value="25" selected>25</option>
+                <?php else: ?>
+                <option value="25">25</option><?php endif; ?>
+                <?php if($numPerPage == 30): ?><option value="30" selected>30</option>
+                <?php else: ?>
+                <option value="30">30</option><?php endif; ?>
 			</select>
 			<span>共<?php echo ($totalCount); ?>条</span>
 		</div>

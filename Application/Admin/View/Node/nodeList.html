@@ -1,0 +1,47 @@
+<style type="text/css">
+	.com {
+		border:1px solid #B8D0D6;
+		border-bottom: 0px;
+		padding: 5px;
+		margin:  5px 5px 0 5px; 
+		background-color: #C0C0C0;
+	}
+	.mcom {
+		border:1px solid #B8D0D6;
+		padding: 3px;
+		margin:  0px 5px 5px 5px; 
+		
+	}
+	.method {
+		display: inline-block;
+		padding-left:3px; 
+		width: 120px;
+		height:18px;
+		line-height: 18px;
+		margin: 3px 3px 3px 15px;
+		background-color: #ccffcc;
+	}
+
+</style>
+
+<div class="pageContent" layoutH="42">
+
+	<volist name="list" id="app">
+	<fieldset style="border:1px solid #D8D0D6;margin:5px;paddng:5px;" class="app">
+    	<legend style="border:1px solid #B8D0D6; padding:5px;">{$app.title} [<a style="color:blue;" target="dialog" href="__CONTROLLER__/addNode/pid/{$app.id}/level/2"> 添加控制器 </a>]
+    	</legend>
+    	<volist name="app['child']" id="action">
+    		<div class="com">
+    		{$action['title']} [ <a style="color:blue" target="dialog"  href="__CONTROLLER__/addNode/pid/{$action['id']}/level/3"> 添加方法 </a> ]
+    		</div>
+    		<div class="mcom">
+    		<volist name="action['child']" id="method">
+    			<span class="method">{$method.title}</span>
+    		</volist>
+    		</div>
+    	</volist>
+    	
+  	</fieldset>
+  	</volist>
+	
+</div>

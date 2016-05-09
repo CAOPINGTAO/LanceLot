@@ -1,0 +1,130 @@
+<form id="pagerForm" action="__CONTROLLER__/index" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default="1"}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}" />
+	<input type="hidden" name="_sort" value="{$Think.request._sort}" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索节点：</label>
+						<input type="text" name="keyword" value="{$Think.post.keyword}" />[关键词：节点、节点名称]
+					</td>
+
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" width="480" height="270" rel="user_msg" title="添加应用"><span>添加应用</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{Think.RDELIM}/navTabId/listnode" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="480" height="270" target="dialog"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+	<table class="table" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="116">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th orderField="id">ID</th>
+				</if>
+				<if condition="$Think.request._order eq 'name'">
+				<th orderField="name" class="{$Think.request._sort}">节点</th>
+				<else />
+				<th orderField="name">节点</th>
+				</if>
+				<th>节点名称</th>
+				<th>节点描述</th>
+				<if condition="$Think.request._order eq 'status'">
+				<th orderField="status" class="{$Think.request._sort}">开启状态</th>
+				<else />
+				<th orderField="status">开启状态 </th>
+				</if>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.name}</td>
+				<td>{$vo.title}</td>
+				<td>{$vo.remark}</td>
+				<if condition="$vo['status']">
+				<td>开启</td>
+				<else />
+				<td>禁用</td>
+				</if>
+				<td>
+					<if condition="$vo['level'] eq 1">
+					<a style="color:blue;" target="dialog" href="__CONTROLLER__/add/pid/{$vo.id}/level/2">添加控制器</a>
+					<elseif condition="$vo['level'] eq 2" />
+					<a style="color:blue;" target="dialog" href="__CONTROLLER__/add/pid/{$vo.id}/level/3">添加方法</a>
+					<else />
+					 方法：{$vo.remark}
+					 </if>
+				</td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+	</div>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+				<if condition="$numPerPage eq 10">
+				<option value="10" selected>10</option>
+				<else />
+				<option value="10">10</option>
+				</if>
+				<if condition="$numPerPage eq 15">
+				<option value="15" selected>15</option>
+				<else />
+				<option value="15">15</option>
+				</if>
+				<if condition="$numPerPage eq 20">
+				<option value="20" selected>20</option>
+				<else />
+				<option value="20">20</option>
+				</if>
+				<if condition="$numPerPage eq 25">
+				<option value="25" selected>25</option>
+				<else />
+				<option value="25">25</option>
+				</if>
+				<if condition="$numPerPage eq 50">
+				<option value="50" selected>50</option>
+				<else />
+				<option value="50">50</option>
+				</if>
+			</select>
+            <span>共{$totalCount}条</span>
+		</div>
+
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumshow="10" currentPage="{$currentPage}">
+	</div>
+</div>

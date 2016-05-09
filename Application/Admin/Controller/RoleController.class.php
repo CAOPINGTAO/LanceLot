@@ -43,7 +43,7 @@ class RoleController extends CommonController{
 		$rid = I('rid', 0, 'intval');
 
 		$db = M('access');
-		$db->where(array('role_id'=>$rid))->select();
+		$db->where(array('role_id'=>$rid))->delete();
 		$data = array();
 		//数据组装
 		foreach ($_POST['access'] as $v) {

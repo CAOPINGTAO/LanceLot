@@ -98,18 +98,22 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({l$Think.LDELIM}numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
-                <?php switch($numPerPage): case "10": ?><option value="10">10</option><?php break;?>
-                    <?php case "15": ?><option value="15">15</option><?php break;?>
-                    <case>
-                        <option value="20">20</option>
-                    </case>
-                    <case>
-                        <option value="25">25</option>
-                    </case>
-                    <case>
-                        <option value="30">30</option>
-                    </case><?php endswitch;?> 
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
+               <?php if($numPerPage == 10): ?><option value="10" selected>10</option>
+               <?php else: ?>
+               <option value="10">10</option><?php endif; ?>
+               <?php if($numPerPage == 15): ?><option value="15" selected>15</option>
+               <?php else: ?>
+               <option value="15">15</option><?php endif; ?>
+               <?php if($numPerPage == 20): ?><option value="20" selected>20</option>
+               <?php else: ?>
+               <option value="20">20</option><?php endif; ?>
+               <?php if($numPerPage == 25): ?><option value="25" selected>25</option>
+               <?php else: ?>
+               <option value="25">25</option><?php endif; ?>
+               <?php if($numPerPage == 30): ?><option value="30" selected>30</option>
+               <?php else: ?>
+               <option value="30">30</option><?php endif; ?>
             </select>
             <span>共<?php echo ($totalCount); ?>条</span>
         </div> 
