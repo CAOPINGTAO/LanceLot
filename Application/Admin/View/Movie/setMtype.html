@@ -1,0 +1,35 @@
+<h2 class="contentTitle">设置影片类别</h2>
+<form method="post" action="__CONTROLLER__/setTypeHandle/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+	<div class="pageFormContent" layoutH="98">
+
+		<input type="hidden" name="movid" value="{$movie_id}" />
+
+ 		<foreach name="type1" item="v" key="k">
+			<p width="100" >{$k}：</p>
+			<div class="divider"></div>
+				<foreach name="v" item="vo">
+					<label><input type="checkbox" name="type{$vo['fid']}[]" value='{$vo['id']}'/>{$vo['typename']}</label>
+				</foreach>
+			</ul>
+			<div class="divider"></div>
+		</foreach>
+
+		<foreach name="type2" item="v" key="k">
+			<p width="100" >{$k}：</p>
+			<div class="divider"></div>
+				<foreach name="v" item="vo">
+					<label><input type="radio" name="type{$vo['fid']}" value='{$vo['id']}'/>{$vo['typename']}</label>
+				</foreach>
+			</ul>
+			<div class="divider"></div>
+		</foreach>
+		
+	</div>
+	<div class="formBar">
+		<ul>
+			<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+			</li>
+		</ul>
+	</div>
+</form>

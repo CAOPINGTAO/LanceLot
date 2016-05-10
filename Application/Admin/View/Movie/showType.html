@@ -1,0 +1,28 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<p>
+				<label>影 片 名：</label>
+				<label style="width:240px;">{$mt.filmname}</label>
+			</p>
+			<p>
+				<label>添加时间：</label>
+				<label style="width:240px;">{$mt.addtime|date="Y-m-d",###}</label>
+			</p>
+			<p><label>影片分类：</label>
+				<label style="width:240px;">
+					<volist name="mt['type']" id="vo">	
+						<span style="width:80px; float:left; padding:5px 0; ">{$vo['typename']}</span>
+					</volist>
+				</label>
+			</p>	
+		</div>
+		<div class="formBar">
+			<ul>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">确定</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>

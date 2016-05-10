@@ -127,7 +127,7 @@
 							<?php else: ?>幻灯片<?php endif; ?>
 						</td>
 						<td>
-							<a style="color:blue;" target="dialog" rel="setActors" href="/LanceLot/admin.php/Movie/showActors/id/<?php echo ($vo["id"]); ?>">产看演员信息</a>
+							<a style="color:blue;" target="dialog" rel="setActors" href="/LanceLot/admin.php/Movie/showActors/id/<?php echo ($vo["id"]); ?>">查看演员信息</a>
 						</td>
 						<td>
 							<a style="color:blue;" target="dialog" rel="showPhotos" href="/LanceLot/admin.php/Movie/showPhotos/id/<?php echo ($vo["id"]); ?>">查看剧照信息</a>

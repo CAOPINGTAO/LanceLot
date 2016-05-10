@@ -1,0 +1,74 @@
+<style type="text/css">
+	#mpic img {
+		border:1px solid #ccc;
+		padding: 3px;
+	}
+	#mpic .imglist{
+		padding: 3px;
+		text-align: center;
+		float: left;
+		height: 135px;
+		width: 110px;
+		margin: 3px;
+		border: 1px solid #ccc;
+		background-color: #ccffcc;
+	}
+	#mpic p{
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		padding-top: 5px;
+	}
+	#mpic p a{
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		padding-top: 5px;
+	}
+
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		$("#mpic .imglist a").click(function(){
+			var pid = $(this).attr('mid'); //photo_id
+
+			$.ajax({
+				url : "http://localhost:8080/LanceLot/admin.php/Movie/deleteimg",
+				detaType : "text",
+				type : "post",
+				data : { id : pid },
+				success : function(data){
+					if(data == 'true'){
+						$("#mpic"+pid).remove();
+					}
+				}
+			})
+		});
+	});
+
+</script>
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+
+			<div id="mpic">
+				<foreach name="pic" item="vo">
+					<div class="imglist" id="mpic{$vo.id}">
+						<img src="__ROOT__/__UPLOAD__/Movie/mPhotos/m_{$vo.picname}" />	
+						<p><a style="color:blue"  mid="{$vo.id}" name="{$vo.picname}">删除</a></p>
+					</div>
+				</foreach>
+			</div>	
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">确定</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
