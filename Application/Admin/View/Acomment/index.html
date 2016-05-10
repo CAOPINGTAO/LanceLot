@@ -1,0 +1,132 @@
+<include file="Public/pagerForm" />
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					<b>搜索</b> &nbsp; 关键字：<input type="text" name="keyword" value="{$Think.request.keyword}" /> [内容]
+				</td>
+				<td>&nbsp; 状态：
+					<select name="status" >
+						<option value="" >-选择-</option>
+						<if condition="$Think.request.status eq 1">
+						<option value="1" selected>正常</option>
+						<else />
+						<option value="1">正常</option>
+						</if>
+						<if condition="$Think.request.status eq 2">
+						<option value="2" selected>举报</option>
+						<else />
+						<option value="2">举报</option>
+						</if>
+						<if condition="$Think.request.status eq 3">
+						<option value="3" selected>禁言</option>
+						<else />
+						<option value="3">禁言</option>
+						</if>
+					</select>
+				</td>	
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listsreview" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  width="600" height="350" target="dialog"><span>修改状态</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th width="40" orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th width="40" orderField="id">ID</th>
+				</if>
+				<th width="40">演员</th>
+				<th width="40">发表用户</th>
+				<if condition="$Think.request._order eq 'unum'">
+				<th width="40" orderField="unum" class="{$Think.request._sort}">有用数</th>
+				<else />
+				<th width="40" orderField="unum">有用数</th>
+				</if>
+				<if condition="$Think.request._order eq 'rtime'">
+				<th width="40" orderField="rtime" class="{$Think.request._sort}">评论时间</th>
+				<else />
+				<th width="40" orderField="rtime">评论时间</th>
+				</if>
+				<th width="30" style="color:red;">举报数</th>
+				<if condition="$Think.request._order eq 'status'">
+				<th width="40" orderField="status" class="{$Think.request._sort}">评论状态</th>
+				<else />
+				<th width="40" orderField="status">评论状态</th>
+				</if>
+				<th width="40">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="v">
+			<tr target="item_id" rel="{$v.id}">
+				<td>{$v.id}</td>
+				<td>{$v.cname}</td>
+				<td>{$v.username}</td>
+				<td>{$v.unum}</td>
+				<td>{$v.rtime|date="Y-m-d H:i:s",###}</td>
+				<td style="color:red;">{$v.report}</td>
+				<if condition="$v.status eq '正常'">
+				<td style="color:blue;">{$v.status}</td>
+				<elseif condition="$v.status eq '举报'" />
+				<td style="color:red;">{$v.status}</td>
+				<else />
+				<td style="color:#666;">{$v.status}</td>
+				</if>
+				<td><a style="color:green;"href="__CONTROLLER__/content/id/{$v.id}" target="dialog">查看回复内容</a></td>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+				<if condition="$numPerPage eq 10">
+                <option value="10" selected>10</option>
+                <else />
+                <option value="10">10</option>
+                </if>
+                <if condition="$numPerPage eq 15">
+                <option value="15" selected>15</option>
+                <else />
+                <option value="15">15</option>
+                </if>
+                <if condition="$numPerPage eq 20">
+                <option value="20" selected>20</option>
+                <else />
+                <option value="20">20</option>
+                </if>
+                <if condition="$numPerPage eq 25">
+                <option value="25" selected>25</option>
+                <else />
+                <option value="25">25</option>
+                </if>
+                <if condition="$numPerPage eq 30">
+                <option value="30" selected>30</option>
+                <else />
+                <option value="30">30</option>
+                </if>
+			</select>
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
