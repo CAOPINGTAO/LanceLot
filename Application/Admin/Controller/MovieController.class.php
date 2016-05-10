@@ -83,7 +83,7 @@ class MovieController extends CommonController{
 	 */
 	public function update(){
 
-		//error 0.文件上传成功
+		//error	0.文件上传成功
 		//		1.文件超过php.ini设置的大小
 		//		2.文件超过html表单MAX_FILE_SIZE设置的最大值
 		//		3.文件只有部分被上传
