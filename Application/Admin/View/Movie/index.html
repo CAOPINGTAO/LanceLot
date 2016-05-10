@@ -1,0 +1,195 @@
+<form id="pagerForm" action="__CONTROLLER__/index" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}" />
+	<input type="hidden" name="_sort" value="{$Think.request._sort}" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索电影：</label>
+						<input type="text" name="keyword" value="{$Think.request.keyword}" />[关键字：影片名，影片别名]
+					</td>
+					<td>
+						<select class="combox" name="status">
+							<option value="">--影片状态--</option>
+							<option value="0">新添加</option>
+							<option value="1">显示</option>
+							<option value="2">幻灯片</option>
+						</select>
+					</td>
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="navTab" rel="user_msg" title="添加影片"><span>添加影片</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="navTab"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/setmtype/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>设置分类</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edittype/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>修改分类</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/uploads/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>上传剧照</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/editUploads/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>修改剧照</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/setActors/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>设置演员信息</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/editactors/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>修改演员信息</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/editstatus/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>修改状态</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+		<table class="list" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="116">
+			<thead>
+				<tr>
+					<if condition="$Think.request._order eq 'id'">
+					<th orderField="id" class="{$Think.request._sort}">ID</th>
+					<else />
+					<th orderField="id">ID</th>
+					</if>
+					<th>影片封面</th>
+					<if condition="$Think.request._order eq 'filmname'">
+					<th orderField="filmname" class="{$Think.request._sort}">影片名</th>
+					<else />
+					<th orderField="filmname">影片名</th>
+					</if>
+					<th>影片别名</th>
+					<th>导演</th>
+					<th>编剧</th>
+					<if condition="$Think.request._order eq 'nation'">
+					<th orderField="nation" class="{$Think.request._sort}">制片国家/地区</th>
+					<else />
+					<th orderField="nation">制片国家/地区</th>
+					</if>
+					<th>语言</th>
+
+					<if condition="$Think.request._order eq 'showtime'">
+					<th orderField="showtime" class="{$Think.request._sort}">上映时间</th>
+					<else />
+					<th orderField="showtime">上映时间</th>
+					</if>
+					<if condition="$Think.request._order eq 'addtime'">
+					<th orderField="addtime" class="{$Think.request._sort}">添加时间</th>
+					<else />
+					<th orderField="addtime">添加时间</th>
+					</if>
+					<if condition="$Think.request._order eq 'minutes'">
+					<th orderField="minutes" class="{$Think.request._sort}">片长</th>
+					<else />
+					<th orderField="minutes">片长</th>
+					</if>
+					<th>影片简介</th>
+					<if condition="$Think.request._order eq 'status'">
+					<th orderField="status" class="{$Think.request._sort}">状态</th>
+					<else />
+					<th orderField="status">状态</th>
+					</if>
+					<th>设置演员信息</th>
+					<th>上传剧照</th>
+					<th>影片分类</th>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="list" id="vo">
+					<tr target="item_id" rel="{$vo.id}">
+						<td>{$vo.id}</td>
+						<td>
+							<img src="__ROOT__/__UPLOAD__/Movie/Cover/a_{$vo.picname}" />
+						</td>
+						<td>{$vo.filmname}</td>
+						<td>{$vo.petname}</td>
+						<td>{$vo.director}</td>
+						<td>{$vo.editor}</td>
+						<td>{$vo.nation}</td>
+						<td>{$vo.language}</td>
+						<td>{$vo.showtime|date="Y-m-d",###}</td>
+						<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+						<td>{$vo.minutes}</td>
+						<td><a style="color:blue;" href="__CONTROLLER__/content/id/{$vo.id}" target="dialog" width="600" height="480" rel="listmovie" title="查看简介">查看简介</a></td>
+						<td>
+							<if condition="$vo.status eq 0">新添加
+							<elseif condition="$vo.status eq 1" />显示
+							<else />幻灯片
+							</if>
+						</td>
+						<td>
+							<a style="color:blue;" target="dialog" rel="setActors" href="__CONTROLLER__/showActors/id/{$vo.id}">产看演员信息</a>
+						</td>
+						<td>
+							<a style="color:blue;" target="dialog" rel="showPhotos" href="__CONTROLLER__/showPhotos/id/{$vo.id}">查看剧照信息</a>
+						</td>
+						<td>
+							<a style="color;blue;" target="dialog" rel="showMType" href="__CONTROLLER__/showType/id/{$vo.id}">查看分类信息</a>
+						</td>
+					</tr>
+				</volist>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="panelBar">
+		<div class="pages">
+            <span>显示</span>
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+               <if condition="$numPerPage eq 10">
+               <option value="10" selected>10</option>
+               <else />
+               <option value="10">10</option>
+               </if>
+               <if condition="$numPerPage eq 15">
+               <option value="15" selected>15</option>
+               <else />
+               <option value="15">15</option>
+               </if>
+               <if condition="$numPerPage eq 20">
+               <option value="20" selected>20</option>
+               <else />
+               <option value="20">20</option>
+               </if>
+               <if condition="$numPerPage eq 25">
+               <option value="25" selected>25</option>
+               <else />
+               <option value="25">25</option>
+               </if>
+               <if condition="$numPerPage eq 30">
+               <option value="30" selected>30</option>
+               <else />
+               <option value="30">30</option>
+               </if>
+            </select>
+            <span>共{$totalCount}条</span>
+        </div> 
+
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumshown="10" currentPage="{$currentPage}">
+	</div>
+</div>
