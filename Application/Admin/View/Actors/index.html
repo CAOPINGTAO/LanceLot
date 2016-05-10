@@ -1,0 +1,146 @@
+<form id="pagerForm" action="__CONTROLLER__/index" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}"/>
+	<input type="hidden" name="_sort" value="{$Think.request._sort}"/>
+</form>
+
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索演员：</label>
+						<input type="text" name="keyword" value="{$Think.post.keyword}"/> [关键字：中文名、外文名]
+					</td>
+				
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</form>	
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" rel="user_msg" title="添加演员"><span>添加演员</span></a></li>
+
+			<li class="line">line</li>			
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listactor" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			
+			<li class="line">line</li>			
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  width="480" height="360" target="dialog"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="add" href="__CONTROLLER__/addActorImgs/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog" title="添加演员剧照" ><span>添加演员剧照</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="add" href="__CONTROLLER__/editActorImgs/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog" title="修改演员剧照" ><span>修改演员剧照</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+	<table class="list" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="116">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th orderField="id">ID</th>
+				</if>
+				<th>演员头像</th>
+				<th>中文名</th>
+				<th>外文名</th>
+				<th>性别</th>
+				<th>星座</th>
+				<th>出生日期</th>
+				<th>出生地</th>
+				<th>职业</th>
+				<th>演员简介</th>
+				<if condition="$Think.request._order eq 'addtime'">
+				<th orderField="addtime" class="{$Think.request._sort}">添加时间</th>
+				<else />
+				<th orderField="addtime">添加时间</th>
+				</if>
+				<th>剧照信息</th>		
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>
+					<img src="__ROOT__/__UPLOAD__/Actor/Photo/s_{$vo.picname}" />
+				</td>
+				<td>{$vo.cname}</td>
+				<td>{$vo.ename}</td>
+				<td>
+					<if condition="$vo.sex eq 1">男
+					<else />女
+					</if>
+				</td>
+				<td>{$vo.constellation}</td>
+				<td>{$vo.birthday|date="Y-m-d",###}</td>
+				<td>{$vo.bornaddress}</td>
+				<td>{$vo.professtion}</td>
+				<td><a style="color:blue" href="__CONTROLLER__/content/id/{$vo.id}" target="dialog" width="600" height="480"  rel="listmovie" title="查看简介">
+				查看简介</a></td>
+				<td>{$vo.addtime|date="Y-m-d / H:i:s",###}</td>
+				<td>
+					<if condition="$vo.num gt 0">
+					<span style="color:red">未上传图片{$vo.num}</span>
+					<else />
+					<a style="color:blue" href="__CONTROLLER__/showpics/id/{$vo.id}" target="dialog" title="查看图片">查看图片 {$vo.num} </a>
+					</if>	
+				</td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+	</div>
+	
+	<div class="panelBar" >
+		<div class="pages">
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+               <if condition="$numPerPage eq 10">
+               <option value="10" selected>10</option>
+               <else />
+               <option value="10">10</option>
+               </if>
+               <if condition="$numPerPage eq 15">
+               <option value="15" selected>15</option>
+               <else />
+               <option value="15">15</option>
+               </if>
+               <if condition="$numPerPage eq 20">
+               <option value="20" selected>20</option>
+               <else />
+               <option value="20">20</option>
+               </if>
+               <if condition="$numPerPage eq 25">
+               <option value="25" selected>25</option>
+               <else />
+               <option value="25">25</option>
+               </if>
+               <if condition="$numPerPage eq 30">
+               <option value="30" selected>30</option>
+               <else />
+               <option value="30">30</option>
+               </if>
+            </select>
+            <span>共{$totalCount}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+
+	</div>
+
+</div>

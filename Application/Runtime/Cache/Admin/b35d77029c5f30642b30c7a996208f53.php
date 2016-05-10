@@ -80,7 +80,7 @@
 	<div class="panelBar">
 		<div class="pages">
 			<span>显示</span>
-			<select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numperPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
 				<?php if($numPerPage == 10): ?><option value="10" selected>10</option>
                 <?php else: ?>
                 <option value="10">10</option><?php endif; ?>

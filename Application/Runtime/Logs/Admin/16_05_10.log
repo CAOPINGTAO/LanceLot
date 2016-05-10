@@ -6025,3 +6025,2302 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003037s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003114s ]
 
+[ 2016-05-10T18:32:52+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/add?_=1462876372247
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004497s ]
+
+[ 2016-05-10T18:33:00+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462876379996
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003121s ]
+ERR: 无法加载控制器:Actors
+
+[ 2016-05-10T20:51:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002805s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002855s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007107s ]
+
+[ 2016-05-10T20:51:29+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462884689059
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004411s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.034687s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000426s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000133s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000212s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002757s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004132s ]
+
+[ 2016-05-10T20:52:04+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/content/id/47?_=1462884724678
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004280s ]
+ERR: 非法操作:content
+
+[ 2016-05-10T20:53:38+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462884817881
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008415s ]
+ERR: 模板不存在:./Application/Admin/View/Actors/add.html
+
+[ 2016-05-10T21:11:01+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462885861354
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005063s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.001316s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000677s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003930s ]
+
+[ 2016-05-10T21:11:03+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462885862919
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003691s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008494s ]
+
+[ 2016-05-10T21:11:09+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462885868935
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008649s ]
+
+[ 2016-05-10T21:11:22+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462885881770
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006585s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008483s ]
+
+[ 2016-05-10T21:12:13+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462885933601
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002879s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000569s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000142s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000270s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003329s ]
+
+[ 2016-05-10T21:16:15+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462886174850
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010432s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000728s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000191s ]
+ERR: 模板不存在:./Application/Admin/View/Actors/edit.html
+
+[ 2016-05-10T21:35:37+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1462887337190
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003781s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000353s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000223s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004091s ]
+
+[ 2016-05-10T21:35:41+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462887340836
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003736s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.001193s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000287s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000005s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000041s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004607s ]
+
+[ 2016-05-10T21:35:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462887344134
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008563s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000743s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.001826s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003628s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008190s ]
+
+[ 2016-05-10T21:36:10+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/update/navTabId/listactor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004743s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000638s ]
+SQL: UPDATE `ll_actors` SET `picname`='52a6141dc6063.jpg',`cname`='陈妍希',`ename`='Michelle Chen',`sex`=1,`constellation`='双子座',`birthday`='1983-05-31',`bornaddress`='台湾,台北',`professtion`='演员',`intro`='&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　陈妍希，台湾女演员。拍广告出身，2006年自南加州大学毕业后从美国返回台湾，被智名制作人柴智屏相中签下。陈妍希在南加大主修行销，副修美术，也受过歌舞剧训练，在偶像剧《换换爱》中是她的首次演出。&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);&quot; /&gt;&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　随后出演偶像剧集《这里发现爱》、《不良校花》、《镜海风云》。2009年，她和台湾新生代小生彭于晏主演电影《听说》，演技获肯定。2011年，她参演九把刀执导的电影《那些年，我们一起追的女孩》，之后人气大涨。2011年，陈妍希还出演了《珍爱林北》、《闪昏》（未播出）、《记得·我们有约》 等电视剧以及影片《爱的面包魂》。&lt;/span&gt;' WHERE `id` = 47 [ RunTime:0.000339s ]
+
+[ 2016-05-10T21:36:14+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462887374619
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006362s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000814s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000132s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/0545899a43a40015a3568eeb21a86979.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004115s ]
+
+[ 2016-05-10T21:36:16+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/update/navTabId/listactor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004476s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000429s ]
+SQL: UPDATE `ll_actors` SET `picname`='52a6141dc6063.jpg',`cname`='陈妍希',`ename`='Michelle Chen',`sex`=0,`constellation`='双子座',`birthday`='1970-01-01',`bornaddress`='台湾,台北',`professtion`='演员',`intro`='&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　陈妍希，台湾女演员。拍广告出身，2006年自南加州大学毕业后从美国返回台湾，被智名制作人柴智屏相中签下。陈妍希在南加大主修行销，副修美术，也受过歌舞剧训练，在偶像剧《换换爱》中是她的首次演出。&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);&quot; /&gt;&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　随后出演偶像剧集《这里发现爱》、《不良校花》、《镜海风云》。2009年，她和台湾新生代小生彭于晏主演电影《听说》，演技获肯定。2011年，她参演九把刀执导的电影《那些年，我们一起追的女孩》，之后人气大涨。2011年，陈妍希还出演了《珍爱林北》、《闪昏》（未播出）、《记得·我们有约》 等电视剧以及影片《爱的面包魂》。&lt;/span&gt;' WHERE `id` = 47 [ RunTime:0.000275s ]
+
+[ 2016-05-10T21:36:20+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462887380742
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002915s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000122s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000290s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 85 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004241s ]
+
+[ 2016-05-10T21:36:53+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462887413438
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004587s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000914s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/0545899a43a40015a3568eeb21a86979.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005204s ]
+
+[ 2016-05-10T21:53:10+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462888390207
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005419s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000424s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000270s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/0545899a43a40015a3568eeb21a86979.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005732s ]
+
+[ 2016-05-10T22:07:20+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007206s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000311s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047484s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006831s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006872s ]
+
+[ 2016-05-10T22:07:26+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462889245983
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004306s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.001964s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000512s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 85 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004748s ]
+
+[ 2016-05-10T22:07:29+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462889249077
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007482s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.001113s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000284s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Runtime/Cache/Admin/0545899a43a40015a3568eeb21a86979.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007676s ]
+
+[ 2016-05-10T22:08:08+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/update/navTabId/listactor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004943s ]
+NOTIC: [8] A non well formed numeric value encountered /var/www/html/LanceLot/Application/Admin/Controller/ActorsController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.001916s ]
+SQL: UPDATE `ll_actors` SET `cname`='陈妍希',`ename`='Michelle Chen',`sex`=0,`constellation`='双子座',`birthday`='1469902088',`bornaddress`='台湾,台北',`professtion`='演员',`intro`='&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　陈妍希，台湾女演员。拍广告出身，2006年自南加州大学毕业后从美国返回台湾，被智名制作人柴智屏相中签下。陈妍希在南加大主修行销，副修美术，也受过歌舞剧训练，在偶像剧《换换爱》中是她的首次演出。&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);&quot; /&gt;&lt;span style=&quot;font-family:Helvetica, Arial, sans-serif;color:#111111;font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;&quot;&gt;　　随后出演偶像剧集《这里发现爱》、《不良校花》、《镜海风云》。2009年，她和台湾新生代小生彭于晏主演电影《听说》，演技获肯定。2011年，她参演九把刀执导的电影《那些年，我们一起追的女孩》，之后人气大涨。2011年，陈妍希还出演了《珍爱林北》、《闪昏》（未播出）、《记得·我们有约》 等电视剧以及影片《爱的面包魂》。&lt;/span&gt;',`picname`='5731eb487eec1.jpg' WHERE `id` = 47 [ RunTime:0.000189s ]
+
+[ 2016-05-10T22:08:13+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462889292726
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006132s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.001183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000408s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007884s ]
+
+[ 2016-05-10T22:09:58+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1462889397787
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004294s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000496s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000134s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.001653s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000765s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001084s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004507s ]
+
+[ 2016-05-10T22:10:07+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/showPhotos/id/39?_=1462889407142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008221s ]
+SQL: SHOW COLUMNS FROM `ll_filmpic` [ RunTime:0.000363s ]
+SQL: SELECT * FROM `ll_filmpic` WHERE ( fid=39 )  [ RunTime:0.000236s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008445s ]
+
+[ 2016-05-10T22:10:13+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462889413196
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003833s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000613s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000818s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001164s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004433s ]
+
+[ 2016-05-10T22:10:17+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47?_=1462889417111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009162s ]
+ERR: 非法操作:showpics
+
+[ 2016-05-10T22:10:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462889423837
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008493s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.003900s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000870s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075588s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005993s ]
+
+[ 2016-05-10T22:10:32+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47?_=1462889432069
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011744s ]
+ERR: 非法操作:editActorImgs
+
+[ 2016-05-10T22:11:33+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/47?_=1462889493609
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005421s ]
+
+[ 2016-05-10T22:11:38+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462889497985
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003313s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.002525s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.000633s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008006s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005421s ]
+
+[ 2016-05-10T22:22:40+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462890160026
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004993s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000443s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000133s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.001778s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006643s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006713s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004973s ]
+
+[ 2016-05-10T22:22:42+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462890161692
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006854s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010760s ]
+
+[ 2016-05-10T22:22:47+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/47?_=1462890166825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004364s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057353s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007886s ]
+
+[ 2016-05-10T22:25:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/uploadsHandle/navTabId/listactor/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004029s ]
+ERR: 非法操作:uploadsHandle
+
+[ 2016-05-10T22:34:34+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462890873688
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004390s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000404s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000122s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000231s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003896s ]
+
+[ 2016-05-10T22:34:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/edit/id/47?_=1462890876517
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005204s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000756s ]
+SQL: SELECT * FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.001130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006213s ]
+
+[ 2016-05-10T22:34:42+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/47?_=1462890882189
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007293s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004182s ]
+
+[ 2016-05-10T22:42:10+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1462891330282
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002994s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000606s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000308s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004198s ]
+
+[ 2016-05-10T22:42:16+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/uploads/id/44?_=1462891336006
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005927s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006025s ]
+
+[ 2016-05-10T22:42:19+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462891338963
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004920s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000408s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000148s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004415s ]
+
+[ 2016-05-10T22:45:18+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1462891517898
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002984s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000497s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000251s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004483s ]
+
+[ 2016-05-10T22:59:21+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462892360903
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007161s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000754s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000166s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000502s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005903s ]
+
+[ 2016-05-10T23:01:26+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012756s ]
+
+[ 2016-05-10T23:01:31+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462892490923
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004840s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005853s ]
+
+[ 2016-05-10T23:01:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/content/id/47?_=1462892495758
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006963s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000460s ]
+SQL: SELECT `intro` FROM `ll_actors` WHERE `id` = 47 LIMIT 1   [ RunTime:0.002688s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006991s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004552s ]
+
+[ 2016-05-10T23:01:38+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/content/id/46?_=1462892498238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008770s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000590s ]
+SQL: SELECT `intro` FROM `ll_actors` WHERE `id` = 46 LIMIT 1   [ RunTime:0.000190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004354s ]
+
+[ 2016-05-10T23:02:18+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47?_=1462892538293
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011918s ]
+ERR: 非法操作:showpics
+
+[ 2016-05-10T23:12:33+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003973s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011957s ]
+
+[ 2016-05-10T23:12:57+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpic/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003870s ]
+ERR: 非法操作:showpic
+
+[ 2016-05-10T23:13:21+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003925s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000341s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=47 )  [ RunTime:0.000176s ]
+ERR: 模板不存在:./Application/Admin/View/Actors/showpics.html
+
+[ 2016-05-10T23:13:43+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47?_=1462893223231
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008471s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.001246s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004725s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011126s ]
+
+[ 2016-05-10T23:15:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004193s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000515s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=47 )  [ RunTime:0.000192s ]
+
+[ 2016-05-10T23:15:27+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004976s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000491s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=47 )  [ RunTime:0.000307s ]
+
+[ 2016-05-10T23:19:47+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462893586463
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005636s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000500s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006421s ]
+
+[ 2016-05-10T23:19:48+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462893588069
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004661s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004345s ]
+
+[ 2016-05-10T23:19:54+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/47?_=1462893593695
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007955s ]
+
+[ 2016-05-10T23:20:34+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/uploadsHandle/navTabId/listactor/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005767s ]
+NOTIC: [8] Undefined index: aid /var/www/html/LanceLot/Application/Admin/Controller/ActorsController.class.php 第 114 行.
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000333s ]
+SQL: INSERT INTO `ll_picactor` (`aid`,`picname`) VALUES (47,'5731fc41bad20.jpg') [ RunTime:0.000140s ]
+SQL: INSERT INTO `ll_picactor` (`aid`,`picname`) VALUES (47,'5731fc41cae7c.jpg') [ RunTime:0.000085s ]
+SQL: INSERT INTO `ll_picactor` (`aid`,`picname`) VALUES (47,'5731fc41e28d4.jpg') [ RunTime:0.000075s ]
+SQL: INSERT INTO `ll_picactor` (`aid`,`picname`) VALUES (47,'5731fc41ee952.jpg') [ RunTime:0.000077s ]
+
+[ 2016-05-10T23:20:38+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462893637724
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004763s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000126s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000287s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004844s ]
+
+[ 2016-05-10T23:20:41+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47?_=1462893640915
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009620s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000823s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=47 )  [ RunTime:0.000266s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000452s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006735s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012931s ]
+
+[ 2016-05-10T23:20:54+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/46?_=1462893654554
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003442s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000376s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=46 )  [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004897s ]
+
+[ 2016-05-10T23:21:07+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/47?_=1462893667085
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002644s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006606s ]
+
+[ 2016-05-10T23:21:49+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462893709513
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004529s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000519s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000519s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003958s ]
+
+[ 2016-05-10T23:21:58+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47?_=1462893717831
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005709s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.001385s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.001747s ]
+
+[ 2016-05-10T23:22:25+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorsImgs/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003573s ]
+ERR: 非法操作:editActorsImgs
+
+[ 2016-05-10T23:22:38+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003222s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000345s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000171s ]
+
+[ 2016-05-10T23:22:40+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003811s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.001939s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000430s ]
+
+[ 2016-05-10T23:25:08+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003411s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.001186s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 48  [ RunTime:0.000255s ]
+
+[ 2016-05-10T23:25:11+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004727s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000342s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000169s ]
+
+[ 2016-05-10T23:52:10+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462895530107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003804s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000981s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000313s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000307s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002914s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005262s ]
+
+[ 2016-05-10T23:52:13+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47?_=1462895532814
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005169s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000308s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000191s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003502s ]
+
+[ 2016-05-10T23:52:15+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/deleteimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003630s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000339s ]
+SQL: SELECT `picname` FROM `ll_picactor` WHERE `id` = 60 LIMIT 1   [ RunTime:0.000203s ]
+SQL: DELETE FROM `ll_picactor` WHERE `id` = 60 [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006978s ]
+
+[ 2016-05-10T23:52:17+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/deleteimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003444s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000981s ]
+SQL: SELECT `picname` FROM `ll_picactor` WHERE `id` = 59 LIMIT 1   [ RunTime:0.000186s ]
+SQL: DELETE FROM `ll_picactor` WHERE `id` = 59 [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006533s ]
+
+[ 2016-05-10T23:52:22+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/47?_=1462895541768
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010400s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000434s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 47  [ RunTime:0.000230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004482s ]
+
+[ 2016-05-10T23:52:26+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/editActorImgs/id/46?_=1462895545970
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010808s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.000828s ]
+SQL: SELECT * FROM `ll_picactor` WHERE `aid` = 46  [ RunTime:0.000518s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008033s ]
+
+[ 2016-05-10T23:52:28+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/addActorImgs/id/46?_=1462895548157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002910s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000722s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000806s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004285s ]
+
+[ 2016-05-10T23:52:31+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003464s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000122s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000213s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002899s ]
+
+[ 2016-05-10T23:52:33+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/showpics/id/47?_=1462895553465
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004770s ]
+SQL: SHOW COLUMNS FROM `ll_picactor` [ RunTime:0.001012s ]
+SQL: SELECT * FROM `ll_picactor` WHERE ( aid=47 )  [ RunTime:0.000683s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002840s ]
+
+[ 2016-05-10T23:52:41+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462895561377
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003786s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002769s ]
+
+[ 2016-05-10T23:55:21+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462895720708
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003527s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000252s ]
+
+[ 2016-05-10T23:55:32+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003524s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000318s ]
+
+[ 2016-05-10T23:55:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006938s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM ll_actors act LEFT JOIN ll_picactor pic ON pic.aid=act.id [ RunTime:0.000164s ]
+
+[ 2016-05-10T23:56:20+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462895780208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003852s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000449s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000135s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005359s ]
+
+[ 2016-05-10T23:56:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003722s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000218s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000136s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 10,10   [ RunTime:0.000304s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003777s ]
+
+[ 2016-05-10T23:56:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/add?_=1462895804277
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002832s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003572s ]
+
+[ 2016-05-10T23:56:45+08:00 ] 10.0.2.2 /LanceLot/admin.php/Actors/index?_=1462895805080
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002309s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_actors` LIMIT 1   [ RunTime:0.000403s ]
+SQL: SELECT * FROM `ll_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 54 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 66 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 92 行.
+NOTIC: [8] Undefined index: num /var/www/html/LanceLot/Application/Runtime/Cache/Admin/c835e8d6014ea3772a0e84d373f6091a.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004933s ]
+
+[ 2016-05-10T23:56:46+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/add?_=1462895805954
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003376s ]
+
+[ 2016-05-10T23:56:46+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1462895806746
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001898s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002566s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000545s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 249 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004336s ]
+

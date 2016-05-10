@@ -1,0 +1,31 @@
+<style type="text/css">
+	#mpic img {
+		border:1px solid #ccc;
+		padding: 3px;
+		margin: 5px;
+	}
+</style>
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<div id="mpic">
+				<ul>
+					<foreach name="pic" item="vo">
+						<li style="float:left">
+							<img src="__ROOT__/__UPLOAD__/Actor/Photos/m_{$vo.picname}" />	
+						</li>
+					</foreach>
+				</ul>
+			</div>	
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">确定</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
