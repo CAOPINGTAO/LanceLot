@@ -1,0 +1,62 @@
+<include file="Public/pagerForm" />
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索公告：</label>
+						<input type="text" name="keywords"/>
+					</td>
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</form>	
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="navTab" title="添加公告"><span>添加公告</span></a></li>
+
+			<li class="line">line</li>			
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			
+			<li class="line">line</li>			
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="navTab"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+	<table class="list" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="116">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>公告标题</th>
+				<th>发布时间</th>
+				<th>公告状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.title}</td>
+				<td>{$vo.addtime|date="Y-m-d H:i",###}</td>
+				<if condition="$vo.status eq 1"><td style="color:green">已发布</td><else /><td style="color:red">未发布</td></if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	</div>
+	
+	<include file="Public/panelBar" />
+
+</div>
