@@ -1,0 +1,34 @@
+<div class="panelBar">
+		<div class="pages">
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.LDELIM}numPerPage:this.value{$Think.RDELIM})">
+               <if condition="$numPerPage eq 10">
+               <option value="10" selected>10</option>
+               <else />
+               <option value="10">10</option>
+               </if>
+               <if condition="$numPerPage eq 15">
+               <option value="15" selected>15</option>
+               <else />
+               <option value="15">15</option>
+               </if>
+               <if condition="$numPerPage eq 20">
+               <option value="20" selected>20</option>
+               <else />
+               <option value="20">20</option>
+               </if>
+               <if condition="$numPerPage eq 25">
+               <option value="25" selected>25</option>
+               <else />
+               <option value="25">25</option>
+               </if>
+               <if condition="$numPerPage eq 30">
+               <option value="30" selected>30</option>
+               <else />
+               <option value="30">30</option>
+               </if>
+            </select>
+            <span>共{$totalCount}条</span>
+      </div> 
+
+      <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+</div>
