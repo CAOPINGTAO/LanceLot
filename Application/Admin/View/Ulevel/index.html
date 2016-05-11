@@ -1,0 +1,36 @@
+<include file="Public/pagerForm" />
+<div class="pageHeader">
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" width="680" height="300" rel="user_msg" title="添加级别"><span>添加</span></a></li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listlevel" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  width="680" height="300" target="dialog"><span>修改</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<th width="40">ID</th>
+				<th width="40">等级位置</th>
+				<th width="40">级别名称</th>
+				<th width="40">积分限制</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.level}</td>
+				<td>{$vo.levelname}</td>
+				<td>{$vo.lscore}</td>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	
+	<include file="Public/panelBar" />
+</div>
