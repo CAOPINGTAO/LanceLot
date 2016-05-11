@@ -216,6 +216,13 @@ class CommonController extends Controller{
         //创建分页对象
         $p = new \Think\Page($count, $listRows);
 
+        ////检查到Movie表（MyISAM）因mysql服务异常关闭而损坏
+        // var_dump($map);
+        // echo "<br>-------".$count."-------<br>";
+        // echo "<br>Order:".$order;
+        // echo "<br>Sort:".$sort;
+        // echo "<br>firstRow:".$p->firstRow;
+        // echo "<br>listRows:".$p->listRows;
         //分页数据查询
         $list = $model->where($map)->order($order.' '.$sort)->limit($p->firstRow.','.$p->listRows)->select();
 
@@ -238,6 +245,7 @@ class CommonController extends Controller{
         $sortAlt = $sort == 'desc' ? '升序排列' : '降序排列'; //排序提示
         $sort = $sort == 'desc' ? 1 : 0; //排序方式
 
+        // var_dump($list);die();
         //模版赋值显示
         $this->assign('list', $list);
         $this->assign('sort', $sort);
