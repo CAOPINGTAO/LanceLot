@@ -1,0 +1,174 @@
+<form id="pagerForm" action="__CONTROLLER__/{$type}" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}"/>
+	<input type="hidden" name="_sort" value="{$Think.request._sort}"/>
+	<input type="hidden" name="id" value="{$vo.id}"/>
+</form>
+
+<style>
+	.pageFormContent dl{ width:680px}/*表单项宽度*/
+	.pageFormContent dl dt{ width:100px;text-align:right;margin-right:5px;font-weight:bold;} /*表单标题加粗 font-weight:bold;*/ 
+	 span.error{ left:300px;}/*错误信息浮动位置*/
+</style>
+<div class="panelBar">
+	<ul class="toolBar">
+		<li><a class="edit" href="__CONTROLLER__/addletter/id/{$vo.id}"  width="550" height="300" target="dialog"><span>站内信</span></a></li>
+
+		<li class="line">line</li>
+		<if condition="$vo.disable neq 0">
+		<li><a class="icon" href="__CONTROLLER__/free/id/{$vo.id}/navTabId/userlist" target="ajaxTodo" title="确定要解禁该用户吗?"><span>解禁</span></a></li>
+		<else />
+		<li><a class="delete" href="__CONTROLLER__/forbid/id/{$vo.id}/navTabId/userlist" target="ajaxTodo" title="确定要禁闭该用户吗?"><span>禁闭</span></a></li>
+		</if>
+
+		<li class="line">line</li>
+		<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		<li class="line">line</li>
+	</ul>
+</div>
+
+<div class="panel close collapse" defH="210">
+	<h1>用户详细信息</h1>
+	<div class="pageContent">
+		<div class="pageFormContent" layoutH="330">
+			<div style="float:left;width:380px;">
+				<img style="margin-left:100px;" src="__ROOT__/Uploads/User/Headpic/{$vo.headpic}" />
+			</div>
+			
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户id：</label>
+				<label>{$vo.id}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户账号：</label>
+				<label>{$vo.username}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户真名：</label>
+				<label>{$vo.name}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户性别：</label>
+				<label><if condition="$vo.sex eq 1">男<else />女</if></label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户生日：</label>
+				<label>{$vo.birthday}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>注册email：</label>
+				<label>{$vo.email}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户地址：</label>
+				<label>{$vo.address}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户等级：</label>
+				<label>{$vo.level}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户积分：</label>
+				<label>{$vo.score}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>登陆次数：</label>
+				<label>{$vo.logtimes}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>注册时间：</label>
+				<label>{$vo.addtime|date="Y-m-d H:i",###}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>最后登陆：</label>
+				<label>{$vo.lastlog|date="Y-m-d H:i",###}</label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label>用户状态</label>
+				<label><if condition="$vo.disable neq 0">禁闭<else />正常</if></label>
+			</p>
+		
+			<p style="border-bottom:1px dashed #ccc;">
+				<label></label>
+				<label></label>
+			</p>
+
+		</div>
+	</div>
+</div>
+	
+<div class="panelBar" style="margin-top:10px;">
+	<ul class="toolBar">
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checklongreview/id/{$vo.id}"  width="550" height="300" target="dialog"><span>长评</span></a></li>
+		<li class="line" style="float:left;">line</li>
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checkshortreview/id/{$vo.id}"  width="550" height="300" target="dialog"><span>短评</span></a></li>
+		<li class="line" style="float:left;">line</li>
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checkpmood/id/{$vo.id}"  width="550" height="300" target="dialog"><span>心情</span></a></li>
+		<li class="line"  style="float:left;">line</li>
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checkdiary/id/{$vo.id}"  width="550" height="300" target="dialog"><span>日志</span></a></li>
+		<li class="line" style="float:left;">line</li>
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checkphotoalbum/id/{$vo.id}"  width="550" height="300" target="dialog"><span>相册</span></a></li>
+		<li class="line"  style="float:left;">line</li>
+		<li style="float:left;"><a class="icon" href="__CONTROLLER__/checkletter/id/{$vo.id}"  width="550" height="300" target="dialog"><span>站内信</span></a></li>
+		<li class="line"  style="float:left;">line</li>
+	</ul>
+</div>
+
+<div class="pageContent">
+	<table class="table" width="100%" layoutH="150">
+		<thead>
+			<tr>
+				<th width="80">内容ID</th>
+				<th width="80">内容</th>
+				<th width="40">发布时间</th>
+				<if condition="$type eq 'checkletter'">
+					<th width="30">状态</th>
+				<else />
+					<th width="30">查看</th>
+				</if>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="v">
+			<tr target="item_id" rel="{$v.id}">
+				<td>{$v.id}</td>
+				<td>{$v.title}</td>
+				<td>{$v.addtime|date="Y-m-d  H:i:s",###}</td>
+				<if condition="$type eq 'checklongreview'">
+				<td ><a href="__ROOT__/index.php/Review/index/id/{$v.id}" target="_blank" style="color:green;" width="700" height="500" >查看</a></td>
+				</if>
+				<if condition="$type eq 'checkshortreview'">
+				<td ><a href="__ROOT__/index.php/Detail/index/id/{$v.fid}" target="_blank" style="color:green;" width="700" height="500" >查看</a></td>
+				</if>
+				<if condition="$type eq 'checkpmood'">
+				<td ><a href="__ROOT__/index.php/Pmood/index/uid/{$vo.id}" target="_blank" style="color:green;" width="700" height="500" >查看</a></td>
+				</if>
+				<if condition="$type eq 'checkdiary'">
+				<td ><a href="__ROOT__/index.php/Diary/mydiary/uid/{$vo.id}/id/{$v.id}" target="_blank" style="color:green;" width="700" height="500" >查看</a></td>
+				</if>
+				<if condition="$type eq 'checkphotoalbum'">
+				<td ><a href="__ROOT__/index.php/Uphotoalbum/albumdetail/uid/{$vo.id}/pid/{$v.id}" target="_blank" style="color:green;" width="700" height="500" >查看</a></td>
+				</if>
+				<if condition="$type eq 'checkletter'">
+				<td ><a href="__ROOT__/index.php/User/myletter/uid/{$vo.id}/lid/{$v.id}" target="_blank" style="color:green;" width="700" height="500" ><if condition="$v.status neq 0">已查看<else />未查看</if></a></td>
+				</if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	
+	<include file="Public/panelBar" />
+</div>

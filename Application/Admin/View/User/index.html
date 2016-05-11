@@ -1,0 +1,83 @@
+<include file="Public/pagerForm" />
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					<b>搜索</b> &nbsp; 关键字：<input type="text" name="keyword" value="{$Think.request.keyword}" /> [ 账号,真实姓名 ]
+				</td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="icon" href="__CONTROLLER__/detail/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  height="480" width="800" max="true" target="dialog"><span>详细</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th width="40" orderField="id"class="{$Think.request._sort}">ID</th>
+				<else />
+				<th width="40" orderField="id">ID</th>
+				</if>
+				<th width="40">账号</th>
+				<th width="40">真实姓名</th>
+				<th width="40">性别</th>
+				<th width="40">级别</th>
+				<if condition="$Think.request._order eq 'addtime'">
+				<th width="40" orderField="addtime" class="{$Think.request._sort}">注册时间</th>
+				<else />
+				<th width="40" orderField="addtime">注册时间</th>
+				</if>
+				<if condition="$Think.request._order eq 'logtimes'">
+				<th width="40" orderField="logtimes" class="{$Think.request._sort}">登录次数</th>
+				<else />
+				<th width="40" orderField="logtimes">登录次数</th>
+				</if>
+				<if condition="$Think.request._order eq 'lastlog'">
+				<th width="40" orderField="lastlog" class="{$Think.request._sort}">最后登陆</th>
+				<else />
+				<th width="40" orderField="lastlog">最后登陆</th>
+				</if>
+				<th width="40">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="vo">
+			<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.username}</td>
+				<td>{$vo.name}</td>
+				<td>
+					<if condition="$vo.sex eq 1">男
+					<else />女
+					</if>
+				</td>
+				<td>{$vo.level}</td>
+				<td>{$vo.addtime|date="Y-m-d H:i",###}</td>
+				<td>{$vo.logtimes}</td>
+				<td>{$vo.lastlog|date="Y-m-d H:i",###}</td>
+				<td>
+					<if condition="$vo.disable neq 0">禁言
+					<else />正常
+					</if> 
+				</td>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	<include file="Public/panelBar" />
+</div>
