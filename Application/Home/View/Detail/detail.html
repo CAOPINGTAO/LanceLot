@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		
+		<!-- 编辑器文件导入 -->
+		<script src="__PUBLIC__/dwz/xheditor/xheditor-1.1.12-zh-cn.min.js" type="text/javascript"></script>		
+		<script>
+			$(function(){
+				$("#text").xheditor({
+					skin:'default',tools:'simple',
+					upImgUrl:'__APP__/Review/upload',
+					upImgExt:'jpg,jpeg,gif,png',
+					html5Upload:false,
+					width:800,
+					height:280,
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+	<!-- head页头部分开始 -->
+	<include file="Public/head" />	
+	<!-- head页头部分结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="main">
+			
+			<!-- 左侧内容 -->
+			<div id="detail_main_left">
+				<!-- 电影详情 -->
+				<div class="movie_detail">
+					<div class="d_title">
+						{$movie.filmname}
+					</div>
+					<div class="d_left01">
+						<img src="__ROOT__/Uploads/Movie/Cover/c_{$movie.picname}" alt="{$movie.filmname}" />
+					</div>						
+					<div class="d_left02">
+						<ul>
+							<li>导演:{$movie.director}</li>
+							<li>编剧:{$movie.editor}</li>
+							<li>主演: 
+								<volist name="movie['actorlist']" id="alist">
+									<a href="__APP__/Detail/actor/id/{$alist.id}">{$alist.cname}</a>/
+								</volist>
+
+							</li>
+							<li>类型: 
+								<volist name="movie['typelist']" id="tlist">
+									<a href="__APP__/Typelist/tags/id/{$tlist.id}">{$tlist.typename}</a>/
+								</volist>
+							</li>
+							<li>国家/地区: {$movie.nation}</li>
+							<li>语言: {$movie.language}</li>
+							<li>上映日期: {$movie.showtime|date="Y-m-d",###}(中国大陆)</li>
+							<li>片长: {$movie.minutes}分钟</li>
+							<li>又名:{$movie.petname}</li>
+						</ul>
+					</div>
+					
+					<div class="d_right">
+						<ul>
+						<li>综合评分: <span>{$movie.score|round=###,2}分</span></li>
+							<li><a >({$movie.reviewtotal}人评价)</a></li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+							<li><a>我来评分</a></li>
+							<li id="pingfen">
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<script type="text/javascript">
+						var oPf=document.getElementById('pingfen');
+						var aLi=oPf.getElementsByTagName('li');
+						var i=0;
+						
+						for(i=0;i<aLi.length;i++){
+							aLi[i].index=i;
+							aLi[i].onmouseover=function(){
+								for(i=0;i<aLi.length;i++){
+									if(i<=this.index)
+									{
+										aLi[i].style.background="url(__PUBLIC__/front/images/star.gif) no-repeat 0 -29px";
+									}
+									else
+									{
+										aLi[i].style.background="url(__PUBLIC__/front/images/star.gif) no-repeat 0 0";
+									}
+								}
+							};
+							
+							aLi[i].onmousedown=function ()
+							{	//ajax评分操作
+								//alert('提交成功:'+(this.index+1)+'分');
+								var score=(this.index+1)*2;
+								var fid="{$movie.id}";
+								$.ajax({
+									url:"__APP__/Detail/score",
+									type:"get",
+									data:{ fid:fid,score:score},
+									dataType:"text",
+									success:function(data){
+										switch(data){
+											case "4":alert_display_block(score+"分,评分成功！");break;
+											case "1":alert_display_block("记得先登录哦");break;
+											case "2":alert_display_block("不能重复评分哦！");break;
+											case "3":alert_display_block("休息一会，再试试吧！");break;
+										}
+									}
+								});
+							};
+						}
+					</script>
+
+					<div class="d_down">
+						<span ><t id="update_saw">{$movie.onum}</t>人 </span><button class="l" onclick="doSaw({$movie.id});">看过</button>
+						<span ><t id="update_see">{$movie.snum}</t>人 </span><button class="l" onclick="doSee({$movie.id});">想看</button>
+						<span ><t id="update_collect">{$movie.collectnum}</t>人 </span><button href="" class="l c" onclick="doCollect({$movie.id})">收藏</button>
+						<span ><t id="update_praise">{$movie.pnum}</t>人 </span><button href="" class="l c" onclick="doPraise({$movie.id})">赞</button>
+						
+						 <button class="r alert_post_review">写影评</button>
+					</div>
+
+					<script type="text/javascript">
+					 //短评举报
+					 function doSreport(id){
+						$.ajax({
+							url:"http://localhost:8080/LanceLot/index.php/Detail/sreport",
+							data:{ id:id},//短评id
+							type:"get",
+							dataType:"text",
+							success:function(data){
+								if(data==1){
+									alert_display_block("举报成功！");
+								}else{
+									alert_display_block("出错了，休息会吧！");
+								}
+							}
+						});
+					 }
+					 
+					 
+					 //赞操作
+					function doPraise(fid){
+						$.ajax({
+							url:"http://localhost:8080/LanceLot/index.php/Detail/dopraise",
+							type:"post",
+							data:{ fid:fid},
+							dataType:"json",
+							success:function(data){
+								switch(data.stat){
+									case 3:
+										//更新页面想看数
+										$("#update_praise").html(data.praisenum);
+										alert_display_block("赞+1！");
+									break;
+									case 1:alert_display_block("记得先登录哦");break;
+									case 2:alert_display_block("你已经赞过了！");break;
+								}
+							}
+						});
+					}
+					 
+					 //想看操作
+					function doSee(fid){
+						$.ajax({
+							url:"http://localhost:8080/LanceLot/index.php/Detail/dosee",
+							type:"post",
+							data:{ fid:fid},
+							dataType:"json",
+							success:function(data){
+								switch(data.stat){
+									case 3:
+										//更新页面想看数
+										$("#update_see").html(data.seenum);
+										$("#update_saw").html(data.sawnum);
+										alert_display_block("想看+1！");
+									break;
+									case 1:alert_display_block("记得先登录哦");break;
+									case 2:alert_display_block("我们已经想看过了！");break;
+								}
+							}
+						});
+					}
+					
+					//看过操作
+					function doSaw(fid){
+						$.ajax({
+							url:"http://localhost:8080/LanceLot/index.php/Detail/dosaw",
+							type:"post",
+							data:{ fid:fid},
+							dataType:"json",
+							success:function(data){
+								switch(data.stat){
+									case 3:
+									//更新页面看过数
+										$("#update_saw").html(data.sawnum);
+										$("#update_see").html(data.seenum);
+										alert_display_block("看过+1！");
+									break;
+									case 1:alert_display_block("记得先登录哦");break;
+									case 2:alert_display_block("你已经看过了！");break;
+								}
+							}
+						});
+					}
+					 
+					 
+					 //收藏ajax操作
+					function doCollect(fid){
+						$.ajax({
+							url:"http://localhost:8080/LanceLot/index.php/Detail/collect",
+							type:"post",
+							data:{ fid:fid},
+							dataType:"text",
+							success:function(data){
+								switch(data){
+									case "4":alert("收藏成功！");
+										//更新页面收藏数
+										var tmp=$("#update_collect").html();
+										tmp=parseInt(tmp)+1;
+										$("#update_collect").html("");
+										$("#update_collect").html(tmp);
+									break;
+									case "1":alert_display_block("记得先登录哦");break;
+									case "2":alert_display_block("不能重复收藏哦！");break;
+									case "3":alert_display_block("休息一会，再收藏吧！");break;
+								}
+							}
+						});
+					}
+					</script>
+					 
+				</div>
+				
+				<div class="nav"></div>
+				
+				<!-- 电影剧情 -->
+				<div class="movie_plot">
+					<div class="p_head">
+						{$movie.filmname}的剧情简介  ·  ·  ·  ·  ·  ·
+					</div>
+					<div class="p_content">
+					{$movie.content}
+					</div>
+			
+				</div>
+				<div class="nav"></div>
+				<if condition="!empty($video['id'])">
+				<!-- {if !empty($video.id)} -->
+				<div class="prevue_video">
+					
+					<div class="video_item">
+						<div class="t"><a href="__APP__/Prevue/play/id/{$video.id}" >预告片</a></div>
+						<div class="c">
+							<a href="__APP__/Prevue/play/id/{$video.id}">
+							<img src="__ROOT__/Uploads/Prevue/b_{$video.picname}"  />
+							<img src="__PUBLIC__/front/images/play.jpg"  class="play"/>
+							</a>
+						<a href="__APP__/Prevue/play/id/{$video.id}" class="gk">立即观看</a>
+						</div>
+					</div>
+				</div>
+				</if>
+				<!-- {/if} -->
+				<div class="nav"></div>
+				
+				<div class="relative_pic_title">
+						影片剧照
+				</div>
+				<!--  影片相关图片 -->
+				<div class="relative_pic" >
+					<ul id="js_relative_pic">
+						<volist name="movie['piclist']" id="plist">
+							<li><img src="__ROOT__/Uploads/Movie/mPhotos/{$plist.picname}" /></li>
+						</volist>
+					</ul>
+				</div>
+				
+			
+				
+				<!-- js	特效-->
+				<script type="text/javascript">
+					var ob=document.getElementById("js_relative_pic");
+					var list=ob.getElementsByTagName("li");
+					var minZindex=2;
+					
+						//1.布局转换
+					for(i=0;i<list.length;i++)
+					{
+						list[i].style.left=list[i].offsetLeft+'px';
+						list[i].style.top=list[i].offsetTop+'px';
+					}
+					
+					for(i=0;i<list.length;i++)
+					{
+						list[i].style.position='absolute';
+						list[i].style.margin='0';
+					}
+					
+					
+					for(var i=0;i<list.length;i++){
+						list[i].onmouseover=function (){
+							this.style.zIndex=minZindex++;
+							startMove(this, { width: 200, height: 200, marginLeft: -50, marginTop: -50});
+						};
+						
+						list[i].onmouseout=function (){
+							startMove(this, { width: 100, height: 100, marginLeft: 0, marginTop: 0});
+						};
+					}
+					
+				</script>
+			
+				<div class="nav"></div>
+
+				<script type="text/javascript">
+					//ajax请求分页函数
+					var page=1;//页码
+					var totalpage=0;//页大小
+					var maxrows=0;//总数据
+					var fid="{$movie.id}";//获取电影id
+					
+					var tmp_data=new Array();//缓存数组
+					function doPageLoad(m){
+						page+=m;
+						//判断是否有缓存 没有就加载
+						if(tmp_data[page]==undefined){
+							$.ajax({
+								url:"__APP__/Detail/pageload",
+								type:"get",
+								data:{ fid:fid,p:page},
+								dataType:"json",
+								async:false,
+								success:function(res){
+									tmp_data[page]=res;
+								}
+							});
+						}
+						
+						//遍历输出
+						data=tmp_data[page]["list"];
+						totalpage=tmp_data[page]["totalpage"];
+						maxrows=tmp_data[page]["maxrows"];
+						if(data!=null){
+							var str="";
+							for(var i=0;i<data.length;i++){
+								
+								str+="<div class='review_list'><div class='acthor'>";
+								str+="<div class='l'><a href='__APP__/User/index/uid/"+data[i].uid+"'>"+data[i].username+"</a>"+data[i].rtime+"</div>";	
+								str+="<div class='r'><span>&nbsp;&nbsp;</span><a href='javascript:doSreport("+data[i].id+");'>举报</a></div></div>";
+								str+="<div class='content'>"+data[i].content+"</div></div>";
+							}
+							
+							//越界判断
+							if(page>totalpage){
+								page=totalpage;
+							}
+							if(page<1){
+								page=1
+							}
+							
+							$("#detail_main_left .movie_short_review .nobody").css("display","none");//隐藏提示
+							$("#detail_main_left .movie_short_review .fy").css("display","block");//显示页码
+							$("#ajax_shortreview_list").html(str);//添加数据
+							$("#detail_main_left .movie_short_review .fy span").html(maxrows+" 条记录 "+page+"/"+totalpage+" 页 ");
+						}
+					}
+					$(function(){
+						//加载页面自动显示默认页
+						doPageLoad(0);
+					});
+						
+				</script>
+				
+				<div class="movie_short_review">
+					<div class="review_head">
+						<span>{$movie.filmname}的短评......</span>
+						<a class="post">看看大家说了什么</a>
+					</div>
+					<!-- 短评列表 -->
+					<div id="ajax_shortreview_list"></div>
+					<div class="nobody">
+						还没有人回复哦,快来抢占沙发吧！！！
+					</div>
+					<!-- 分页显示短评 -->
+					<div class="fy">
+					<span></span>
+					<a href="javascript:doPageLoad(-1)">上一页</a>
+					<a href="javascript:doPageLoad(1)">下一页</a>
+					</div>
+					
+					<!-- 短评留言 -->
+					<div class="message" id="js_message">
+						<form action="" method="post" onsubmit="return false;">
+							<p id="js_message_p">这里需要你的脚印......</p>
+							<textarea name="message" id="js_message_textarea" cols="70" rows="6" style="resize:none;"></textarea>
+							<button id="message_button" class="sub" />我来说两句</button>
+						</form>
+					</div>
+					<script type="text/javascript">
+						//发布框js
+				
+						var oDiv=document.getElementById("js_message")
+						var oP = document.getElementById("js_message_p");
+						var oT = document.getElementById("js_message_textarea");
+						var oA = oDiv.getElementsByTagName('button')[0];
+							
+						var ie = !-[1,];
+						var bBtn = true;
+						var timer = null;
+						var iNum = 0;
+						//获取焦点事件
+						oT.onfocus = function(){
+							if(bBtn){
+								oP.innerHTML = "风继续吹，不忍离去...... <a>还可以输入</a><span>140</span>字";
+								bBtn = false;
+							}
+							
+						};
+						//失去焦点事件
+						oT.onblur = function(){
+							
+							if(oT.value==''){
+								oP.innerHTML = '这里需要你的痕迹......';
+								bBtn = true;
+							}
+							
+						};
+						//进行ie兼容性判断
+						if(ie){
+							oT.onpropertychange = toChange;
+						}else{
+							oT.oninput = toChange;
+						}
+						//单个字符改变事件
+						function toChange(){
+							var num = Math.ceil(getLength(oT.value)/2);
+							var oSpan = oDiv.getElementsByTagName('span')[0];
+							var opa=oP.getElementsByTagName("a")[0];
+							
+							if(!oSpan){ return}
+							
+							if(num<=140){
+								opa.innerHTML="还可以输入";
+								oSpan.innerHTML = 140 - num;
+								oSpan.style.color = '#d20000';
+							}else{
+								opa.innerHTML="已超出";
+								oSpan.innerHTML = num-140;
+								oSpan.style.color = 'red';
+							}
+							
+							if(num<10 || num>140){
+								oA.className = 'sub';
+							}else{
+								oA.className = '';
+							}
+							
+						}
+						//获取字符的长度转换汉字进制数
+						function getLength(str){
+							return String(str).replace(/[^\x00-\xff]/g,'aa').length;
+						}
+					
+						//点击事件
+						oA.onclick = function(){		
+							if(this.className == 'sub'){
+								alert_display_block("字数要求在10-140个字之间哦！");
+							}else{
+								var str=oT.value;
+								//去除两侧的空白字符
+								if($.trim(str)==""){
+									alert_display_block("字数不能为空！");
+									return;
+								}
+								var fid="{$movie.id}";//影片id
+								var content=$("#js_message_textarea").val();//短评内容
+								
+								//如果输入合法进行ajax请求
+								$.ajax({
+									url:"__APP__/Detail/insert",
+									data:{ fid:fid,content:content},
+									type:"post",
+									dataType:"json",
+									success:function(data){
+										//用户没有登录提示
+										if(data=="1"){
+											alert_display_block("请先登录");
+											return;
+										}
+										//添加失败
+										if(data=="2"){
+											alert_display_block("有点小问题，稍等一下！");
+											return;
+										}
+										//回复成功 返回数组
+										var str="";
+										str+="<div class='review_list'><div class='acthor'>";
+										str+="<div class='l'><a href='__APP__/User/index/uid/"+data.uid+"'>"+data.username+"</a>"+data.rtime+"</div>";	
+										str+="<div class='r'><span>&nbsp;&nbsp;</span><a href='javascript:doSreport("+data.id+");'>举报</a></div></div>";
+										str+="<div class='content'>"+data.content+"</div></div>";
+										
+										//回复成功 加载回复列表
+										tmp_data=new Array();//清空缓存
+										doPageLoad(0);
+										//$("#detail_main_left .movie_short_review .review_head").after(str);
+										$("#js_message_textarea").val("");//清空留言框短评内容
+										//清空数字计数
+										if(oT.value==''){
+											oP.innerHTML = '这里需要你的痕迹......';
+											bBtn = true;
+										}
+										
+										
+									}
+								});
+							}	
+						};	
+				
+					</script>
+				</div>	
+				
+				
+				<div class="nav"></div>
+
+				
+				<!-- 最受欢迎的影评 -->
+				<div class="movie_review">
+					<div class="review_head">
+						<span>{$movie.filmname}的影评......</span>
+						<a href="__APP__/List/index/fid/{$movie.id}">更多相关影评</a>
+						<button  class="post alert_post_review">我来评论这部电影</button>
+					</div>
+					<volist name="viewlist" id="review">		
+					<div class="review_list">
+							
+							<div class="title">
+								<div class="user_pic">
+									<a href="__APP__/User/index/uid/{$review.user.id}"><img src="__ROOT__/Uploads/User/Headpic/{$review.user.headpic}" alt="" width="40" height="40"/></a>
+								</div>
+								<a href="__APP__/Review/index/id/{$review.id}">
+								{$review.title}
+								</a> 
+							</div>
+							<div class="acthor">
+								  <a href="__APP__/User/index/uid/{$review.user.id}">{$review.user.username} </a> {$review.ptime|date="y-m-d H:i:s",###}
+							</div>
+							<div class="content">
+								{$review.content}
+							</div>
+							<div class="point">
+								<!-- <span>546/678&nbsp;&nbsp;有用</span> --><a href="__APP__/Review/index/id/{$review.id}">({$review.countreply}人回复)</a>
+							</div> 	
+					</div>
+					</volist>
+					<div class="nobody">
+						还没有人评论哦,快来抢占评论吧！！！
+					</div>
+<!-- 					</foreach>	 -->
+				</div>
+			
+			</div>
+			
+			<!-- 右侧内容 -->
+			<div id="main_right">
+				<!-- 右侧经典台词 -->
+				<div class="movie_word">
+					<div class="word_title">
+						经典台词
+					</div>
+					<div class="word_con">
+						<p>{$dialogue.en_dialogue}</p>
+						<p>{$dialogue.cn_dialogue}</p>
+					</div>
+					<div class="source">
+						《{$dialogue.source}》
+					</div>
+				</div>
+				
+				<div class="nav"></div>
+				
+				<!--右侧分类列表 -->
+				<div class="movie_sort">
+					<div class="sort_head">
+						影片分类
+						<span style="float:right;padding-top:10px;"><a href="__APP__/Typelist/index">所有分类 >>></a></span>
+					</div>
+					<div class="sort_list">
+						<ul>
+							<foreach name="mtype" item="vo">
+								<li><a href="__APP__/Typelist/tags/id/{$vo.id}">{$vo['typename']}</a></li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="nav"></div>
+				<!-- 评论榜 -->
+				<div class="movie_rank">
+					<div class="rank_head">
+						<span>MyMovie热评榜</span><!-- 
+						<span style="float:right;padding-top:10px;"><a href="">更多榜单 >>></a></span> -->
+					</div>
+					<div class="rank_list">
+						<ul>
+							<foreach name="num" item="vo">
+							<li>
+								<span style="display:inline-block; width:200px;"><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
+								<span style="display:inline-block; width:50px; color:#8CB5C3;">评论数：</span>
+								<span style="color:#8CB5C3;">{$vo.replynum}</span>
+							</li>
+							</foreach>
+
+							<!-- margin-left:120px;color:#8CB5C3; -->
+							
+						</ul>
+					</div>
+				</div>
+				
+				<div class="nav"></div>
+				
+
+				<!-- 电影top10-->
+				<div class="movie_top">
+					<div class="top_head">
+						<span>电影Top10 </span>
+						<span style="float:right;padding-top:10px;"><a href="__APP__/List/movietop">更多 >>></a></span>
+					</div>
+					<div class="top_list">
+						<ul>
+							<foreach name="clicknum" item="vo">
+							<li style="height:140px;">
+								<a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/b_{$vo.picname}" alt="" /></a>
+								<a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a>
+							</li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="nav"></div>
+				
+				<!-- 友情链接 -->
+				<div class="movie_link">
+					<div class="link_head">
+						<span>友情链接</span>
+					</div>
+					<div class="link_list">
+						<ul>
+							<foreach name="link" item="l">
+							<li><a href="{$l.url}"><img src="__ROOT__/Uploads/News/mypic/c_{$l.picname}"/></a></li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="nav"></div>
+			</div>
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<!-- 隐藏的弹框div -->
+			<div  id="alert_review_bg"></div>
+			<div id="words_edit">
+				<img src="__PUBLIC__/front/images/close.jpg" alt="关闭" />
+				<div class="atitle">
+					向大家分享下你对这部电影的感受吧......
+				</div>
+				<div class="acon">
+				<form action="__APP__/Review/insert/fid/{$movie.id}" method="post" onsubmit="return reviewJudge();">
+				
+					标题:<input type="text" name="title" class="winput"/>
+					<textarea name="content" id="text" style="resize:none;"   cols="70" rows="10" ></textarea>
+	
+					<input type="submit" value="发表影评" class="wsub"/>
+				</form>
+				</div>		
+			</div>
+
+		<!-- 发影评弹框页js -->
+		<script type="text/javascript">
+		//发布影评内容可标题不可以为空
+		function reviewJudge(){
+			
+			if($('#words_edit .winput').val()==""){
+				alert_display_block("标题不可以为空！");
+				return false;
+			}
+			if($('#text').val()==""){
+				alert_display_block("传说：一定要写几个字！");
+				return false;
+			}
+			return true;
+		}
+		
+		$(function(){
+			//获取屏幕的宽高		
+			
+			var w=($(window).outerWidth()-$("#words_edit").width())/2;
+			var h=($(window).outerHeight()-$("#words_edit").height())/2;
+			var userid="{$Think.session.loginuser}";
+			
+			//点击弹出div层
+			$(".alert_post_review").click(function(){
+				if(userid==""){
+					alert_display_block("请先登录！");
+					return;
+				}
+				$("#alert_review_bg").fadeIn("normal");
+				$("#words_edit").slideDown("normal").css({ top:$(window).scrollTop()+h+"px",left:w+"px"});
+			});
+			
+			//点击关闭隐藏div层
+			$("#words_edit img").click(function(){	
+				$("#alert_review_bg").fadeOut("normal");
+				$("#words_edit").fadeOut("normal");
+			});
+			
+			//滚动窗滚动跟随滚动
+			$(window).scroll(function(){
+				$("#alert_review_bg").css({ top:$(window).scrollTop()+"px"});
+				$("#words_edit").css({ top:$(window).scrollTop()+h+"px"});
+			});
+			
+			
+		});
+		</script>
+		
+		
+		<div class="nav"></div>
+		
+		<!-- 页脚部分开始 -->
+		<include file="Public/foot" />
+		<!-- 页脚不封结束 -->
+		
+		
+	</body>
+</html>

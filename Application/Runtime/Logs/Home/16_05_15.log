@@ -1,0 +1,414 @@
+[ 2016-05-15T23:19:45+08:00 ] 10.0.2.2 /LanceLot/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.003050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.103218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.121710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.121998s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.027050s ]
+SQL: SELECT * FROM `ll_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.016824s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.015915s ]
+SQL: SHOW COLUMNS FROM `ll_movie_actor` [ RunTime:0.023050s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.036703s ]
+SQL: SHOW COLUMNS FROM `ll_movie_type` [ RunTime:0.015890s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.013141s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=38 )  [ RunTime:0.032891s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.011935s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=45 )  [ RunTime:0.008881s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=44 )  [ RunTime:0.005400s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=38 )  [ RunTime:0.007739s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.013712s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.002765s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.004683s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.003989s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=39 )  [ RunTime:0.007786s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.003103s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=47 )  [ RunTime:0.004267s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=46 )  [ RunTime:0.003953s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=39 )  [ RunTime:0.003196s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.005703s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.002909s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.009920s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002107s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.003220s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=35 )  [ RunTime:0.017009s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.004820s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=37 )  [ RunTime:0.012923s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=36 )  [ RunTime:0.013987s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=35 )  [ RunTime:0.001941s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.003046s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.002866s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.006005s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002906s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.006923s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=34 )  [ RunTime:0.006870s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.005825s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=33 )  [ RunTime:0.007752s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=34 )  [ RunTime:0.001297s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=34 )  [ RunTime:0.004066s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.001503s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.001114s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.001330s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=36 )  [ RunTime:0.004942s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.002105s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=39 )  [ RunTime:0.004071s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=36 )  [ RunTime:0.003878s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.001975s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.001146s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.001164s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.007850s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.003910s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=37 )  [ RunTime:0.004927s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.003158s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=42 )  [ RunTime:0.001113s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=41 )  [ RunTime:0.005889s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=37 )  [ RunTime:0.002325s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.001947s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.002031s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.008653s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002036s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=31 )  [ RunTime:0.008162s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.002035s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=27 )  [ RunTime:0.011989s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=28 )  [ RunTime:0.005907s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=31 )  [ RunTime:0.002159s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.004014s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.004136s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.004062s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.003947s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.002741s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002061s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.061053s ]
+SQL: SHOW COLUMNS FROM `ll_dialogue` [ RunTime:0.021139s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.024092s ]
+SQL: SELECT * FROM `ll_dialogue` WHERE ( status=1 )  [ RunTime:0.006063s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.009930s ]
+SQL: SELECT * FROM `ll_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.007771s ]
+SQL: SHOW COLUMNS FROM `ll_friendlink` [ RunTime:0.031098s ]
+SQL: SELECT * FROM `ll_friendlink`  [ RunTime:0.010027s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.020162s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.003663s ]
+SQL: SELECT `id`,`filmname`,`picname` FROM `ll_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.002060s ]
+SQL: SELECT `id`,`filmname`,`replynum` FROM `ll_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.003919s ]
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `ll_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.005040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000492s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000689s ]
+NOTIC: [8] Undefined index: loginuser /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined offset: 1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 274 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.566063s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.568899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.146972s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.149041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.299047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.302407s ]
+
+[ 2016-05-15T23:36:13+08:00 ] 10.0.2.2 /LanceLot/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001854s ]
+INFO: [ app_init ] --END-- [ RunTime:0.087095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.122901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.123310s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.004974s ]
+SQL: SELECT * FROM `ll_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.004022s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.003113s ]
+SQL: SHOW COLUMNS FROM `ll_movie_actor` [ RunTime:0.003108s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.003797s ]
+SQL: SHOW COLUMNS FROM `ll_movie_type` [ RunTime:0.007818s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.003036s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=38 )  [ RunTime:0.004913s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.004580s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=45 )  [ RunTime:0.003331s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=44 )  [ RunTime:0.002037s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=38 )  [ RunTime:0.003087s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.002052s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.001139s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.008896s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002152s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=39 )  [ RunTime:0.002953s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.007026s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=47 )  [ RunTime:0.003114s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=46 )  [ RunTime:0.007872s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=39 )  [ RunTime:0.001957s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.001546s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.003055s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.004000s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.005929s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.002965s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=35 )  [ RunTime:0.005977s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.004004s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=37 )  [ RunTime:0.002832s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=36 )  [ RunTime:0.006861s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=35 )  [ RunTime:0.004999s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.002255s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.006673s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.001259s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.007006s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.004051s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=34 )  [ RunTime:0.003650s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.002991s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=33 )  [ RunTime:0.001195s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=34 )  [ RunTime:0.002134s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=34 )  [ RunTime:0.002144s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.003042s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.003205s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.003126s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=36 )  [ RunTime:0.007885s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.007551s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=39 )  [ RunTime:0.002838s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=36 )  [ RunTime:0.002757s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.003361s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.007656s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.004238s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.009119s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002457s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=37 )  [ RunTime:0.005600s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.002769s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=42 )  [ RunTime:0.002026s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=41 )  [ RunTime:0.001750s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=37 )  [ RunTime:0.005233s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.002012s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.005143s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.001987s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002037s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=31 )  [ RunTime:0.002099s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.002011s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=27 )  [ RunTime:0.002130s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=28 )  [ RunTime:0.001961s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=31 )  [ RunTime:0.003886s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.006980s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.003989s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.004300s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.005740s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.005296s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.003083s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.004088s ]
+SQL: SHOW COLUMNS FROM `ll_dialogue` [ RunTime:0.003196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.003855s ]
+SQL: SELECT * FROM `ll_dialogue` WHERE ( status=1 )  [ RunTime:0.002385s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.003106s ]
+SQL: SELECT * FROM `ll_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.002692s ]
+SQL: SHOW COLUMNS FROM `ll_friendlink` [ RunTime:0.005033s ]
+SQL: SELECT * FROM `ll_friendlink`  [ RunTime:0.002048s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.003909s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.002521s ]
+SQL: SELECT `id`,`filmname`,`picname` FROM `ll_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.001554s ]
+SQL: SELECT `id`,`filmname`,`replynum` FROM `ll_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.003144s ]
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `ll_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.003067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001967s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003062s ]
+NOTIC: [8] Undefined index: loginuser /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined offset: 1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 274 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.424104s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.426857s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.129185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.132846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.390968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.392085s ]
+
+[ 2016-05-15T23:37:00+08:00 ] 10.0.2.2 /LanceLot/index.php/News/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002634s ]
+INFO: [ app_init ] --END-- [ RunTime:0.100341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.152448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.154559s ]
+SQL: SHOW COLUMNS FROM `ll_mnews` [ RunTime:0.168934s ]
+SQL: SHOW COLUMNS FROM `ll_pnews` [ RunTime:0.064768s ]
+SQL: SHOW COLUMNS FROM `ll_mpicnews` [ RunTime:0.017016s ]
+SQL: SHOW COLUMNS FROM `ll_ppicnews` [ RunTime:0.017724s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=1 and addtime>1462462618 ) ORDER BY looknum desc LIMIT 6   [ RunTime:0.012119s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=3 ) ORDER BY addtime desc LIMIT 2   [ RunTime:0.002982s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=3 ) ORDER BY addtime desc LIMIT 2,3   [ RunTime:0.003059s ]
+SQL: SELECT * FROM `ll_mpicnews` WHERE `mid` = 63  [ RunTime:0.019163s ]
+SQL: SELECT * FROM `ll_mpicnews` WHERE `mid` = 66  [ RunTime:0.002456s ]
+SQL: SELECT * FROM `ll_mpicnews` WHERE `mid` = 60  [ RunTime:0.001219s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=1 ) ORDER BY addtime desc LIMIT 2   [ RunTime:0.003129s ]
+SQL: SELECT * FROM `ll_mpicnews` WHERE `mid` = 56  [ RunTime:0.003075s ]
+SQL: SELECT * FROM `ll_mpicnews` WHERE `mid` = 72  [ RunTime:0.003748s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=1 ) ORDER BY addtime desc LIMIT 2,7   [ RunTime:0.002021s ]
+SQL: SELECT * FROM `ll_mnews` WHERE ( state=2 and status=2 ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.004404s ]
+SQL: SELECT * FROM `ll_pnews` WHERE ( state=2 and status=1 ) ORDER BY addtime desc LIMIT 2   [ RunTime:0.008231s ]
+SQL: SELECT * FROM `ll_ppicnews` WHERE `pid` = 53  [ RunTime:0.007049s ]
+SQL: SELECT * FROM `ll_ppicnews` WHERE `pid` = 51  [ RunTime:0.002980s ]
+SQL: SELECT * FROM `ll_pnews` WHERE ( state=2 and status=1 ) ORDER BY addtime desc LIMIT 2,7   [ RunTime:0.002252s ]
+SQL: SELECT * FROM `ll_pnews` WHERE ( state=2 and status=2 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.003804s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001314s ]
+NOTIC: [8] Undefined index: loginuser /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 109 行.
+NOTIC: [8] Undefined variable: mv1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 183 行.
+NOTIC: [8] Undefined variable: mv1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 183 行.
+NOTIC: [8] Undefined variable: mv1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 186 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 198 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 198 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 201 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 201 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 204 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 204 行.
+NOTIC: [8] Undefined variable: mv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 215 行.
+NOTIC: [8] Undefined variable: mv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 215 行.
+NOTIC: [8] Undefined variable: mv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 218 行.
+NOTIC: [8] Undefined variable: mv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 218 行.
+NOTIC: [8] Undefined variable: mv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 221 行.
+NOTIC: [8] Undefined variable: mv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 239 行.
+NOTIC: [8] Undefined variable: mv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 239 行.
+NOTIC: [8] Undefined variable: mv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 242 行.
+NOTIC: [8] Undefined variable: mv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 242 行.
+NOTIC: [8] Undefined variable: mv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 245 行.
+NOTIC: [8] Undefined variable: mv5 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 253 行.
+NOTIC: [8] Undefined variable: mv5 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 253 行.
+NOTIC: [8] Undefined variable: mv5 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 256 行.
+NOTIC: [8] Undefined variable: mv6 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 268 行.
+NOTIC: [8] Undefined variable: mv6 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 268 行.
+NOTIC: [8] Undefined variable: mv6 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 271 行.
+NOTIC: [8] Undefined variable: mv6 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 271 行.
+NOTIC: [8] Undefined variable: mv6 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 274 行.
+NOTIC: [8] Undefined variable: pv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 292 行.
+NOTIC: [8] Undefined variable: pv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 292 行.
+NOTIC: [8] Undefined variable: pv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 295 行.
+NOTIC: [8] Undefined variable: pv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 295 行.
+NOTIC: [8] Undefined variable: pv2 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 298 行.
+NOTIC: [8] Undefined variable: pv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 308 行.
+NOTIC: [8] Undefined variable: pv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 308 行.
+NOTIC: [8] Undefined variable: pv3 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 311 行.
+NOTIC: [8] Undefined variable: pv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 324 行.
+NOTIC: [8] Undefined variable: pv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 324 行.
+NOTIC: [8] Undefined variable: pv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 328 行.
+NOTIC: [8] Undefined variable: pv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 331 行.
+NOTIC: [8] Undefined variable: pv4 /var/www/html/LanceLot/Application/Runtime/Cache/Home/6be51b3900cccae2c73119baf20891ff.php 第 331 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.270068s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.273653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.119883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.120080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.223363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.226863s ]
+
+[ 2016-05-15T23:37:09+08:00 ] 10.0.2.2 /LanceLot/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.088913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.134970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.137164s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.007879s ]
+SQL: SELECT * FROM `ll_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.002917s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.006121s ]
+SQL: SHOW COLUMNS FROM `ll_movie_actor` [ RunTime:0.003941s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.003238s ]
+SQL: SHOW COLUMNS FROM `ll_movie_type` [ RunTime:0.006840s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.004983s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=38 )  [ RunTime:0.004740s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.002860s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=45 )  [ RunTime:0.004815s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=44 )  [ RunTime:0.002148s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=38 )  [ RunTime:0.002128s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.003090s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.003103s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000405s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.004001s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=39 )  [ RunTime:0.002116s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.004568s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=47 )  [ RunTime:0.002271s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=46 )  [ RunTime:0.002037s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=39 )  [ RunTime:0.002944s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.001939s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.002036s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.006017s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.004956s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.002788s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=35 )  [ RunTime:0.003032s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.003998s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=37 )  [ RunTime:0.007026s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=36 )  [ RunTime:0.002010s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=35 )  [ RunTime:0.001374s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.003143s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.007813s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.002974s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002006s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.003296s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=34 )  [ RunTime:0.002112s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.000350s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=33 )  [ RunTime:0.004012s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=34 )  [ RunTime:0.002127s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=34 )  [ RunTime:0.002009s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.002088s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.003137s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002892s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=36 )  [ RunTime:0.000528s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.002115s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=39 )  [ RunTime:0.002097s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=36 )  [ RunTime:0.004019s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.002912s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.002878s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.002915s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.005374s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.001693s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=37 )  [ RunTime:0.001979s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.002761s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=42 )  [ RunTime:0.004000s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=41 )  [ RunTime:0.004000s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=37 )  [ RunTime:0.003032s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.004797s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.003733s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.002083s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002930s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( id=31 )  [ RunTime:0.004902s ]
+SQL: SELECT `aid` FROM `ll_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.001999s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=27 )  [ RunTime:0.003065s ]
+SQL: SELECT `cname` FROM `ll_actors` WHERE ( id=28 )  [ RunTime:0.002150s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE ( fid=31 )  [ RunTime:0.002775s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.002024s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.002015s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.003012s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.003144s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000491s ]
+SQL: SELECT `typename` FROM `ll_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.002177s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname
+                            from ll_longreview r,ll_movie m,ll_user u
+                            where r.status in(1,2) and r.fid=m.id and r.uid=u.id
+                            order by r.rnum desc limit 0,5 [ RunTime:0.002897s ]
+SQL: SHOW COLUMNS FROM `ll_dialogue` [ RunTime:0.002085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.003107s ]
+SQL: SELECT * FROM `ll_dialogue` WHERE ( status=1 )  [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.004105s ]
+SQL: SELECT * FROM `ll_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.003930s ]
+SQL: SHOW COLUMNS FROM `ll_friendlink` [ RunTime:0.003021s ]
+SQL: SELECT * FROM `ll_friendlink`  [ RunTime:0.004722s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.003046s ]
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `ll_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.003864s ]
+SQL: SELECT `id`,`filmname`,`picname` FROM `ll_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.003232s ]
+SQL: SELECT `id`,`filmname`,`replynum` FROM `ll_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.002151s ]
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `ll_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.001189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001787s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002944s ]
+NOTIC: [8] Undefined index: loginuser /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 203 行.
+NOTIC: [8] Undefined offset: 1 /var/www/html/LanceLot/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 274 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.439869s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.440097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.119870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.120094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.261808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.263061s ]
+

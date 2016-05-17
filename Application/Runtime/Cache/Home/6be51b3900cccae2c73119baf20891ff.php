@@ -18,7 +18,7 @@
 			//获取个人中心的top位置
 			var ptop = $("#person_menu").css("top");
 			//改变头的位置和透明度
-			$("#header .h_top").css({ position:"relative", top:$(window.scrollTop()+"px"});
+			$("#header .h_top").css({ position:"relative", top:$(window).scrollTop()+"px"});
 			if($(window).scrollTop()>1){
 				$("#header .h_top").css({ opacity:"0.7", filter:"Alpha(opacity=70)"});
 			} else {
@@ -48,8 +48,8 @@
                 <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
                 <li><a href="/LanceLot/index.php/Register/register">注册</a></li>
                 <?php else: ?>
-                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($smarty["session"]["loginuser"]["id"]); ?>" style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
-                <li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>u
+                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>" style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
+                <li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>
             </ul>
         </div>
     </div>
@@ -62,11 +62,11 @@
             <div class="search">
                 <form action="/LanceLot/index.php/Index/search" method="post">
                     <input type="text" class="inp" placeholder="电影、分类" style="font-size: 12px;padding-left: 5px;" name="key" />
-                    <input type="submit" class="sub" value="">
+                    <input type="submit" class="sub" value="" />
                 </form>
             </div>
             <div class="logoimg">
-                <img src="/LanceLot/Public/front/images/logo.jqg" alt=""/>
+                <img src="/LanceLot/Public/front/images/logo.jpg" alt=""/>
             </div>
         </div>
     </div>
@@ -106,9 +106,9 @@
         });
         //点击个人中心进行判断
          function personCheckLogin(){
-             var uid = "<?php echo ($smarty["session"]["loginuser"]["id"]); ?>";
+             var uid = "<?php echo ($_SESSION['loginuser']['id']); ?>";
              if(uid.length>0){
-                 window.location = "/LanceLot/index.php/Index/index/id/"+uid;
+                 window.location = "/LanceLot/index.php/User/index/id/"+uid;
              } else {
                  alert_display_block("你还没有登录!");
              }
@@ -123,7 +123,7 @@
             <li class="nav4"><a title="影评" href="/LanceLot/index.php/List/index">影评</a></li>
             <li class="nav5"><a title="分类" href="/LanceLot/index.php/Typelist/index">分类</a></li>
             <li class="nav6"><a title="预告片" href="/LanceLot/index.php/Prevue/index">预告片</a></li>
-            <li class="nav7"><a title="网站地图" href="/LanceLot/index.php/Map/map">网站地图s</a></li>
+            <li class="nav7"><a title="网站地图" href="/LanceLot/index.php/Map/map">网站地图</a></li>
         </ul>
     </div>
     <!--个人中心提示菜单结束-->
@@ -177,23 +177,20 @@
                 <div id="ml_top">
                     <a href="/LanceLot/index.php/Newslist/mnewslist1"><span>最新咨询</span></a>
                 </div>
-                {foreach $mlist1 as $mv1}
-                <div class="mlc">
+                <?php if(is_array($mlist1)): foreach($mlist1 as $key=>$mv1): ?><div class="mlc">
                     <div class="mlc1">
                         <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv1["id"]); ?>"><?php echo ($mv1["title"]); ?></a>
                     </div>
                     <div class="mlc2">
                         <?php echo ($mv1["title2"]); ?>
                     </div>
-                </div>
-                {/foreach}
+                </div><?php endforeach; endif; ?>
                 <div class="mlc3">
                     <a href="/LanceLot/index.php/Newslist/mnewslist1">更多 >>></a>
                 </div>
             </div>
             <div id="main_center">
-                {foreach $mlist2 as $mv2}
-                <div class="mc">
+                <?php if(is_array($mlist2)): foreach($mlist2 as $key=>$mv2): ?><div class="mc">
                     <div class="mc1">
                         <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv2["id"]); ?>"><?php echo ($mv2["title2"]); ?></a>
                     </div>
@@ -203,14 +200,12 @@
                     <div class="mc3">
                         <?php echo ($mv2["summary"]); ?><a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv2["id"]); ?>">【阅读全文】</a>
                     </div>
-                </div>
-                {/foreach}
+                </div><?php endforeach; endif; ?>
             </div>
             <div id="main_right">
                 <div class="mr_top">
                     <a href="/LanceLot/index.php/Newslist/mnewslist2"><span>精彩抢先看</span></a>
-                    {foreach $mlist3 as $mv3}
-                    <div class="mrc">
+                    <?php if(is_array($mlist3)): foreach($mlist3 as $key=>$mv3): ?><div class="mrc">
                         <div class="mrc1">
                             <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv3["id"]); ?>"><img src="/LanceLot/Uploads/News/article/c_<?php echo ($mv3["pica"]); ?>" style="width: 180px;height: 100px;" /></a>
                         </div>
@@ -220,8 +215,7 @@
                         <div class="mrc3">
                             <?php echo ($mv3["title2"]); ?>
                         </div>
-                    </div>
-                    {/foreach}
+                    </div><?php endforeach; endif; ?>
                     <div class="mlc3">
                         <a href="/LanceLot/index.php/Newslist/mnewslist2">更多 >>></a>
                     </div>
@@ -233,8 +227,7 @@
             </div>
             <div id="mc_left">
                 <div class="mc_left_left">
-                    {foreach $mlist4 as $mv4}
-                    <div class="mc_left_top">
+                    <?php if(is_array($mlist4)): foreach($mlist4 as $key=>$mv4): ?><div class="mc_left_top">
                         <div class="mcl_top1">
                             <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv4["id"]); ?>"><img src="/LanceLot/Uploads/News/article/a_<?php echo ($mv4["pica"]); ?>" style="width: 300px;height: 200px"/></a>
                         </div>
@@ -244,26 +237,22 @@
                         <div class="mcl_top3">
                             <?php echo ($mv4["summary"]); ?>
                         </div>
-                    </div>
-                    {/foreach}
+                    </div><?php endforeach; endif; ?>
                 </div>
                 <div class="mc_left_right">
-                    {foreach $mlist5 as $mv5}
-                    <div class="mc_center">
+                <?php if(is_array($mlist5)): foreach($mlist5 as $key=>$mv5): ?><div class="mc_center">
                         <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv5["id"]); ?>"><?php echo ($mv5["title"]); ?></a>
                     </div>
                     <div class="mc_center2">
                         <?php echo ($mv5["summary"]); ?>
-                    </div>
-                    {/foreach}
+                    </div><?php endforeach; endif; ?>
                 </div>
             </div>
             <div id="mc_right">
                 <div class="mr_top">
                     <a href="/LanceLot/index.php/Newslist/mnewslist3"><span>专题&策划</span></a>
                 </div>
-                {foreach $mlist6 as $mv6}
-                <div class="mcr_bottom">
+                <?php if(is_array($mlist6)): foreach($mlist6 as $key=>$mv6): ?><div class="mcr_bottom">
                     <div class="mcb1">
                         <a href="/LanceLot/index.php/Newsdetail/newsdetail/id/<?php echo ($mv6["id"]); ?>"><img src="/LanceLot/Uploads/News/article/d_<?php echo ($mv6["picname"]); ?>" style="width: 250px;height: 80px" /></a>
                     </div>
@@ -273,8 +262,7 @@
                     <div class="mcb3">
                         <?php echo ($mv6["summary"]); ?>
                     </div>
-                </div>
-                {/foreach}
+                </div><?php endforeach; endif; ?>
                 <div class="mcl3">
                     <a href="/LanceLot/index.php/Newslist/mnewslist3">更多>>></a>
                 </div>
@@ -286,8 +274,7 @@
                 </div>
                 <div id="cb_left">
                     <div class="mc_left_left">
-                        {foreach $plist2 as $pv2}
-                        <div class="mc_left_top">
+                        <?php if(is_array($plist2)): foreach($plist2 as $key=>$pv2): ?><div class="mc_left_top">
                             <div class="mcl_top1">
                                 <a href="/LanceLot/index.php/Newsdetail/pnewsdetail/id/<?php echo ($pv2["id"]); ?>"><img src="/LanceLot/Uploads/News/article/a_<?php echo ($pv2["pica"]); ?>" style="width: 300px;height: 200px" /></a>
                             </div>
@@ -297,29 +284,25 @@
                             <div class="mcl_top3">
                                 <?php echo ($pv2["summary"]); ?>
                             </div>
-                        </div>
-                        {/foreach}
+                        </div><?php endforeach; endif; ?>
                     </div>
 
                     <div id="bb_right">
-                        {foreach $plist3 as $pv3}
-                        <div class="mc_center">
+                        <?php if(is_array($plist3)): foreach($plist3 as $key=>$pv3): ?><div class="mc_center">
                             <div class="mc_center1">
                                 <a href="/LanceLot/index.php/Newsdetail/pnewsdetail/id/<?php echo ($pv3["id"]); ?>"><?php echo ($pv3["title"]); ?></a>
                             </div>
                             <div class="mc_center2">
                                 <?php echo ($pv3["summary"]); ?>
                             </div>
-                        </div>
-                        {/foreach}
+                        </div><?php endforeach; endif; ?>
                     </div>
                 </div>
                 <div id="cb_right">
                     <div class="mr_top">
                         <a href="/LanceLot/index.php/Newslist/pnewslist4"><span>人物专访</span></a>
                     </div>
-                    {foreach $plist4 as $pv4}
-                    <div class="cbr">
+                    <?php if(is_array($plist4)): foreach($plist4 as $key=>$pv4): ?><div class="cbr">
                         <div class="cbr2">
                             <a href="/LanceLot/index.php/Newslist/pnewsdetail/id/<?php echo ($pv4["id"]); ?>"><span><?php echo ($pv4["title2"]); ?></span></a>
                         </div>
@@ -331,8 +314,7 @@
                                 <a href="/LanceLot/index.php/Newsdetail/pnewsdetail/id/<?php echo ($pv4["id"]); ?>"><img src="/LanceLot/Uploads/News/article/d_<?php echo ($pv4["picname"]); ?>" /></a>
                             </div>
                         </div>
-                    </div>
-                    {/foreach}
+                    </div><?php endforeach; endif; ?>
                 </div>
             </div>
         </div>

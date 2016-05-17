@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+	</head>
+	<body>
+		<!-- 个人中心菜单结束 -->
+		<include file="Public/head" />
+		<!-- 个人中心菜单结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="main">
+		
+			<!-- 左侧内容 -->
+			<div id="main_left">
+				<div class="list_title">
+					{$toptitle}的影评
+				</div>
+				<if condition="$display eq 'block'">
+				<div class="list_title_down">
+					<a href="__APP__/List/index/order/ptime">最新发表的影评</a>
+					<a href="__APP__/List/index/order/rnum">最受欢迎的影评</a>
+				</div>
+				<else />
+				</if>
+				<div class="nav"></div>
+				<!-- 最受欢迎的影评 -->
+				<div class="movie_review">
+					<if condition="isset($list)">
+					<foreach name="list" item="v">
+					<div class="review_list">
+						<div class="rl">
+							<a href="__APP__/Detail/index/id/{$v.fid}"><img src="__ROOT__/Uploads/Movie/Cover/b_{$v.picname}" alt="{$v.filmname}" /></a>
+						</div>
+						<div class="rr">
+							<div class="title">
+								<a href="__APP__/Review/index/id/{$v.id}">
+								{$v.title}
+								</a> 
+							</div>
+							<div class="acthor">
+								{$v.username} 评论: <a href="__APP__/Detail/index/id/{$v.fid}">《{$v.filmname}》 </a>
+							</div>
+							<div class="content">
+								{$v.content}
+							</div>
+							
+							<!--  如果是影片列表打开评分选项 -->
+							<!-- 
+							<div class="point">
+								<span>综合评分：7.7</span><a href="">(176人回复)</a>
+							</div> 
+							-->
+						</div>
+					</div>
+					</foreach>
+					<div class="review_list_page" style="">{$pageshow}</div>
+					<else />
+					<div class="nobody">
+						还没有影评哦,快去发表一篇吧！！！
+					</div>
+					</if>
+				</div>
+				
+			</div>
+			
+			<!-- 右侧内容 -->
+			<div id="main_right">
+				<!-- 右侧经典台词 -->
+				<div class="movie_word">
+					<div class="word_title">
+						经典台词
+					</div>
+					<div class="word_con">
+						<p>{$dialogue.en_dialogue}</p>
+						<p>{$dialogue.cn_dialogue}</p>
+					</div>
+					<div class="source">
+						《{$dialogue.source}》
+					</div>
+				</div>
+				<div class="nav"></div>
+				<div class='ad'>
+					<img src="__ROOT__/Public/front/images/ad2.jpg" alt="" />
+				</div>
+				<div class="nav"></div>	
+				<!-- 友情链接 -->
+				<div class="movie_link">
+					<div class="link_head">
+						<span>友情链接</span>
+					</div>
+					<div class="link_list">
+						<ul>
+							<foreach name="link" item="l">
+							<li><a href="{$l.url}"><img src="__ROOT__/Uploads/News/mypic/c_{$l.picname}"/></a></li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				<div class="nav"></div>
+			</div>
+		</div>
+		<!-- 主体部分结束	-->	
+		d
+		<div class="nav"></div>		
+
+		<!-- 页脚部分开始 -->
+		<include file="Public/foot" />
+		<!-- 页脚部分结束 -->
+		
+		
+	</body>
+</html>

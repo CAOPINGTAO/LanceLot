@@ -25,7 +25,7 @@
                 <div id="ml_top">
                     <a href="__APP__/Newslist/mnewslist1"><span>最新咨询</span></a>
                 </div>
-                {foreach $mlist1 as $mv1}
+                <foreach name="mlist1" item="mv1">
                 <div class="mlc">
                     <div class="mlc1">
                         <a href="__APP__/Newsdetail/newsdetail/id/{$mv1.id}">{$mv1.title}</a>
@@ -34,13 +34,13 @@
                         {$mv1.title2}
                     </div>
                 </div>
-                {/foreach}
+                </foreach>
                 <div class="mlc3">
                     <a href="__APP__/Newslist/mnewslist1">更多 >>></a>
                 </div>
             </div>
             <div id="main_center">
-                {foreach $mlist2 as $mv2}
+                <foreach name="mlist2" item="mv2">
                 <div class="mc">
                     <div class="mc1">
                         <a href="__APP__/Newsdetail/newsdetail/id/{$mv2.id}">{$mv2.title2}</a>
@@ -52,12 +52,12 @@
                         {$mv2.summary}<a href="__APP__/Newsdetail/newsdetail/id/{$mv2.id}">【阅读全文】</a>
                     </div>
                 </div>
-                {/foreach}
+                </foreach>
             </div>
             <div id="main_right">
                 <div class="mr_top">
                     <a href="__APP__/Newslist/mnewslist2"><span>精彩抢先看</span></a>
-                    {foreach $mlist3 as $mv3}
+                    <foreach name="mlist3" item="mv3">
                     <div class="mrc">
                         <div class="mrc1">
                             <a href="__APP__/Newsdetail/newsdetail/id/{$mv3.id}"><img src="__ROOT__/Uploads/News/article/c_{$mv3.pica}" style="width: 180px;height: 100px;" /></a>
@@ -69,7 +69,7 @@
                             {$mv3.title2}
                         </div>
                     </div>
-                    {/foreach}
+                    </foreach>
                     <div class="mlc3">
                         <a href="__APP__/Newslist/mnewslist2">更多 >>></a>
                     </div>
@@ -81,7 +81,7 @@
             </div>
             <div id="mc_left">
                 <div class="mc_left_left">
-                    {foreach $mlist4 as $mv4}
+                    <foreach name="mlist4" item="mv4">
                     <div class="mc_left_top">
                         <div class="mcl_top1">
                             <a href="__APP__/Newsdetail/newsdetail/id/{$mv4.id}"><img src="__ROOT__/Uploads/News/article/a_{$mv4.pica}" style="width: 300px;height: 200px"/></a>
@@ -93,24 +93,24 @@
                             {$mv4.summary}
                         </div>
                     </div>
-                    {/foreach}
+                    </foreach>
                 </div>
                 <div class="mc_left_right">
-                    {foreach $mlist5 as $mv5}
+                <foreach name="mlist5" item="mv5">
                     <div class="mc_center">
                         <a href="__APP__/Newsdetail/newsdetail/id/{$mv5.id}">{$mv5.title}</a>
                     </div>
                     <div class="mc_center2">
                         {$mv5.summary}
                     </div>
-                    {/foreach}
+                    </foreach>
                 </div>
             </div>
             <div id="mc_right">
                 <div class="mr_top">
                     <a href="__APP__/Newslist/mnewslist3"><span>专题&策划</span></a>
                 </div>
-                {foreach $mlist6 as $mv6}
+                <foreach name="mlist6" item="mv6">
                 <div class="mcr_bottom">
                     <div class="mcb1">
                         <a href="__APP__/Newsdetail/newsdetail/id/{$mv6.id}"><img src="__ROOT__/Uploads/News/article/d_{$mv6.picname}" style="width: 250px;height: 80px" /></a>
@@ -122,7 +122,7 @@
                         {$mv6.summary}
                     </div>
                 </div>
-                {/foreach}
+                </foreach>
                 <div class="mcl3">
                     <a href="__APP__/Newslist/mnewslist3">更多>>></a>
                 </div>
@@ -134,7 +134,7 @@
                 </div>
                 <div id="cb_left">
                     <div class="mc_left_left">
-                        {foreach $plist2 as $pv2}
+                        <foreach name="plist2" item="pv2">
                         <div class="mc_left_top">
                             <div class="mcl_top1">
                                 <a href="__APP__/Newsdetail/pnewsdetail/id/{$pv2.id}"><img src="__ROOT__/Uploads/News/article/a_{$pv2.pica}" style="width: 300px;height: 200px" /></a>
@@ -146,11 +146,11 @@
                                 {$pv2.summary}
                             </div>
                         </div>
-                        {/foreach}
+                        </foreach>
                     </div>
 
                     <div id="bb_right">
-                        {foreach $plist3 as $pv3}
+                        <foreach name="plist3" item="pv3">
                         <div class="mc_center">
                             <div class="mc_center1">
                                 <a href="__APP__/Newsdetail/pnewsdetail/id/{$pv3.id}">{$pv3.title}</a>
@@ -159,14 +159,14 @@
                                 {$pv3.summary}
                             </div>
                         </div>
-                        {/foreach}
+                        </foreach>
                     </div>
                 </div>
                 <div id="cb_right">
                     <div class="mr_top">
                         <a href="__APP__/Newslist/pnewslist4"><span>人物专访</span></a>
                     </div>
-                    {foreach $plist4 as $pv4}
+                    <foreach name="plist4" item="pv4">
                     <div class="cbr">
                         <div class="cbr2">
                             <a href="__APP__/Newslist/pnewsdetail/id/{$pv4.id}"><span>{$pv4.title2}</span></a>
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </div>
-                    {/foreach}
+                    </foreach>
                 </div>
             </div>
         </div>

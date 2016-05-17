@@ -117,7 +117,6 @@ $(function(){
                             <li><span>幻灯片信息管理</span>
                                 <ul>
                                     <li><a href="/LanceLot/admin.php/Ppt/index" target="navTab" rel="pptlist">浏览幻灯片信息</a></li>
-                                    <li><a href="/LanceLot/admin.php/Ppt/add" target="dialog" width="600" height="300">添加幻灯片信息</a></li>
                                 </ul>
                             </li>
                             <li><span>每日台词</span>

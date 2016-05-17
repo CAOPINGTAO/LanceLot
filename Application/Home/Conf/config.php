@@ -8,5 +8,5 @@ return array(
     //分页数量
     "PAGE_COUNT_ONE"    => 10,
     "PAGE_COUNT_TWO"    => 0,
-
+    'NUM_PER_PAGE'  	=>  '10', //每页默认显示的数量
 );

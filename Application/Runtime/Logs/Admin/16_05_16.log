@@ -1,0 +1,290 @@
+[ 2016-05-16T10:42:35+08:00 ] 10.0.2.2 /LanceLot/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015708s ]
+
+[ 2016-05-16T10:42:35+08:00 ] 10.0.2.2 /LanceLot/admin.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004428s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005714s ]
+
+[ 2016-05-16T10:42:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007906s ]
+
+[ 2016-05-16T10:42:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Login/verify/1463366565416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016279s ]
+
+[ 2016-05-16T10:42:45+08:00 ] 10.0.2.2 /LanceLot/admin.php/Login/verify/1463366566461
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004568s ]
+
+[ 2016-05-16T10:42:49+08:00 ] 10.0.2.2 /LanceLot/admin.php/Login/checkLogin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004807s ]
+SQL: SHOW COLUMNS FROM `ll_auser` [ RunTime:0.016829s ]
+SQL: SELECT * FROM `ll_auser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.000283s ]
+SQL: UPDATE `ll_auser` SET `login_time`=1463366569,`login_ip`='10.0.2.2' WHERE `id` = 13 [ RunTime:0.013559s ]
+
+[ 2016-05-16T10:42:49+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011145s ]
+
+[ 2016-05-16T10:42:55+08:00 ] 10.0.2.2 /LanceLot/admin.php/Auser/index?_=1463366576414
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004373s ]
+SQL: SHOW COLUMNS FROM `ll_auser` [ RunTime:0.000426s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_auser` LIMIT 1   [ RunTime:0.000209s ]
+NOTIC: [8] Undefined index: pageNum /var/www/html/LanceLot/Application/Admin/Controller/AuserController.class.php 第 27 行.
+SQL: SELECT `id`,`username`,`fullname`,`email`,`phone`,`login_time`,`login_ip`,`status`,`logintimes`,`score` FROM `ll_auser` LIMIT 0,10   [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `ll_role` [ RunTime:0.127475s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='13' [ RunTime:0.008307s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='16' [ RunTime:0.013155s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='18' [ RunTime:0.000328s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='19' [ RunTime:0.000891s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='21' [ RunTime:0.000347s ]
+NOTIC: [8] Undefined index: mapping_order /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.id,name,title FROM ll_role_user AS a, ll_role AS b WHERE a.role_id = b.id AND a. user_id='32' [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: pageNum /var/www/html/LanceLot/Application/Admin/Controller/AuserController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/173d0316517a85946913a3ba71feb1df.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/173d0316517a85946913a3ba71feb1df.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/173d0316517a85946913a3ba71feb1df.php 第 16 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/173d0316517a85946913a3ba71feb1df.php 第 58 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/173d0316517a85946913a3ba71feb1df.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004428s ]
+
+[ 2016-05-16T10:43:03+08:00 ] 10.0.2.2 /LanceLot/admin.php/User/index?_=1463366584525
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003090s ]
+SQL: SHOW COLUMNS FROM `ll_user` [ RunTime:0.000489s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_user` LIMIT 1   [ RunTime:0.000135s ]
+SQL: SELECT * FROM `ll_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `ll_ulevel` [ RunTime:0.034212s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.003002s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000526s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000648s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000598s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000408s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000590s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.001064s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 14 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 36 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 43 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 46 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004232s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004297s ]
+
+[ 2016-05-16T10:43:12+08:00 ] 10.0.2.2 /LanceLot/admin.php/Mnews/index?_=1463366593589
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003246s ]
+ERR: 无法加载控制器:Mnews
+
+[ 2016-05-16T10:43:18+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ulevel/index?_=1463366598893
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003875s ]
+SQL: SHOW COLUMNS FROM `ll_ulevel` [ RunTime:0.000176s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_ulevel` LIMIT 1   [ RunTime:0.000152s ]
+SQL: SELECT * FROM `ll_ulevel` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4ab20d3f8cebf39bd8287a5a74497d6.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4ab20d3f8cebf39bd8287a5a74497d6.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004063s ]
+
+[ 2016-05-16T10:43:19+08:00 ] 10.0.2.2 /LanceLot/admin.php/Notice/index?_=1463366600094
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003365s ]
+SQL: SHOW COLUMNS FROM `ll_notice` [ RunTime:0.039758s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_notice` LIMIT 1   [ RunTime:0.000249s ]
+SQL: SELECT * FROM `ll_notice` ORDER BY id desc LIMIT 0,10   [ RunTime:0.009921s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/8bf6ffc0b643909929bdce2b422ff961.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/8bf6ffc0b643909929bdce2b422ff961.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007013s ]
+
+[ 2016-05-16T10:43:20+08:00 ] 10.0.2.2 /LanceLot/admin.php/User/index?_=1463366601498
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003122s ]
+SQL: SHOW COLUMNS FROM `ll_user` [ RunTime:0.000678s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_user` LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT * FROM `ll_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `ll_ulevel` [ RunTime:0.000530s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000179s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000118s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000117s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000119s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000130s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SELECT `levelname` FROM `ll_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000159s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 14 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 36 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 43 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 46 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005239s ]
+

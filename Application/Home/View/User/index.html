@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>用户空间</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<script type="text/javascript">
+			//定义发布心情函数
+			function doreply(form){
+				//获得表单添加数据
+				var message = $("textarea").val();
+	
+				if(message.length<1){
+					alert("至少说几个字");
+					return false;
+				}
+				
+				if(message.length>70){
+					alert("不能超过70个字");
+					return false;
+				}
+	
+				//执行ajax
+				$.ajax({
+					url:"http://localhost:8080/LanceLot/index.php/Pmood/doinsert",
+					type:"post",
+					data:{ content:message},
+					dataType:"text",
+					success:function(res){
+						if(res=="nologin"){
+							alert("请先登录！");
+							return false;
+						}
+						
+						if(res=="true"){
+							form.reset();
+							$("#mytextcontent").html(message);
+							$("#js_message_p").html("此时此刻，恰如彼时彼刻......");
+							$("#js_message_textarea").html("");
+						}else{
+							alert("添加失败，稍后再试!");
+						}
+					}
+				});
+				return false;
+			}
+			
+			//定义关注函数
+			function doatt(bid){
+				//执行Ajax
+				$.ajax({
+					url:"http://localhost:8080/LanceLot/index.php/Friend/doatt",
+					type:"get",
+					data:{ bid:bid},
+					dataType:"text",
+					success:function(res){
+						if(res == "nologin"){
+							alert("请先登录");
+							return false;
+						}else if(res == "self"){
+							alert("无法添加自己");
+							return false;
+						}else if(res == "already"){
+							alert("已添加过该好友");
+						}else if(res == "true"){
+							alert("添加成功");
+							$("#gzbut").html("<a href='javascript:noatt({$vo.id})' >漠视他</a>");
+						}else{
+							alert("无法添加");
+						}
+					},
+					error:function(){
+						alert("无法添加");
+					}
+					
+				});
+			}
+			
+			//定义取消关注函数
+			function noatt(bid){
+				//执行Ajax
+				if(confirm("真的要取消关注此好友么?")){
+					$.ajax({
+						url:"http://localhost:8080/LanceLot/index.php/Friend/noatt",
+						type:"get",
+						data:{ bid:bid},
+						dataType:"text",
+						success:function(res){
+							if(res == "nologin"){
+								alert("请先登录");
+								return false;
+							}else if(res == "true"){
+								alert("取消关注成功");
+								$("#gzbut").html("<a href='javascript:doatt({$vo.id})'>关注他</a>");
+							}else{
+								alert("还不是您的好友");
+							}
+						},
+						error:function(){
+							alert("还不是您的好友");
+						}
+					});
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<include file="Public/uhead" />
+		<!-- 页头结束 -->
+		
+		<div class="nav"></div>
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+				<!-- 左侧心情签名 -->
+				<div id="psign">
+					<div id="psmallimg">
+						<img src="__ROOT__/Uploads/User/Headpic/{$vo.headpic}" />
+					</div>
+					<div id="ptext">
+						<div id="mytext">
+							<span id="mytexttitle">个性签名：</span>
+							<if condition="!empty($vo['pmood'][0]['content'])">
+								<span id="mytextcontent">{$vo.pmood.0.content}<span>
+							<else />
+								<span id="mytextcontent" style="color:#ccc;">快来记录自己的第一条心情<span>
+							</if>
+						</div>
+						<if condition="$Think.get.uid eq $Think.session.loginuser.id">
+							<form onsubmit="return doreply(this)">
+							<p id="js_message_p">此时此刻，恰如彼时彼刻......</p>
+								<div id="psignarea">
+									<textarea rows=2 cols=63 id="js_message_textarea"></textarea>
+								</div>
+								<div id="psignbut">
+									<input type="submit" class="btn-submit" value="发布心情"></button>
+								</div>
+							</form>
+						</if>
+					</div>
+				</div>
+				<!-- 左侧当前用户最新影评 -->
+				<div class="plist">
+					<div class="plist_title">最新影评</div>
+					<div class="review_list">
+						<if condition="empty($vo['longreview'][0]['filmname'])">
+							<div class="nothing">快去添加自己的第一条影评吧...</div>
+						<else />
+							<div class="rl">
+								<a href="__APP__/Review/index/id/{$vo.longreview.0.id}" target="_blank">
+									<img src="__ROOT__/Uploads/Movie/Cover/b_{$vo.longreview.0.picname}" />
+								</a>
+							</div>
+							<div class="rr">
+								<div class="title">
+									<a href="__APP__/Review/index/id/{$vo.longreview.0.id}" target="_blank">
+										{$vo.longreview.0.title}
+									</a>
+									<span class="titletime">{$vo.longreview.0.ptime|date="Y-m-d H:i:s",###}</span>
+								</div>
+								<div class="acthor">
+									 {$vo.username} 评论: <a href="__APP__/Detail/index/id/{$vo.longreview.0.fid}" target="_blank">{$vo.longreview.0.filmname} </a>
+								</div>
+								<div class="content">
+									<if condition="$vo['longreview'][0]['content'] neq '......'">
+										{$vo.longreview.0.content}
+									<else />
+										暂无影评
+									</if>
+								</div>
+							</div>
+						</if>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户最新短评 -->
+				<div class="plist">
+					<div class="plist_title">最新短评</div>
+					<div class="review_list">
+					<if condition="empty($vo['shortreview'][0]['picname'])">
+						<div class="nothing">快去添加自己的第一条短评吧...</div>
+					<else />
+						<div class="rl">
+							<a href="__APP__/Detail/index/id/{$vo.shortreview.0.fid}" target="_blank">
+								<img src="__ROOT__/Uploads/Movie/Cover/b_{$vo.shortreview.0.picname}" />
+							</a>
+						</div>
+						<div class="rr">
+							<div class="title">
+								<a href="__APP__/Detail/index/id/{$vo.shortreview.0.fid}" target="_blank">
+									最新的短评
+								</a>
+								<span class="titletime">{$vo.shortreview.0.rtime|date="Y-m-d H:i:s",###}</span>
+							</div>
+							<div class="acthor">
+								 {$vo.username} 评论: <a href="__APP__/Detail/index/id/{$vo.shortreview.0.fid}" target="_blank">{$vo.shortreview.0.filmname} </a>
+							</div>
+							<div class="content">
+								<if condition="!empty($vo['shortreview'][0]['content'])">
+									{$vo.shortreview.0.content}
+								<else />
+									暂无短评
+								</if>
+							</div>
+						</div>
+					</if>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户最新回复 -->
+				<div class="plist">
+					<div class="plist_title">最新回复</div>
+					<div class="review_list">
+					<if condition="empty($vo['reviewreply'][0]['picname'])">
+						<div class="nothing">快去添加自己的第一条回复吧...</div>
+					<else />
+						<div class="rl">
+							<a href="__APP__/Detail/index/id/{$vo.reviewreply.0.fid}" target="_blank">
+								<img src="__ROOT__/Uploads/Movie/Cover/b_{$vo.reviewreply.0.picname}" />
+							</a>
+						</div>
+						<div class="rr">
+							<div class="title">
+								<a href="__APP__/Review/index/id/{$vo.reviewreply.0.rid}">
+								最新的影评回复
+								</a>
+								<span class="titletime">{$vo.reviewreply.0.rtime|date="Y-m-d H:i:s",###}</span>
+							</div>
+							<div class="acthor">
+								 {$vo.username} 评论:  <a href="__APP__/Review/index/id/{$vo.reviewreply.0.rid}" target="_blank">{$vo.reviewreply.0.retitle} </a>
+							</div>
+							<div class="content">
+								<if condition="$vo['reviewreply'][0]['content'] neq '......'">
+									{$vo.reviewreply.0.content}
+								<else />
+									暂无回复
+								</if>
+							</div>
+						</div>
+					</if>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户最新日记 -->
+				<div class="plist">
+					<div class="plist_title">最新日记</div>
+					<div class="review_list">
+					<if condition="$vo['diary'][0]['content'] eq '......'">
+						<div class="nothing">快去添加自己的第一篇日志吧...</div>
+					<else />
+						<div class="rl">
+							<a href="__APP__/Diary/mydiary/uid/{$Think.get.uid}/id/{$vo.diary.0.id}" target="_blank">
+								<img src="__PUBLIC__/front/images/diary.jpg" />
+							</a>
+						</div>
+					
+						<div class="rr">
+							<div class="title">
+								<a href="__APP__/Diary/mydiary/uid/{$Think.get.uid}/id/{$vo.diary.0.id}">
+								{$vo.diary.0.title}
+								</a>
+								<span class="titletime">{$vo.diary.0.addtime|date="Y-m-d H:i:s",###}</span>
+							</div>
+							<div class="acthor">
+
+							</div>
+							<div class="content">
+								<if condition="$vo['diary'][0]['content'] neq '......'">
+									{$vo.diary.0.content}
+								<else />
+									暂无日志
+								</if>
+							</div>
+						</div>
+					</if>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户最新留言 -->
+				<div class="plist">
+					<div class="plist_title">最新留言</div>
+					<div class="review_list">
+					<if condition="$vo['message'][0]['content'] eq '......'">
+						<div class="nothing">快去添加自己的第一条留言吧...</div>
+					<else />
+						<div class="rl">
+							<a href="__APP__/Diary/mydiary/uid/{$Think.get.uid}/id/{$vo.diary.0.id}" target="_blank">
+								<img src="__PUBLIC__/front/images/message.jpg" />
+							</a>
+						</div>
+					
+						<div class="rr">
+							<div class="title">
+								<a href="__APP__/Umessage/index/uid/{$Think.get.uid}/">
+									最新留言
+								</a> 
+								<span class="titletime">{$vo.diary.0.addtime|date="Y-m-d H:i:s",###}</span>
+							</div>
+							<div class="acthor">
+								 {$vo.message.0.username} 留言:
+							</div>
+							<div class="content">
+								<if condition="$vo['message'][0]['content'] neq '......'">
+									{$vo.message.0.content}
+								<else />
+									暂无留言
+								</if>
+							</div>
+						</div>
+					</if>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户的好友 -->
+				<div class="plist">
+					<div class="plist_title">我的好友</div>
+					<div>
+						<div class="plist_content_pic">
+							<foreach name="myfriendlist" item="myfriend">
+								<if condition="$myfriend['id'] neq $Think.get.uid">
+									<a href="__APP__/User/index/uid/{$myfriend.id}">
+										<img src="__ROOT__/Uploads/User/Headpic/{$myfriend.headpic}" alt="{$myfriend.username}" />
+									</a>
+								</if>
+							</foreach>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 左侧当前用户的相册 -->
+				<div class="plist">
+					<div class="plist_title">我的相册</div>
+					<div>
+						<div class="plist_content_pic">
+							<foreach name="photolist" item="vp">								<a href="__APP__/Uphotoalbum/albumdetail/uid/{$Think.get.uid}/pid/{$vp.id}">
+									<img src="__ROOT__/Uploads/Photoalbum/Small/{$vp.coverpic}" width="120" height="120"/>
+								</a>
+							</foreach>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<!-- 右侧内容 -->
+			<div id="pmain_right">
+				<div class="pinfoboxtop">
+					<p class="prighttitle">{$vo.username}</p>
+					
+					<div id="rpic">
+						<div id="psmallimg">
+							<img src="__ROOT__/Uploads/User/Headpic/{$vo.headpic}" />
+						</div>
+					</div>
+					
+					<ul class="prightcc">
+						<li>
+							<em>{$vo.iattnum}</em>
+							关注
+						</li>
+						<li>
+							<em>{$vo.attmenum}</em>
+							粉丝
+						</li>
+						<li>
+							<em>{$vo.hufennum}</em>
+							互粉
+						</li>
+					</ul>
+					
+					<div class="nav"></div>
+					<p>积分：{$vo.score}</p>
+					<p>等级：{$vo.levelname}</p>
+				</div>
+				
+				<if condition="$Think.get.uid neq $Think.session.loginuser.id">
+					<div class="ucaozuo">
+						<p class="caozuotitle">操作</p>
+						
+						<ul>
+							<li id="gzbut">
+								<if condition="$vo['attstatus'] neq 'true'">
+									<a href="javascript:doatt({$vo.id})">关注他</a>
+								<else />
+									<a href="javascript:noatt({$vo.id})" >漠视他</a>
+								</if>
+							</li>
+						</ul>
+					</div>
+				</if>
+				
+				<div class="pinfobox">
+					<p class="prighttitle">个人标签({$vo.mytypenum})</p>
+					
+					<ul>
+						<volist name="mytypes" id="vo" offset="0" length="6">
+							<li class="mytag"><a href="__APP__/Typelist/tags/id/{$mytypes[vo].id}">{$mytypes[vo].typename}</a></li>
+						</volist>
+					</ul>
+				</div>
+				
+				<div class="pinfobox">
+					<p class="prighttitle">最近访客</p>
+					
+					<ul>
+						<foreach name="vlist" item="visitor">
+							<li class="mytag"><a href="__APP__/User/index/uid/{$visitor.id}" title="{$visitor.vtime|date='Y-m-d H:i:s',###}">{$visitor.visitorname}</a></li>
+						</foreach>
+					</ul>
+				</div>
+				
+				<div class="pinfobox">
+					<p class="prighttitle">好友生日</p>
+					
+					<ul>
+						<foreach name="birthdaylist" item="birday">
+							<li class="mytag"><a href="__APP__/User/index/uid/{$birday.id}" title="{$birday.birthday|date='Y-m-d H:i:s',###}">{$birday.username}</a></li>
+						</foreach>	
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		<include file="Public/foot" />
+		
+		<script type="text/javascript">
+			//发布框js
+			var oP = document.getElementById("js_message_p");
+			var oT = document.getElementById("js_message_textarea");
+				
+			var ie = !-[1,];
+			var bBtn = true;
+			var timer = null;
+			var iNum = 0;
+			//获取焦点事件
+			oT.onfocus = function(){
+				if(bBtn){
+					oP.innerHTML = "用文字定格时间...... <a>还可以输入</a><span id='textnum'>70</span>字";
+				}
+				
+			};
+			//失去焦点事件
+			oT.onblur = function(){
+				
+				if(oT.value==''){
+					oP.innerHTML = '这里需要你的痕迹......';
+				}
+			};
+			//进行ie兼容性判断
+			if(ie){
+				oT.onpropertychange = toChange;
+			}else{
+				oT.oninput = toChange;
+			}
+			//单个字符改变事件
+			function toChange(){
+				var num = Math.ceil(getLength(oT.value)/2);
+				var oSpan = document.getElementById("textnum");
+				var opa=oP.getElementsByTagName("a")[0];
+				
+				if(!oSpan){ return}
+				
+				if(num<=70){
+					opa.innerHTML="还可以输入";
+					oSpan.innerHTML = 70 - num;
+					oSpan.style.color = '#d20000';
+				}else{
+					opa.innerHTML="已超出";
+					oSpan.innerHTML = num-70;
+					oSpan.style.color = 'red';
+				}
+				
+			}
+			//获取字符的长度转换汉字进制数
+			function getLength(str){
+				return String(str).replace(/[^\x00-\xff]/g,'aa').length;
+			}
+		</script>
+		
+	</body>
+</html>

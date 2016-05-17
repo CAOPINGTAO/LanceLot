@@ -27,10 +27,13 @@
 			<dt>状态：</dt>
 			<dd>
 				<?php if($vo["status"] == 0): ?><input type="radio" name="status" value="0" checked />启用
-				<input type="radio" name="status" value="1">禁用
+				<input type="radio" name="status" value="1" />禁用
+				<?php elseif($vo["status"] == 1): ?>
+				<input type="radio" name="status" value="0" />启用
+				<input type="radio" name="status" value="1" checked />禁用
 				<?php else: ?>
-				<input type="radio" name="status" value="0">启用
-				<input type="radio" name="status" value="1" checked />禁用<?php endif; ?>
+				<input type="radio" name="status" value="0" />启用
+				<input type="radio" name="status" value="1" />禁用<?php endif; ?>
 			</dd>
 		</dl>
 	</div>

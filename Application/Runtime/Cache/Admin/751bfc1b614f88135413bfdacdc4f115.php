@@ -1,8 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/LanceLot/admin.php/Movie/index" method="post">
 	<input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
 	<input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
-	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>" />
-	<input type="hidden" name="_sort" value="<?php echo ($_REQUEST['_sort']); ?>" />
+	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>"/>
+	<input type="hidden" name="_sort" value="<?php echo ($_REQUEST['_sort']); ?>"/>
 </form>
 
 <div class="pageHeader">
@@ -142,8 +142,7 @@
 
 	<div class="panelBar">
 		<div class="pages">
-            <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak(<?php echo (C("TMPL_L_DELIM")); ?>numPerPage:this.value<?php echo (C("TMPL_R_DELIM")); ?>)">
                <?php if($numPerPage == 10): ?><option value="10" selected>10</option>
                <?php else: ?>
                <option value="10">10</option><?php endif; ?>
@@ -163,6 +162,6 @@
             <span>共<?php echo ($totalCount); ?>条</span>
         </div> 
 
-        <div class="pagination" targetType="navTab" totalCount="<?php echo ($totalCount); ?>" numPerPage="<?php echo ($numPerPage); ?>" pageNumshown="10" currentPage="<?php echo ($currentPage); ?>">
+        <div class="pagination" targetType="navTab" totalCount="<?php echo ($totalCount); ?>" numPerPage="<?php echo ($numPerPage); ?>" pageNumShown="10" currentPage="<?php echo ($currentPage); ?>"></div>
 	</div>
 </div>

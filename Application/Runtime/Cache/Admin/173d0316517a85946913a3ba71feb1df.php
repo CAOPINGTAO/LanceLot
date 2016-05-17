@@ -118,6 +118,6 @@
             <span>共<?php echo ($totalCount); ?>条</span>
         </div> 
 
-        <div class="pagination" targetType="navTab" totalCount="<?php echo ($totalCount); ?>" numPerPage="<?php echo ($numPerPage); ?>" pageNumshow="10" currentPage="<?php echo ($currentPage); ?>">
+        <div class="pagination" targetType="navTab" totalCount="<?php echo ($totalCount); ?>" numPerPage="<?php echo ($numPerPage); ?>" pageNumshown="10" currentPage="<?php echo ($currentPage); ?>">
     </div>
 </div>
