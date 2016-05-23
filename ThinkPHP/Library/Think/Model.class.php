@@ -106,7 +106,7 @@ class Model {
         if(empty($this->fields)) {
             // 如果数据表字段没有定义则自动获取
             if(C('DB_FIELDS_CACHE')) {
-                $db   =  $this->dbName?:C('DB_NAME');
+                $db   =  $this->dbName?$this->dbName:C('DB_NAME');
                 $fields = F('_fields/'.strtolower($db.'.'.$this->tablePrefix.$this->name));
                 if($fields) {
                     $this->fields   =   $fields;
@@ -857,7 +857,8 @@ class Model {
      public function create($data='',$type='') {
         // 如果没有传值默认取POST数据
         if(empty($data)) {
-            $data   =   I('post.');
+            // $data   =   I('post.');
+            $data = $_POST;
         }elseif(is_object($data)){
             $data   =   get_object_vars($data);
         }
@@ -868,7 +869,7 @@ class Model {
         }
 
         // 状态
-        $type = $type?:(!empty($data[$this->getPk()])?self::MODEL_UPDATE:self::MODEL_INSERT);
+        $type = $type?$type:(!empty($data[$this->getPk()])?self::MODEL_UPDATE:self::MODEL_INSERT);
 
         // 检查字段映射
         if(!empty($this->_map)) {
