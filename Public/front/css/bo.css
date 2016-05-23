@@ -393,9 +393,9 @@
 }
 
 .prlist_title{
-    background-color: #F6F3D3;
+    background-color: #f5f5f5;
     border-radius: 4px;
-    color: #777777;
+    color: #2277AA;
     font-size: 14px;
     letter-spacing: 1px;
     padding: 10px;
@@ -1200,9 +1200,9 @@
 }
 
 .recom_list .filmtype{
-    background-color: #FAE9DA;
+    background-color: #ebebeb;
     border-radius: 5px;
-    color: #CA6445;
+    color: #fff;
     font-size: 14px;
     height: 30px;
     margin:5px;
@@ -1230,7 +1230,7 @@
 .recom_list .title #changmytype a{
     background-color: white;
     border-radius: 5px;
-    color: #CA6445;
+    color: #2277AA;
     cursor: pointer;
     display: block;
     float: right;
@@ -1243,9 +1243,6 @@
     width: 120px;
 }
 
-.recom_list .title #changmytype a:hover{
-    background-color: #ccc;
-}
 
 #changepiclink{
 	text-align:center;
@@ -1278,7 +1275,7 @@
 #changemyinfolink a {
     background-color: white;
     border-radius: 5px;
-    color: #CA6445;
+    color: #2277AA;
     cursor: pointer;
     display: block;
     float: right;
@@ -1296,13 +1293,12 @@
 }
 
 .myinfotag {
-    background-color: #F6F3D3;
     border-radius: 5px;
-    color: #CA6445;
+    color: #2277AA;
     cursor: pointer;
     display: block;
     float: right;
-    font-size: 14px;
+    font-size: 12px;
     height: 20px;
     line-height: 20px;
     margin-right: 30px;

@@ -54,10 +54,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_left .movie_hot .hot_head a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_left .movie_hot .hot_list{
 	width:100%;
 	margin-top:10px;
@@ -76,7 +73,7 @@ img{ border:0 none;}
 	
 }
 #main_left .movie_hot .hot_list ul li span{
-	color:red;
+	color:#37a;
 	height:25px;
 	width:140px;
 	line-height:25px;
@@ -87,12 +84,13 @@ img{ border:0 none;}
 #main_left .movie_hot .hot_list ul li span a{
 	
 	text-decoration:none;
-	color:#444444;
+	color:#37a;
 	font:14px/150% Arial,Helvetica,sans-serif;
 	
 }
-#main_left .movie_hot .hot_list ul li span a:hover{
-	
+#main_left .movie_hot .hot_list ul li span strong{
+
+	color: #e09015;
 }
 
 /*  电影大图间隔带 */
@@ -127,10 +125,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_left .movie_recent .recent_head a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_left .movie_recent .recent_list{
 	width:100%;
 	margin-top:10px;
@@ -161,10 +156,7 @@ img{ border:0 none;}
 	font:13px/150% Arial,Helvetica,sans-serif;
 	
 }
-#main_left .movie_recent .recent_list ul li span a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 
 
 /* 编辑器样式 */
@@ -256,14 +248,11 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_left .movie_review .review_head a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_left .movie_review .review_list{
 	width:590px;
 	height:190px;
-	margin-top:25px;
+	margin-top:18px;
 	border-bottom:1px solid #EAEAEA;
 }
 #main_left .movie_review .review_list .rl{
@@ -289,10 +278,7 @@ img{ border:0 none;}
 	color:#3377AA;
 	text-decoration:none;
 }
-#main_left .movie_review .review_list .rr .title a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 
 #main_left .movie_review .review_list .rr .acthor{
 	width:480px;
@@ -304,10 +290,7 @@ img{ border:0 none;}
 	color:#666666;
 	text-decoration:none;
 }
-#main_left .movie_review .review_list .rr .acthor a:hover{
-	color:#fff;
-	background-color:#666666;
-}
+
 #main_left .movie_review .review_list .rr .content{
 	width:480px;
 	height:100px;
@@ -417,11 +400,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_right .movie_sort .sort_head a:hover{
-	
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_right .movie_sort .sort_list{
 	width:100%;
 	margin-top:15px;
@@ -443,10 +422,6 @@ img{ border:0 none;}
 	color:#3377AA;
 	font-size:13px;
 		
-}
-#main_right .movie_sort .sort_list ul li a:hover{
-	color:#fff;
-	background:#3377BB;
 }
 
 /*koubeitop*/
@@ -475,10 +450,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_right .movie_rank .rank_head a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_right .movie_rank .rank_list{
 	width:100%;
 	margin-top:15px;
@@ -497,10 +469,6 @@ img{ border:0 none;}
 	color:#3377AA;
 	font-size:12px;
 		
-}
-#main_right .movie_rank .rank_list ul li a:hover{
-	color:#fff;
-	background:#3377BB;
 }
 
 /* =本周top10= */
@@ -526,10 +494,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#main_right .movie_top .top_head a:hover{
-	color:#fff;
-	background:#3377BB;
-}
+
 #main_right .movie_top .top_list{
 	width:100%;
 	margin-top:15px;
@@ -553,10 +518,6 @@ img{ border:0 none;}
 	color:#3377AA;
 	font-size:12px;
 	
-}
-#main_right .movie_top .top_list ul li a:hover{
-	color:#fff;
-	background:#3377BB;
 }
 
 
@@ -682,10 +643,7 @@ img{ border:0 none;}
 	color:#3377AA;
 	text-decoration:none;
 }
-#detail_main_left .movie_detail .d_left02 ul li a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 #detail_main_left .movie_detail .d_right{
 	float:right;
 	width:150px;
@@ -693,7 +651,7 @@ img{ border:0 none;}
 	color:#666666;
 }
 #detail_main_left .movie_detail .d_right span{
-	color:red;
+	color:#e09015;
 }
 #detail_main_left .movie_detail .d_right ul{
 	margin-top:0px;
@@ -702,10 +660,7 @@ img{ border:0 none;}
 	color:#3377AA;
 	text-decoration:none;
 }
-#detail_main_left .movie_detail .d_right ul li a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 /* 评分 */
 #pingfen{ 
 	width:135px;
@@ -800,11 +755,6 @@ img{ border:0 none;}
 	text-decoration:none;
 	cursor:pointer;
 }
-#detail_main_left .movie_detail .d_down a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
-
 
 
 
@@ -963,10 +913,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#detail_main_left .movie_short_review .review_head a:hover{
-	color:#fff;
-	background:#3377AA;
-}
+
 #detail_main_left .movie_short_review .review_head .post{
 	text-decoration:none;
 	float:right;
@@ -980,10 +927,7 @@ img{ border:0 none;}
 	padding-left:15px;
 	background-color:#FAE9DA;
 }
-#detail_main_left .movie_short_review .review_head a:hover{
-	color:#D9896A;
-	background:#FCEFE3;
-}
+
 #detail_main_left .movie_short_review .review_list{
 	width:590px;
 	
@@ -1006,10 +950,7 @@ img{ border:0 none;}
 	margin-right:10px;
 	text-decoration:none;
 }
-#detail_main_left .movie_short_review .review_list .acthor .l a:hover{
-	color:#fff;
-	background-color:#666666;
-}
+
 
 #detail_main_left .movie_short_review .review_list .acthor .r{
 	float:right;
@@ -1023,10 +964,7 @@ img{ border:0 none;}
 	margin-left:10px;
 	text-decoration:none;
 }
-#detail_main_left .movie_short_review .review_list .acthor .r a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 #detail_main_left .movie_short_review .review_list .content{
 	width:590px;
 	height:80px;
@@ -1108,10 +1046,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#detail_main_left .movie_review .review_head a:hover{
-	color:#fff;
-	background:#3377AA;
-}
+
 #detail_main_left .movie_review .review_head .post{
 	border:none;
 	float:right;
@@ -1126,10 +1061,7 @@ img{ border:0 none;}
 	background-color:#FAE9DA;
 	cursor:pointer;
 }
-#detail_main_left .movie_review .review_head a:hover{
-	color:#D9896A;
-	background:#FCEFE3;
-}
+
 #detail_main_left .movie_review .review_list{
 	width:590px;
 	height:200px;
@@ -1156,10 +1088,6 @@ img{ border:0 none;}
 	color:#3377AA;
 	text-decoration:none;
 }
-#detail_main_left .movie_review .review_list .title a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
 
 #detail_main_left .movie_review .review_list .acthor{
 	width:590px;
@@ -1172,10 +1100,7 @@ img{ border:0 none;}
 	margin-right:10px;
 	text-decoration:none;
 }
-#detail_main_left .movie_review .review_list .acthor a:hover{
-	color:#fff;
-	background-color:#666666;
-}
+
 #detail_main_left .movie_review .review_list .content{
 	width:590px;
 	height:105px;
@@ -1197,10 +1122,7 @@ img{ border:0 none;}
 	margin-left:10px;
 	text-decoration:none;
 }
-#detail_main_left .movie_review .review_list .point a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 #detail_main_left .movie_review .nobody{
 	height:200px;
 	line-height:200px;
@@ -1337,10 +1259,7 @@ img{ border:0 none;}
 	font-size:12px;
 	margin-left:10px;	
 }
-#review_main_left .movie_review_reply .review_head a:hover{
-	color:#fff;
-	background:#3377AA;
-}
+
 #review_main_left .movie_review_reply .review_head .post{
 	text-decoration:none;
 	float:right;
@@ -1354,10 +1273,7 @@ img{ border:0 none;}
 	padding-left:15px;
 	background-color:#FAE9DA;
 }
-#review_main_left .movie_review_reply .review_head a:hover{
-	color:#D9896A;
-	background:#FCEFE3;
-}
+
 #review_main_left .movie_review_reply .review_list{
 	width:590px;
 	margin:10px 0;
@@ -1380,10 +1296,6 @@ img{ border:0 none;}
 	margin-right:10px;
 	text-decoration:none;
 }
-#review_main_left .movie_review_reply .review_list .acthor .l a:hover{
-	color:#fff;
-	background-color:#666666;
-}
 
 #review_main_left .movie_review_reply .review_list .acthor .r{
 	float:right;
@@ -1396,10 +1308,7 @@ img{ border:0 none;}
 	color:#3377AA;
 	text-decoration:none;
 }
-#review_main_left .movie_review_reply .review_list .acthor .r a:hover{
-	color:#fff;
-	background-color:#3377AA;
-}
+
 #review_main_left .movie_review_reply .review_list .content{
 	width:590px;
 	height:80px;

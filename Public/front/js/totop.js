@@ -27,7 +27,7 @@ $(function (){
 		if (h > 0 && aa == null){
 
 			//将回到顶端的按钮动态插入到文档中
-			$('body').append('<div id="totop"><a href="#"><img src="http://192.168.140.98/MM/1302/Public/front/images/totop.gif" alt="回到顶端" title="回到顶端" /></a></div>');
+			$('body').append('<div id="totop"><a href="#"><img src="/LanceLot/Public/front/images/totop.gif" alt="回到顶端" title="回到顶端" /></a></div>');
 
 			//判断宽度来实现按钮距离右边的距离
 			if (jx){
