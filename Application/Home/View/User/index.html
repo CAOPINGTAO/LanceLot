@@ -134,7 +134,7 @@
 								<span id="mytextcontent" style="color:#ccc;">快来记录自己的第一条心情<span>
 							</if>
 						</div>
-						<if condition="$Think.get.uid eq $Think.session.loginuser.id">
+						<eq name="Think.get.uid" value="$Think.session.loginuser.id">
 							<form onsubmit="return doreply(this)">
 							<p id="js_message_p">此时此刻，恰如彼时彼刻......</p>
 								<div id="psignarea">
@@ -144,7 +144,7 @@
 									<input type="submit" class="btn-submit" value="发布心情"></button>
 								</div>
 							</form>
-						</if>
+						</eq>
 					</div>
 				</div>
 				<!-- 左侧当前用户最新影评 -->
@@ -325,11 +325,11 @@
 					<div>
 						<div class="plist_content_pic">
 							<foreach name="myfriendlist" item="myfriend">
-								<if condition="$myfriend['id'] neq $Think.get.uid">
+								<neq name="myfriend.id" value="$Think.get.uid">
 									<a href="__APP__/User/index/uid/{$myfriend.id}">
 										<img src="__ROOT__/Uploads/User/Headpic/{$myfriend.headpic}" alt="{$myfriend.username}" />
 									</a>
-								</if>
+								</neq>
 							</foreach>
 						</div>
 					</div>
@@ -382,7 +382,7 @@
 					<p>等级：{$vo.levelname}</p>
 				</div>
 				
-				<if condition="$Think.get.uid neq $Think.session.loginuser.id">
+				<neq name="Think.get.uid" value="$Think.session.loginuser.id">
 					<div class="ucaozuo">
 						<p class="caozuotitle">操作</p>
 						
@@ -396,14 +396,14 @@
 							</li>
 						</ul>
 					</div>
-				</if>
+				</neq>
 				
 				<div class="pinfobox">
 					<p class="prighttitle">个人标签({$vo.mytypenum})</p>
 					
 					<ul>
 						<volist name="mytypes" id="vo" offset="0" length="6">
-							<li class="mytag"><a href="__APP__/Typelist/tags/id/{$mytypes[vo].id}">{$mytypes[vo].typename}</a></li>
+							<li class="mytag"><a href="__APP__/Typelist/tags/id/{$vo.id}">{$vo.typename}</a></li>
 						</volist>
 					</ul>
 				</div>

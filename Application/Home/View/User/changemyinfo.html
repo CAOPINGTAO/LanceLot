@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>LanceLot-修改我的资料</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/time/my.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/time/my.js"></script>
+		
+		<script type="text/javascript">
+			var info={ required:"&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req1.png'/>&nbsp;&nbsp;让更多的朋友了解你！",email:"&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req1.png'/>&nbsp;&nbsp;请输入正确email地址!",age:"&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req1.png'/>&nbsp;&nbsp;请输入正确的年龄哈!"};
+			
+			$(function(){
+				//获取所有input输入框，并添加获取和失去焦点事件
+				$("#name,#email,#age").focus(function(){
+					//获取焦点事件处理
+					$(this).next("span").remove();
+					var cname=$(this).attr("classname");
+					$(this).after("<span style='color:blue;font-size:12px;'>"+info[cname]+"</span>")		
+				}).blur(function(){
+					//失去焦点事件处理
+					$(this).next("span").remove();
+					//做验证
+					var cname=$(this).attr("classname");
+					switch(cname){
+						case "required":
+							if($(this).val()==null){
+								$(this).after("<span style='color:red;font-size:12px;'>&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req3.png'/>&nbsp;&nbsp;姓名是必要的！</span>");
+							}else{
+								$("#name").after("<span>&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req2.png'/>&nbsp;&nbsp;会有更多的人认识你</span>");
+							}
+							break;
+						case "email":
+							if($(this).val().match(/^\w+@\w+(\.\w+){$Think.LDELIM}0,3{$Think.RDELIM}$/)==null){
+								$(this).after("<span style='color:red;font-size:12px;'>&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req3.png'/>&nbsp;&nbsp;邮箱地址错误！</span>");
+							}else{
+								$(this).after("<span>&nbsp;&nbsp;<img src='__PUBLIC__/front/images/req2.png'/></span>");
+							}
+							break;
+					}
+					
+				});
+			});
+				
+			function doCheck(myform){
+				//判断数据添加是否正确
+				if($("#email").val().match(/^\w+@\w+(\.\w+){$Think.LDELIM}0,3{$Think.RDELIM}$/)==null){
+					alert("输入正确邮箱地址！");
+					return false;
+				}
+					
+				if($("#name").val()==null){
+					alert("添加真实的姓名，交往真正的朋友");
+					return false;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<include file="Public/uhead" />
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 用户资料修改 -->
+				<div class="prlist">
+					<div class="prlist_title">&nbsp;资料修改页<span id="changemyinfolink"><a href="__APP__/User/changepass/uid/{$Think.session.loginuser.id}">修改我的密码</a></span></div>
+					
+					<div class="myinfo">
+						<form action="__CONTROLLER__/dochangeinfo" method="post" onsubmit="return doCheck(this);">
+							<input type="hidden" name="id" value="{$Think.session.loginuser.id}"
+							<div class="item">
+								<label class="labelinp" ><b><span class="myinfotag">用户ID:</span></b></label>
+								<label class="labelinp" >{$vo.id}</label>&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp" ><b><span class="myinfotag">用户账号:</span></b></label>
+								<label class="labelinp">{$vo.username}</label>&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp"><b><span class="myinfotag">用户姓名:</span></b></label>
+								<input style="color:#222;" id="name" name="name" class="basic-input" maxlength="60" value="{$vo.name}" type="text" classname="required">&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp"><b/><span class="myinfotag">用户邮箱:</span></b></label>
+								<input style="color:#222;"id="email" name="email" class="basic-input" maxlength="60" value="{$vo.email}" type="text" classname="email">&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp"><b><span class="myinfotag">用户性别:</span></b></label>
+								<if condition="$vo.sex eq 1">
+								<label class="labelinp"><input type="radio" name="sex" value="1" checked />男</label>
+								<label class="labelinp"><input type="radio" name="sex" value="0" />女</label>
+								<else />
+								<label class="labelinp"><input type="radio" name="sex" value="1" />男</label>
+								<label class="labelinp"><input type="radio" name="sex" value="0" checked />女</label>
+								</if>
+							</div>
+							
+							<div class="item">
+								<label class="labelinp" for="birthday"><b><span class="myinfotag">出生日期:</span></b></label>
+								<input style="color:#222;" id="birthday" name="birthday" class="basic-input" maxlength="60" value="{$vo.birthday}"  type="text" classname="birthday">&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp"><b><span class="myinfotag">用户地址:</span></b></label>
+								<input style="color:#222;" id="address" name="address" class="basic-input2" value="{$vo.address}" type="text">&nbsp;&nbsp;
+							</div>
+							
+							<div class="item">
+								<label class="labelinp">&nbsp;</label>
+								<input value="修改" id="user_login" name="user_login" class="btn-submit" type="submit" classname="sub">&nbsp;&nbsp;
+								<input value="重置" id="user_login" name="user_login" class="btn-submit" type="reset" classname="sub">
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>	
+		
+		<!-- 导入页脚部分 -->
+		<include file="Public/foot" />
+		
+	</body>
+</html>

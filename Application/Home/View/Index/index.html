@@ -53,7 +53,7 @@
 				width:120px;
 				height: 30px;
 				line-height: 30px;
-				background-color: #CCFFCC; 
+				background-color: #e5ebe4; 
 				border-radius:5px;
 				text-align: center;
 			}
@@ -262,7 +262,8 @@
 
                             <span><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
                             <span>
-                                综合评分：{$vo.rate}
+                                综合评分：
+                                <strong>{$vo.rate|round=###,1}</strong>
                             </span>
                         </li>
                         </volist>
@@ -273,7 +274,8 @@
                             <a href="__APP__/Detail/index/id/{$vo.id}"><img src="__ROOT__/__UPLOAD__/Movie/Cover/d_{$vo.picname}" alt="" /></a>
                             <span><a href="__APP__/Detail/index/id/{$vo.id}">{$vo.filmname}</a></span>
                             <span>
-                                综合评分：{$vo.rate}
+                                综合评分：
+                                <strong>{$vo.rate|round=###,1}</strong>
                             </span>
                         </li>
                         </volist>

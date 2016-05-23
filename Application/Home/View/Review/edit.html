@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>LanceLot</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>		
+		<!-- 编辑器文件导入 -->
+		<script src="__PUBLIC__/dwz/xheditor/xheditor-1.1.12-zh-cn.min.js" type="text/javascript"></script>				
+		<script>
+			$(function(){
+				$("#text").xheditor({
+					skin:'default',tools:'simple',
+					upImgUrl:'__APP__/Review/upload',
+					upImgExt:'jpg,jpeg,gif,png',
+					html5Upload:false,
+					width:800,
+					height:480,
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 个人中心菜单结束 -->		
+		<include file="Public/head" />			
+		<!-- 个人中心菜单结束 -->		
+		<!-- 主体部分开始	-->
+		<div id="main">
+			<div id="review_edit">
+				<img src="__PUBLIC__/front/images/close.jpg" alt="关闭" />
+				<div class="atitle">
+					修剪一下！让我变得更多彩......
+				</div>
+				<div class="acon">
+				<form action="__APP__/Review/update" method="post">
+					<input type="hidden" name="id" value="{$vo.id}"/>
+					标题:<input type="text" name="title" class="winput" value="{$vo.title}"/>
+					<textarea name="content" id="text" style="resize:none;"   cols="70" rows="10" >
+						{$vo.content}
+					</textarea>
+	
+					<input type="submit" value="修改影评" class="wsub" />
+					<a href="__APP__/Review/index/id/{$vo.id}" class="back"/>返回</a>
+				</form>
+				</div>		
+			</div>			
+		</div>		
+		<!-- 主体部分结束	-->	
+		<div class="nav"></div>
+		
+		<!-- 页脚部分开始 -->
+		<include file="Public/foot" />	
+		<!-- 页脚不封结束 -->
+	</body>
+</html>
