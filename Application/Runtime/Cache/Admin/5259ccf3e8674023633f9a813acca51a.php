@@ -43,7 +43,7 @@
 			</p>
 			<dl class="nowrap">
 				<dt>影片简介：</dt>
-				<dd></textarea><textarea class="editor" name="content" rows="9" cols="68" tools="simple" ><?php echo ($vo["content"]); ?></textarea></dd>
+				<dd></textarea><textarea class="editor" name="content" rows="10" cols="68" tools="simple"><?php echo ($vo["content"]); ?></textarea></dd>
 			</dl>
 				
 		</div>

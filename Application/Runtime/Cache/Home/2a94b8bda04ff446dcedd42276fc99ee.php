@@ -53,7 +53,7 @@
 				width:120px;
 				height: 30px;
 				line-height: 30px;
-				background-color: #CCFFCC; 
+				background-color: #e5ebe4; 
 				border-radius:5px;
 				text-align: center;
 			}
@@ -136,7 +136,7 @@
     <div class="h_top">
         <div class="con">
             <ul class="left">
-                <li><a href="/LanceLot/index.php/Index/index" class="title">笃 学 力 行 守 正 求 新</a></li>
+                <li><a href="/LanceLot/index.php/Index/index" class="title"></a></li>
             </ul>
             <ul class="right">
                 <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
@@ -159,9 +159,9 @@
                     <input type="submit" class="sub" value="" />
                 </form>
             </div>
-            <div class="logoimg">
+           <!--  <div class="logoimg">
                 <img src="/LanceLot/Public/front/images/logo.jpg" alt=""/>
-            </div>
+            </div> -->
         </div>
     </div>
     <!--menu菜单-->
@@ -405,7 +405,8 @@
 
                             <span><a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo["id"]); ?>"><?php echo ($vo["filmname"]); ?></a></span>
                             <span>
-                                综合评分：<?php echo ($vo["rate"]); ?>
+                                综合评分：
+                                <strong><?php echo (round($vo["rate"],1)); ?></strong>
                             </span>
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
@@ -414,7 +415,8 @@
                             <a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo["id"]); ?>"><img src="/LanceLot/Uploads/Movie/Cover/d_<?php echo ($vo["picname"]); ?>" alt="" /></a>
                             <span><a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo["id"]); ?>"><?php echo ($vo["filmname"]); ?></a></span>
                             <span>
-                                综合评分：<?php echo ($vo["rate"]); ?>
+                                综合评分：
+                                <strong><?php echo (round($vo["rate"],1)); ?></strong>
                             </span>
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
@@ -557,26 +559,16 @@
     <div class="nav"></div>
 
     <!--导入页脚部分-->
-    <!--页脚部分开始-->
-    <div id="footer">
+        <div id="footer">
         <div class="foot_top">
             <div class="foot_link">
-                <a href="" target="_blank">公司简介</a> |
-                <a href="" target="_blank">合作伙伴</a> |
-                <a href="" target="_blank">诚聘英才</a> |
-                <a href="" target="_blank">广告服务</a> |
-                <a href="/LanceLot/index.php/Map/map" target="_blank">网站地图</a> |
-                <a href="" target="_blank">保护隐私</a> |
+                <a href="" target="_blank">网站地图</a> |
                 <a href="" target="_blank">版权信息</a> |
-                <a href="" target="_blank">客户服务</a> |
                 <a href="" target="_blank">联系我们</a> |
                 <a href="" target="_blank">电影之家</a>
             </div>
         </div>
-        <div class="foot_content">
-            Copyright&#169;1996-2014  LanceLot
-        </div>
     </div>
-<!--页脚部分结束-->
+
 </body>
 </html>

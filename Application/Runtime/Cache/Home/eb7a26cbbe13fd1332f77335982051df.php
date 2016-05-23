@@ -10,12 +10,12 @@
 	a{ color:#000;text-decoration:none;}
 	a:hover{ color:#F30;text-decoration:underline;}
 	input{ padding:0px;margin:0px;}
-	.txtbox{ border:1px solid #E79F50;height:20px;line-height:22px;width:120px;}
+	.txtbox{ border:1px solid #528641;height:20px;line-height:22px;width:120px;}
 	.bfont{ font:700 12px "宋体";}
 	#login{ width:400px;height:100%;overflow:hidden;margin:0px auto;}
 	#login_one{ width:400px;float:left;}
 	/*#login_two{ width:180px;height:220px;margin-top:10px;float:right;}*/
-	#title{ width:400px;height:30px;line-height:30px;color:#F60;font-weight:700;background-color:#FDEBD9;text-align:center;margin:0px auto;}
+	#title{ width:400px;height:30px;line-height:30px;color:#d5d5d5;background-color:#545652;text-align:center;margin:0px auto;}
 	#loginbox{ width:185px;height:120px;margin:10px 20px;float:left;display:inline;}
 	#btnlogin{ width:55px;height:120px;float:right;margin:10px 30px 10px 5px;}
 	#forget{ width:200px;margin:0px auto;height:25px;line-height:25px;text-align:center;}
@@ -43,17 +43,17 @@
             </tr>
 			 <tr>
                 <td class="bfont">&nbsp;</td>
-                <td><input class="txtbox" type="submit" name="" value="马上登录" style="width:120px;height:30px;color:#fff;margin-top:20px;background-color:#3E8D2A;"/></td>
+                <td><input class="txtbox" type="submit" name="" value="马上登录" style="width:120px;height:30px;color:#fff;margin-top:20px;background-color:#3fa156;"/></td>
             </tr>
         </table>
 		</form>
     </div>
     <div id="forget">
-    	<span style="float:left;"><a href="#">忘记密码？</a></span>
-        <span style="float:right;"><a href="/LanceLot/index.php/Reqister/reqister">马上注册？</a></span>
+    	<span style="float:left;"><a href="#">忘记密码</a></span>
+        <span style="float:right;"><a href="/LanceLot/index.php/Reqister/reqister">马上注册</a></span>
     </div>
-    <div style="height:25px;line-height:25px;text-align:center">马上注册还可以对喜爱的电影和影星进行收藏哦(⊙o⊙)！ </div>
-	</div>
+    <!-- <div style="height:25px;line-height:25px;text-align:center">马上注册还可以对喜爱的电影和影星进行收藏哦(⊙o⊙)！ </div>
+	</div> -->
 	<!-- <div id="login_two">
 		<img style="width:180px;height:220px;" src="/LanceLot/Public/front/images/loginpic.jpg"/>
 	</div> -->

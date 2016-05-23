@@ -1,0 +1,680 @@
+[ 2016-05-20T00:21:01+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1463675068734
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003912s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004653s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000515s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000309s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006332s ]
+
+[ 2016-05-20T00:21:05+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/edit/id/44?_=1463675073119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004858s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000301s ]
+SQL: SELECT * FROM `ll_movie` WHERE `id` = 44 LIMIT 1   [ RunTime:0.000865s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005742s ]
+
+[ 2016-05-20T00:21:36+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/update/navTabId/listmovie/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005599s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000516s ]
+SQL: UPDATE `ll_movie` SET `filmname`='疯狂动物城',`petname`='动物乌托邦',`director`='拜恩·霍华德、瑞奇·摩尔、杰拉德·布什',`editor`='杰拉德·布什、菲尔·约翰斯顿',`nation`='美国',`language`='英语',`showtime`=1457020800,`minutes`=109,`content`='&lt;span style=&quot;font-family:arial, 宋体, sans-serif;color:#333333;font-size: 14px; line-height: 24px; text-indent: 28px;&quot;&gt;一个现代化的动物都市，每种动物在这里都有自己的居所，有沙漠气候的撒哈拉广场、常年严寒的冰川镇等等，它就像一座大熔炉，动物们在这里和平共处——无论是大象还是小老鼠，只要努力，都能闯出一番名堂。兔子朱迪从小就梦想能成为动物城市的警察，尽管身边的所有人都觉得兔子不可能当上警察，但她还是通过自己的努力，跻身到了全是大块头动物城警察局，成为了第一个兔子警官。为了证明自己，她决心侦破一桩神秘案件。追寻真相的路上，朱迪迫使在动物城里以坑蒙拐骗为生的狐狸尼克帮助自己，却发现这桩案件背后隐藏着一个意欲颠覆动物城的巨大阴谋，他们不得不联手合作，去尝试揭开隐藏在这巨大阴谋后的真相。&lt;/span&gt;',`picname`='57317f639b767.jpg' WHERE `id` = 44 [ RunTime:0.000247s ]
+
+[ 2016-05-20T00:22:41+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/index?_=1463675168361
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005099s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.001430s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `ll_movie` WHERE `status` = 2  [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000257s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '地心引力'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '泰坦尼克号'  [ RunTime:0.000104s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '忠犬八公的故事'  [ RunTime:0.000092s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '西西里的美丽传说'  [ RunTime:0.000106s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '活在当下Now Is Good'  [ RunTime:0.000095s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '阿甘正传'  [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: mp /var/www/html/LanceLot/Application/Admin/Controller/PptController.class.php 第 46 行.
+SQL: SELECT * FROM `ll_ppt`  [ RunTime:0.000086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 15 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 20 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 23 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 78 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 84 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 87 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 90 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 94 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007127s ]
+
+[ 2016-05-20T00:23:02+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/del/id/119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003667s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000368s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 119 LIMIT 1   [ RunTime:0.000187s ]
+SQL: DELETE FROM `ll_ppt` WHERE `id` = 119 [ RunTime:0.000117s ]
+
+[ 2016-05-20T00:23:05+08:00 ] 10.0.2.2 /LanceLot/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010048s ]
+
+[ 2016-05-20T00:23:08+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/index?_=1463675196063
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004945s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.001197s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `ll_movie` WHERE `status` = 2  [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000196s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '地心引力'  [ RunTime:0.000159s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '泰坦尼克号'  [ RunTime:0.000095s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '忠犬八公的故事'  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '西西里的美丽传说'  [ RunTime:0.000090s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '活在当下Now Is Good'  [ RunTime:0.000093s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '阿甘正传'  [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: mp /var/www/html/LanceLot/Application/Admin/Controller/PptController.class.php 第 46 行.
+SQL: SELECT * FROM `ll_ppt`  [ RunTime:0.000083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 15 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 20 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 23 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 78 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 84 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 87 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 90 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 94 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004839s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005967s ]
+
+[ 2016-05-20T00:23:11+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/add/id/121?_=1463675198057
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005756s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000883s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 121 LIMIT 1   [ RunTime:0.000335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008893s ]
+
+[ 2016-05-20T00:23:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/insert/navTabId/pptlist/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006300s ]
+NOTIC: [2] md5_file(./Uploads/News/mypic/573de890885b8.jpg): failed to open stream: No such file or directory /var/www/html/LanceLot/ThinkPHP/Library/Think/UploadFile.class.php 第 204 行.
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.001220s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 121 LIMIT 1   [ RunTime:0.000064s ]
+SQL: UPDATE `ll_ppt` SET `mid`=30,`title`='地心引力',`picname`='573de890885b8.jpg',`state`=2 WHERE `id` = 121 [ RunTime:0.001238s ]
+
+[ 2016-05-20T00:23:48+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/index?_=1463675235858
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004896s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000244s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `ll_movie` WHERE `status` = 2  [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000330s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '地心引力'  [ RunTime:0.000254s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '泰坦尼克号'  [ RunTime:0.000116s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '忠犬八公的故事'  [ RunTime:0.000105s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '西西里的美丽传说'  [ RunTime:0.000093s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '活在当下Now Is Good'  [ RunTime:0.000001s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '阿甘正传'  [ RunTime:0.000198s ]
+NOTIC: [8] Undefined variable: mp /var/www/html/LanceLot/Application/Admin/Controller/PptController.class.php 第 46 行.
+SQL: SELECT * FROM `ll_ppt`  [ RunTime:0.000083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 15 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 20 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 23 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 78 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 84 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 87 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 90 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 94 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003973s ]
+
+[ 2016-05-20T00:24:34+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/edit/id/121?_=1463675281675
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011949s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000775s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 121 LIMIT 1   [ RunTime:0.000613s ]
+ERR: 模板不存在:./Application/Admin/View/Ppt/edit.html
+
+[ 2016-05-20T00:24:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/edit/id/121?_=1463675291178
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010466s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000334s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 121 LIMIT 1   [ RunTime:0.000190s ]
+ERR: 模板不存在:./Application/Admin/View/Ppt/edit.html
+
+[ 2016-05-20T00:24:51+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1463675298308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003777s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006771s ]
+
+[ 2016-05-20T00:24:58+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004650s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000514s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000138s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 10,10   [ RunTime:0.000263s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005260s ]
+
+[ 2016-05-20T00:25:02+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/edit/id/30?_=1463675310023
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003799s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000541s ]
+SQL: SELECT * FROM `ll_movie` WHERE `id` = 30 LIMIT 1   [ RunTime:0.000297s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003844s ]
+
+[ 2016-05-20T00:25:12+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/editstatus/id/30?_=1463675319459
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012069s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000524s ]
+SQL: SELECT `id`,`filmname`,`petname`,`addtime`,`status` FROM `ll_movie` WHERE `id` = 30 LIMIT 1   [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006256s ]
+
+[ 2016-05-20T00:25:18+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/editStatusHandle/navTabId/listmovie/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004955s ]
+SQL: SELECT COUNT(mp.fid) 'pnum' FROM ll_movie m LEFT JOIN ll_filmpic mp ON mp.fid=m.id WHERE m.id=30 [ RunTime:0.034701s ]
+SQL: SELECT COUNT(mt.fid) 'tnum' FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE m.id=30 [ RunTime:0.000216s ]
+SQL: SELECT COUNT(ma.fid) 'anum' FROM ll_movie m LEFT JOIN ll_movie_actor ma ON ma.fid=m.id WHERE m.id=30 [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000540s ]
+SQL: UPDATE `ll_movie` SET `status`=1 WHERE `id` = 30 [ RunTime:0.000194s ]
+
+[ 2016-05-20T00:25:22+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/editstatus/id/30?_=1463675329794
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005899s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.002281s ]
+SQL: SELECT `id`,`filmname`,`petname`,`addtime`,`status` FROM `ll_movie` WHERE `id` = 30 LIMIT 1   [ RunTime:0.001875s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019159s ]
+
+[ 2016-05-20T00:25:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/editStatusHandle/navTabId/listmovie/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004027s ]
+SQL: SELECT COUNT(mp.fid) 'pnum' FROM ll_movie m LEFT JOIN ll_filmpic mp ON mp.fid=m.id WHERE m.id=30 [ RunTime:0.000207s ]
+SQL: SELECT COUNT(mt.fid) 'tnum' FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE m.id=30 [ RunTime:0.000166s ]
+SQL: SELECT COUNT(ma.fid) 'anum' FROM ll_movie m LEFT JOIN ll_movie_actor ma ON ma.fid=m.id WHERE m.id=30 [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000475s ]
+SQL: UPDATE `ll_movie` SET `status`=2 WHERE `id` = 30 [ RunTime:0.000934s ]
+
+[ 2016-05-20T00:25:28+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004205s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000374s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.001048s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 10,10   [ RunTime:0.000279s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004888s ]
+
+[ 2016-05-20T00:25:32+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/showType/id/30?_=1463675339150
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013672s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000554s ]
+SQL: SELECT `id`,`filmname`,`addtime` FROM `ll_movie` WHERE `id` = 30 LIMIT 1   [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `ll_movie_type` [ RunTime:0.000303s ]
+SQL: SELECT `tid` FROM `ll_movie_type` WHERE `fid` = 30  [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.000460s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 38 LIMIT 1   [ RunTime:0.001453s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 100 LIMIT 1   [ RunTime:0.000472s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 124 LIMIT 1   [ RunTime:0.000836s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 12 LIMIT 1   [ RunTime:0.000716s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.000937s ]
+SQL: SELECT `fid`,`typename` FROM `ll_type` WHERE `id` = 4 LIMIT 1   [ RunTime:0.000205s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000914s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009904s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008972s ]
+
+[ 2016-05-20T00:25:34+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/showPhotos/id/30?_=1463675341819
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007642s ]
+SQL: SHOW COLUMNS FROM `ll_filmpic` [ RunTime:0.000969s ]
+SQL: SELECT * FROM `ll_filmpic` WHERE ( fid=30 )  [ RunTime:0.000262s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010898s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006362s ]
+
+[ 2016-05-20T00:25:37+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/showActors/id/30?_=1463675344458
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010885s ]
+SQL: SELECT ma.* FROM ll_actors ma LEFT JOIN ll_movie_actor act on ma.id=act.aid WHERE act.fid='30' [ RunTime:0.000631s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 5 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 62 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 65 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 68 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 71 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 74 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 78 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 81 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/e4387a300cce218414b1da4d9c28a951.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011956s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007109s ]
+
+[ 2016-05-20T00:25:40+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/content/id/30?_=1463675347110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010249s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000332s ]
+SQL: SELECT `content` FROM `ll_movie` WHERE `id` = 30 LIMIT 1   [ RunTime:0.000105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005974s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008954s ]
+
+[ 2016-05-20T00:25:44+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/index?_=1463675351613
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003869s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000247s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `ll_movie` WHERE `status` = 2  [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000398s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '地心引力'  [ RunTime:0.000176s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '泰坦尼克号'  [ RunTime:0.000092s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '忠犬八公的故事'  [ RunTime:0.000090s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '西西里的美丽传说'  [ RunTime:0.000095s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '活在当下Now Is Good'  [ RunTime:0.000089s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '阿甘正传'  [ RunTime:0.000001s ]
+NOTIC: [8] Undefined variable: mp /var/www/html/LanceLot/Application/Admin/Controller/PptController.class.php 第 46 行.
+SQL: SELECT * FROM `ll_ppt`  [ RunTime:0.000112s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 15 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 20 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 23 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 78 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 84 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 87 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 90 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 94 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003376s ]
+
+[ 2016-05-20T00:25:49+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/edit/id/121?_=1463675356467
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006724s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.001013s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `id` = 121 LIMIT 1   [ RunTime:0.001505s ]
+ERR: 模板不存在:./Application/Admin/View/Ppt/edit.html
+
+[ 2016-05-20T00:26:48+08:00 ] 10.0.2.2 /LanceLot/admin.php/Ppt/index?_=1463675416084
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005422s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000559s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `ll_movie` WHERE `status` = 2  [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `ll_ppt` [ RunTime:0.000182s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '地心引力'  [ RunTime:0.000145s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '泰坦尼克号'  [ RunTime:0.000095s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '忠犬八公的故事'  [ RunTime:0.000087s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '西西里的美丽传说'  [ RunTime:0.000073s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '活在当下Now Is Good'  [ RunTime:0.000103s ]
+SQL: SELECT * FROM `ll_ppt` WHERE `title` = '阿甘正传'  [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: mp /var/www/html/LanceLot/Application/Admin/Controller/PptController.class.php 第 46 行.
+SQL: SELECT * FROM `ll_ppt`  [ RunTime:0.000090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 3 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 15 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 20 行.
+NOTIC: [8] Undefined index: state /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 23 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 78 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 81 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 84 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 87 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 90 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 94 行.
+NOTIC: [8] Undefined variable: totalCount /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: numPerPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+NOTIC: [8] Undefined variable: currentPage /var/www/html/LanceLot/Application/Runtime/Cache/Admin/26542d5ebf1f46ad3b3983553c8c808e.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048583s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004883s ]
+

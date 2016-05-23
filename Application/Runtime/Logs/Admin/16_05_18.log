@@ -1,0 +1,1081 @@
+[ 2016-05-18T16:09:17+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/setAccess/navTabId/listrole/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003553s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.000332s ]
+SQL: DELETE FROM `ll_access` WHERE `role_id` = 28 [ RunTime:0.000143s ]
+SQL: INSERT INTO `ll_access` (`role_id`,`node_id`,`level`) VALUES (28,38,1),(28,39,1),(28,40,1),(28,41,1),(28,42,1),(28,43,1),(28,44,1),(28,47,1),(28,48,1),(28,49,1),(28,52,1),(28,53,1),(28,54,1),(28,96,1),(28,55,1),(28,56,1),(28,57,1),(28,58,1),(28,59,1),(28,60,1),(28,61,1),(28,62,1),(28,63,1),(28,64,1),(28,65,1),(28,66,1),(28,67,1),(28,68,1),(28,69,1),(28,70,1),(28,71,1),(28,72,1),(28,73,1),(28,74,1),(28,75,1),(28,76,1),(28,77,1),(28,78,1),(28,79,1),(28,80,1),(28,81,1),(28,82,1),(28,83,1),(28,84,1),(28,85,1),(28,86,1),(28,87,1),(28,88,1),(28,89,1),(28,90,1),(28,91,1),(28,92,1),(28,93,1),(28,94,1),(28,95,1),(28,97,1),(28,98,1),(28,99,1),(28,100,1),(28,101,1),(28,102,1),(28,103,1),(28,104,1),(28,105,1),(28,106,1),(28,107,1),(28,108,1),(28,109,1),(28,110,1),(28,111,1),(28,112,1),(28,113,1),(28,114,1),(28,115,1),(28,116,1),(28,117,1),(28,118,1),(28,119,1),(28,120,1),(28,121,1),(28,122,1),(28,123,1),(28,124,1),(28,125,1),(28,126,1),(28,127,1),(28,128,1),(28,129,1),(28,130,1),(28,131,1),(28,132,1),(28,133,1),(28,134,1),(28,135,1),(28,136,1),(28,137,1),(28,138,1),(28,139,1),(28,140,1),(28,141,1),(28,142,1),(28,143,1),(28,144,1),(28,145,1),(28,146,1),(28,147,1),(28,148,1),(28,149,1),(28,150,1),(28,151,1),(28,152,1),(28,153,1),(28,154,1),(28,155,1),(28,156,1),(28,158,1),(28,159,1),(28,160,1),(28,161,1),(28,162,1),(28,163,1),(28,164,1),(28,165,1),(28,166,1),(28,167,1),(28,168,1),(28,169,1),(28,170,1),(28,171,1),(28,172,1),(28,173,1),(28,174,1),(28,175,1),(28,176,1) [ RunTime:0.000851s ]
+
+[ 2016-05-18T16:09:22+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/showAccess/rid/28?_=1463558961664
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000090s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017037s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.000962s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.000984s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.000922s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005322s ]
+
+[ 2016-05-18T16:09:24+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/index?_=1463558964543
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007974s ]
+SQL: SHOW COLUMNS FROM `ll_role` [ RunTime:0.000327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_role` LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `ll_role` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000273s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 52 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 55 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/b35d77029c5f30642b30c7a996208f53.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005948s ]
+
+[ 2016-05-18T16:09:26+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/access/rid/28?_=1463558966202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015056s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.001278s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.001027s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.000635s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011996s ]
+
+[ 2016-05-18T16:09:31+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/access/rid/28?_=1463558971300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001937s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010253s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.001437s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.000461s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.003395s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013041s ]
+
+[ 2016-05-18T16:09:34+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/showAccess/rid/28?_=1463558974265
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014417s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.001828s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.002133s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.001269s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.001308s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000545s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000765s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013269s ]
+
+[ 2016-05-18T16:09:41+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/edit/id/28?_=1463558980603
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017352s ]
+SQL: SHOW COLUMNS FROM `ll_role` [ RunTime:0.001074s ]
+SQL: SELECT * FROM `ll_role` WHERE `id` = 28 LIMIT 1   [ RunTime:0.000331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004584s ]
+
+[ 2016-05-18T16:09:43+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/update/navTabId/listrole/callbackType/closeCurrent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003543s ]
+SQL: SHOW COLUMNS FROM `ll_role` [ RunTime:0.000316s ]
+SQL: UPDATE `ll_role` SET `name`='test4',`title`='功能测试',`remark`='用于测试该模块的功能',`status`=0 WHERE `id` = 28 [ RunTime:0.000183s ]
+
+[ 2016-05-18T16:09:47+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/access/rid/28?_=1463558987443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011058s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.001009s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.003547s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.002673s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006509s ]
+
+[ 2016-05-18T16:09:56+08:00 ] 10.0.2.2 /LanceLot/admin.php/Role/showAccess/rid/28?_=1463558996241
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010437s ]
+SQL: SHOW COLUMNS FROM `ll_node` [ RunTime:0.002446s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `ll_node`  [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `ll_access` [ RunTime:0.001216s ]
+SQL: SELECT `node_id` FROM `ll_access` WHERE `role_id` = 28  [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+NOTIC: [8] Undefined index: pid /var/www/html/LanceLot/Application/Admin/Common/function.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000539s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010996s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013672s ]
+
+[ 2016-05-18T16:16:23+08:00 ] 10.0.2.2 /LanceLot/admin.php/Movie/index?_=1463559382732
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008257s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000231s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_movie` LIMIT 1   [ RunTime:0.000133s ]
+SQL: SELECT * FROM `ll_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.002180s ]
+NOTIC: [8] Undefined variable: search /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 257 行.
+NOTIC: [8] Undefined index: values /var/www/html/LanceLot/Application/Admin/Controller/CommonController.class.php 第 258 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 4 行.
+NOTIC: [8] Undefined index: _sort /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 5 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 15 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 75 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 79 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 85 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 90 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 93 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 96 行.
+NOTIC: [8] Undefined index: _order /var/www/html/LanceLot/Application/Runtime/Cache/Admin/751bfc1b614f88135413bfdacdc4f115.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010557s ]
+

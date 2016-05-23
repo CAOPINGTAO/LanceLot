@@ -1,47 +1,29 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>My Movie</title>
+		<title>LanceLot</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link href="/LanceLot/Public/front/css/style.css" rel="stylesheet" type="text/css"/>
 		<link href="/LanceLot/Public/front/css/public.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="/LanceLot/Public/front/js/jquery-1.8.2.min.js"></script>
-		<script type="text/javascript" src="/LanceLot/Public/front/js/move.js"></script>
-
-		<style type="text/css">
-			h2 {
-				height: 70px;
-				line-height: 70px;
-				width: 100%;
-				font-size: 20px;
-				font-weight: normal;
-				border-bottom: 1px solid #ccc;
-			}
-
-			.content {
-				padding: 5px 0;
-			}
-
-			.none {
-				width:100%;
-				height: 100px;
-				line-height: 100px;
-				background-color: #ccffcc;
-				border:1px solid #ccc;
-				color: #3377aa;
-				font-size: 14px;
-				text-align: center;
-			}
-
-			.page {
-				float: right;
-				text
-			}
-		</style>
+		<script type="text/javascript" src="/LanceLot/Public/front/js/move.js"></script>		
+		<!-- 编辑器文件导入 -->
+		<script src="/LanceLot/Public/dwz/xheditor/xheditor-1.1.12-zh-cn.min.js" type="text/javascript"></script>				
+		<script>
+			$(function(){
+				$("#text").xheditor({
+					skin:'default',tools:'simple',
+					upImgUrl:'/LanceLot/index.php/Review/upload',
+					upImgExt:'jpg,jpeg,gif,png',
+					html5Upload:false,
+					width:800,
+					height:480,
+				});
+			});
+		</script>
 	</head>
 	<body>
-		<!-- 个人中心菜单结束 -->
-	
+		<!-- 个人中心菜单结束 -->		
 		<script type="text/javascript">
 	//左侧通用导航栏
 	$(function(){
@@ -194,92 +176,30 @@
         });
     </script>
 
-
 			
-		<!-- 个人中心菜单结束 -->
-		
+		<!-- 个人中心菜单结束 -->		
 		<!-- 主体部分开始	-->
 		<div id="main">
-			
-			<!-- <h2>电影标签：<?php echo ($tag); ?></h2> -->
-			<!-- 左侧内容 -->
-			
-			<div id="main_left">
-			<h2><?php echo ($tag); ?></h2>	
-				<div class="movie_review">
-					
-					<?php if(empty($list)): ?><div class="none">
-							此分类下还没有电影呢，去其他分类下看看吧...
-							<a style="color:blue" href="/LanceLot/index.php/Typelist/index">返回</a>
-						</div>
-					<?php else: ?>
-						<?php if(is_array($list)): foreach($list as $key=>$vo): ?><div class="review_list">
-								<div class="rl">
-									<a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo['id']); ?>"><img src="/LanceLot/Uploads/Movie/Cover/b_<?php echo ($vo['picname']); ?>" alt="" /></a>
-								</div>
-								<div class="rr">
-									<div class="title">
-										<a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo['id']); ?>">
-										<?php echo ($vo['filmname']); ?>
-										</a> 
-									</div>
-									<!-- <div class="acthor">
-										 Miss Sajarevo 评论: <a href="">《地心引力》 </a>
-									</div> -->
-									<div class="content">
-										<?php echo (date("Y-m-d",$vo['showtime'])); ?>(<?php echo ($vo['nation']); ?>) / <?php echo ($vo['director']); ?> / <?php echo ($vo["editor"]); ?> / <?php if(is_array($vo['actorlist'])): foreach($vo['actorlist'] as $key=>$v): echo ($v['cname']); ?> /<?php endforeach; endif; ?> <?php echo ($vo['petname']); ?>
-									</div>
-								
-									<div class="point">
-										<span>综合评分：<?php echo ($vo['rate']); ?> </span><span style="font-style: italic;color:#000">( <?php echo ($vo['ratenum']); ?> 人回复 )</span>
-									</div> 
-									
-									<div class=""></div>	
-								</div>
-							</div><?php endforeach; endif; ?>
-						<div class="page"><?php echo ($page); ?></div><?php endif; ?>
+			<div id="review_edit">
+				<img src="/LanceLot/Public/front/images/close.jpg" alt="关闭" />
+				<div class="atitle">
+					修剪一下！让我变得更多彩......
 				</div>
-			</div>
-			
-			<!-- 右侧内容 -->
-			<div id="main_right">
-				<!-- 右侧经典台词 -->
-				<div class="movie_word">
-					<div class="word_title">
-						经典台词
-					</div>
-					<div class="word_con">
-						<p><?php echo ($dialogue["en_dialogue"]); ?></p>
-						<p><?php echo ($dialogue["cn_dialogue"]); ?></p>
-					</div>
-					<div class="source">
-						《<?php echo ($dialogue["source"]); ?>》
-					</div>
-				</div>	
-		
-				<div class="nav"></div>
-				
-				<div class='ad'>
-					<img src="/LanceLot/Public/front/images/ad1.png" alt="" />
-				</div>
-
-				<div class="nav"></div>
-				<!-- 友情链接 -->
-				<div class="movie_link">
-					<div class="link_head">
-						<span>友情链接</span>
-					</div>
-					<div class="link_list">
-						<ul>
-							<?php if(is_array($link)): foreach($link as $key=>$l): ?><li><a href="<?php echo ($l["url"]); ?>"><img src="/LanceLot/Uploads/News/mypic/c_<?php echo ($l["picname"]); ?>"/></a></li><?php endforeach; endif; ?>
-						</ul>
-					</div>
-				</div>
-				<div class="nav"></div>
-			</div>
-		</div>
-		<!-- 主体部分结束	-->
-		
+				<div class="acon">
+				<form action="/LanceLot/index.php/Review/update" method="post">
+					<input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>"/>
+					标题:<input type="text" name="title" class="winput" value="<?php echo ($vo["title"]); ?>"/>
+					<textarea name="content" id="text" style="resize:none;"   cols="70" rows="10" >
+						<?php echo ($vo["content"]); ?>
+					</textarea>
+	
+					<input type="submit" value="修改影评" class="wsub" />
+					<a href="/LanceLot/index.php/Review/index/id/<?php echo ($vo["id"]); ?>" class="back"/>返回</a>
+				</form>
+				</div>		
+			</div>			
+		</div>		
+		<!-- 主体部分结束	-->	
 		<div class="nav"></div>
 		
 		<!-- 页脚部分开始 -->
@@ -293,8 +213,7 @@
             </div>
         </div>
     </div>
-
-		<!-- 页脚不封结束 -->		
-		
+	
+		<!-- 页脚不封结束 -->
 	</body>
 </html>

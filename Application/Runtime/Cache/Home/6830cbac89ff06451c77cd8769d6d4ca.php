@@ -253,7 +253,7 @@
 							<?php else: ?>
 								<span id="mytextcontent" style="color:#ccc;">快来记录自己的第一条心情<span><?php endif; ?>
 						</div>
-						<?php if($_GET['uid']== $Think.session.loginuser.id): ?><form onsubmit="return doreply(this)">
+						<?php if(($_GET['uid']) == $_SESSION['loginuser']['id']): ?><form onsubmit="return doreply(this)">
 							<p id="js_message_p">此时此刻，恰如彼时彼刻......</p>
 								<div id="psignarea">
 									<textarea rows=2 cols=63 id="js_message_textarea"></textarea>
@@ -421,7 +421,7 @@
 					<div class="plist_title">我的好友</div>
 					<div>
 						<div class="plist_content_pic">
-							<?php if(is_array($myfriendlist)): foreach($myfriendlist as $key=>$myfriend): if($myfriend['id'] != $Think.get.uid): ?><a href="/LanceLot/index.php/User/index/uid/<?php echo ($myfriend["id"]); ?>">
+							<?php if(is_array($myfriendlist)): foreach($myfriendlist as $key=>$myfriend): if(($myfriend["id"]) != $_GET['uid']): ?><a href="/LanceLot/index.php/User/index/uid/<?php echo ($myfriend["id"]); ?>">
 										<img src="/LanceLot/Uploads/User/Headpic/<?php echo ($myfriend["headpic"]); ?>" alt="<?php echo ($myfriend["username"]); ?>" />
 									</a><?php endif; endforeach; endif; ?>
 						</div>
@@ -474,7 +474,7 @@
 					<p>等级：<?php echo ($vo["levelname"]); ?></p>
 				</div>
 				
-				<?php if($_GET['uid']!= $Think.session.loginuser.id): ?><div class="ucaozuo">
+				<?php if(($_GET['uid']) != $_SESSION['loginuser']['id']): ?><div class="ucaozuo">
 						<p class="caozuotitle">操作</p>
 						
 						<ul>
@@ -490,7 +490,7 @@
 					<p class="prighttitle">个人标签(<?php echo ($vo["mytypenum"]); ?>)</p>
 					
 					<ul>
-						<?php if(is_array($mytypes)): $i = 0; $__LIST__ = array_slice($mytypes,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="mytag"><a href="/LanceLot/index.php/Typelist/tags/id/<?php echo ($mytypes[vo]["id"]); ?>"><?php echo ($mytypes[vo]["typename"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($mytypes)): $i = 0; $__LIST__ = array_slice($mytypes,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="mytag"><a href="/LanceLot/index.php/Typelist/tags/id/<?php echo ($vo["id"]); ?>"><?php echo ($vo["typename"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 				

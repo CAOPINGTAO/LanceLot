@@ -41,7 +41,7 @@
     <div class="h_top">
         <div class="con">
             <ul class="left">
-                <li><a href="/LanceLot/index.php/Index/index" class="title">笃 学 力 行 守 正 求 新</a></li>
+                <li><a href="/LanceLot/index.php/Index/index" class="title"></a></li>
             </ul>
             <ul class="right">
                 <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
@@ -64,9 +64,9 @@
                     <input type="submit" class="sub" value="" />
                 </form>
             </div>
-            <div class="logoimg">
+           <!--  <div class="logoimg">
                 <img src="/LanceLot/Public/front/images/logo.jpg" alt=""/>
-            </div>
+            </div> -->
         </div>
     </div>
     <!--menu菜单-->
@@ -254,27 +254,17 @@
 		<div class="nav"></div>		
 
 		<!-- 页脚部分开始 -->
-		<!--页脚部分开始-->
-    <div id="footer">
+		    <div id="footer">
         <div class="foot_top">
             <div class="foot_link">
-                <a href="" target="_blank">公司简介</a> |
-                <a href="" target="_blank">合作伙伴</a> |
-                <a href="" target="_blank">诚聘英才</a> |
-                <a href="" target="_blank">广告服务</a> |
-                <a href="/LanceLot/index.php/Map/map" target="_blank">网站地图</a> |
-                <a href="" target="_blank">保护隐私</a> |
+                <a href="" target="_blank">网站地图</a> |
                 <a href="" target="_blank">版权信息</a> |
-                <a href="" target="_blank">客户服务</a> |
                 <a href="" target="_blank">联系我们</a> |
                 <a href="" target="_blank">电影之家</a>
             </div>
         </div>
-        <div class="foot_content">
-            Copyright&#169;1996-2014  LanceLot
-        </div>
     </div>
-<!--页脚部分结束-->
+
 		<!-- 页脚部分结束 -->
 		
 		

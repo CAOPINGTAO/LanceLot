@@ -1,0 +1,110 @@
+[ 2016-05-24T00:04:38+08:00 ] 10.0.2.2 /LanceLot/index.php/Review/insert/fid/44
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006874s ]
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000465s ]
+
+[ 2016-05-24T00:05:18+08:00 ] 10.0.2.2 /LanceLot/index.php/Review/insert/fid/44
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006388s ]
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000207s ]
+SQL: INSERT INTO `ll_longreview` (`title`,`content`,`fid`,`uid`,`ptime`) VALUES ('孩子学会做一个体面的普通人','<span style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;color:#111111;line-height: 21.06px;\">前言：很多家长，如果今明两天不带孩子去看，就可能错过人生他们人生中最重要的周末，迪士尼数千个创意者为孩子们准备的最好的一个世界，是我们身边所有父母不可能建构的，一个平行于人类成人世界最好的寓言。目前，排片率并不高，而且竞争对手大肆刷票房，这种事迪士尼这样的国际公司是不可能干的。如果周末不带孩子去，下周排片就会更少，很容易想看不上了，豆瓣从未上映的9.1分已经飙到9.5分……这种奇葩得分机制，非常值得赴约，豆瓣不可能每次都是高分但是票房很低的贱命代表，这一次一定可以实现让子弹飞一会！</span><br style=\"color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 21.06px;\" /><br style=\"color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 21.06px;\" /><span style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;color:#111111;line-height: 21.06px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从我儿子有交流能力的第一天我就在忧虑一件事，就是我应该如何向他描述我们成年人的世界。</span><br style=\"color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 21.06px;\" /><br style=\"color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 21.06px;\" /><span style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;color:#111111;line-height: 21.06px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我努力地用来自全球各地的各种绘本，试图从各个层面搭建一个我心目中的可以向他这么大的孩子描述的成人世界，我用各种各样的绘本和故事向他打过各种各样的比方，但是好几年下来，我发现，其实通过绘本我可以描述的世界或许太过美好了，以至于我无法向他解释我自己身上以及中国当下那么多不能解释的种种缺陷。</span>',44,2,1464019518) [ RunTime:0.017934s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_longreview` WHERE ( fid=44 ) LIMIT 1   [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `ll_shortreview` [ RunTime:0.000093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_shortreview` WHERE ( fid=44 ) LIMIT 1   [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.001084s ]
+SQL: update ll_movie set replynum=2 where id=44 [ RunTime:0.000266s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 102 行.
+NOTIC: [8] Undefined index: review_img /var/www/html/LanceLot/Application/Home/Controller/ReviewController.class.php 第 162 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `ll_reviewpic` [ RunTime:0.000710s ]
+NOTIC: [2] implode(): Invalid arguments passed /var/www/html/LanceLot/ThinkPHP/Library/Think/Db.class.php 第 495 行.
+SQL: SELECT * FROM `ll_reviewpic` WHERE `id` IN ()  [ RunTime:0.000101s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `ll_reviewpic` WHERE `id` IN () 
+SQL: update ll_user set score=score+10 where id=2 [ RunTime:0.000223s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 102 行.
+
+[ 2016-05-24T00:05:18+08:00 ] 10.0.2.2 /LanceLot/index.php/Review/index/id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005402s ]
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000390s ]
+SQL: SELECT * FROM `ll_longreview` WHERE `id` = 54 LIMIT 1   [ RunTime:0.000407s ]
+SQL: UPDATE `ll_longreview` SET `vnum`=vnum+1 WHERE ( id=54 ) [ RunTime:0.000984s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 102 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000574s ]
+SQL: SELECT * FROM `ll_longreview` WHERE `id` = 54 LIMIT 1   [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000700s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( 1=1 AND id='44' ) LIMIT 1   [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `ll_user` [ RunTime:0.000435s ]
+SQL: SELECT * FROM `ll_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.000160s ]
+
+[ 2016-05-24T00:05:50+08:00 ] 10.0.2.2 /LanceLot/index.php/Review/index/id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005272s ]
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000427s ]
+SQL: SELECT * FROM `ll_longreview` WHERE `id` = 54 LIMIT 1   [ RunTime:0.000070s ]
+SQL: UPDATE `ll_longreview` SET `vnum`=vnum+1 WHERE ( id=54 ) [ RunTime:0.000127s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 102 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /var/www/html/LanceLot/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `ll_longreview` [ RunTime:0.000529s ]
+SQL: SELECT * FROM `ll_longreview` WHERE `id` = 54 LIMIT 1   [ RunTime:0.000171s ]
+SQL: SHOW COLUMNS FROM `ll_movie` [ RunTime:0.000675s ]
+SQL: SELECT * FROM `ll_movie` WHERE ( 1=1 AND id='44' ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: SHOW COLUMNS FROM `ll_user` [ RunTime:0.000528s ]
+SQL: SELECT * FROM `ll_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT * FROM `ll_movie` WHERE `id` = 44 LIMIT 1   [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `ll_type` [ RunTime:0.000488s ]
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM ll_movie_type AS a, ll_type AS b WHERE a.tid = b.id AND a. fid='44' ORDER BY id desc [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `ll_actors` [ RunTime:0.000763s ]
+NOTIC: [8] Undefined index: mapping_limit /var/www/html/LanceLot/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM ll_movie_actor AS a, ll_actors AS b WHERE a.aid = b.id AND a. fid='44' ORDER BY id desc [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `ll_filmpic` [ RunTime:0.000447s ]
+SQL: SELECT * FROM `ll_filmpic` WHERE ( 1=1 AND fid='44' )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `ll_longreview` WHERE `fid` = 44 AND `status` IN (1,2) ORDER BY vnum desc LIMIT 5   [ RunTime:0.000169s ]
+SQL: SELECT * FROM `ll_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.000133s ]
+SQL: SHOW COLUMNS FROM `ll_friendlink` [ RunTime:0.000348s ]
+SQL: SELECT * FROM `ll_friendlink`  [ RunTime:0.000107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined index: username /var/www/html/LanceLot/Application/Runtime/Cache/Home/1b692bc0a523b98e56f925a008d52346.php 第 532 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005778s ]
+
+[ 2016-05-24T00:05:51+08:00 ] 10.0.2.2 /LanceLot/index.php/Review/pageload?p=1&id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004474s ]
+SQL: SHOW COLUMNS FROM `ll_reviewreply` [ RunTime:0.000514s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ll_reviewreply` WHERE ( rid=54 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT * FROM `ll_reviewreply` WHERE ( rid=54 ) ORDER BY rtime desc LIMIT 0,5   [ RunTime:0.000185s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/LanceLot/Application/Home/Controller/ReviewController.class.php 第 54 行.
+

@@ -28,12 +28,6 @@
         </h1>
         <div class="login_headerContent">
             <div class="navList">
-                <ul>
-                    <li><a href="#">设为首页</a></li>
-                    <li><a href="#">升级说明</a></li>
-                    <li><a href="#">反馈</a></li>
-                    <li><a href="#">帮助</a></li>
-                </ul>
             </div>
             <h2 class="login_title" style="font-size: 16px; text-align: left;">登录Lancelot后台</h2>
         </div>
