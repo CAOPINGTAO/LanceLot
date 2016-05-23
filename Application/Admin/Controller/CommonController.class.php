@@ -23,7 +23,7 @@ class CommonController extends Controller{
         $notAuth = in_array(MODULE_NAME, explode(',',C('NOT_AUTH_ACTION'))) || in_array(ACTION_NAME, explode(',',C('NOT_AUTH_ACTION')));
 
         if (C('USER_AUTH_ON') && !$notAuth) {
-            import('ORG.Util.RBAC');
+            // import('ORG.Util.RBAC');
             \Org\Util\Rbac::AccessDecision() || $this->error("没有权限");
         }
     }

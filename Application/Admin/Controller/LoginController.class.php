@@ -34,7 +34,7 @@ class LoginController extends Controller{
         //检查验证码是否正确
         $Verify = new \Think\Verify();
         $code = I('param.code');
-        var_dump($code);
+        // var_dump($code);
         if (!$Verify->check($code)) {
             $this->error(L('验证码错误'));
         }
@@ -71,6 +71,7 @@ class LoginController extends Controller{
             session(C('ADMIN_AUTH_KEY'), true);
         }
 
+        //用户通过USER_AUTH_KEY和ADMIN_AUTH_KEY检测后台登录用户的权限，并保存到session中
         \Org\Util\Rbac::saveAccessList();
 
         //跳转至后台首页

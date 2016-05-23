@@ -47,7 +47,7 @@ class MovieController extends CommonController{
         $_POST['showtime'] = strtotime($_POST['showtime']);
         $_POST['picname'] = $info[0]['savename'];
         $_POST['addtime'] = time();
-
+        $_POST['content'] = strip_tags($_POST['content']);
         //添加影片基本信息
         parent::insert();
 	}
@@ -93,6 +93,8 @@ class MovieController extends CommonController{
 			// 没有图片上传时,直接更新其他信息
 			$_POST['picname'] = $_POST['pname'];
 			$_POST['showtime'] = strtotime($_POST['showtime']);
+			$_POST['content'] = strip_tags($_POST['content']);
+			// var_dump($_POST);die();
 			parent::update();
 		}
 
@@ -127,6 +129,8 @@ class MovieController extends CommonController{
 		}
 
 		$_POST['picname'] = $info[0]['savename'];
+		var_dump($_POST);die();
+		$_POST['content'] = strip_tags($_POST['content']);
 		parent::update();
 	}
 
