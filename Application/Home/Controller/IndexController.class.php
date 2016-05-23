@@ -34,13 +34,13 @@ class IndexController extends Controller {
         //实例化 加载PPt表，等同于$m = new \Think\Model('Ppt');
         $m = M("Ppt");
         $ppt = $m->where("state=1")->limit(7)->select();
-        //查询电影相关信息
+        //实例化各个模型
         $movie = M("Movie");
         $ma = M("Movie_actor");
         $a = M("Actors");
         $mt = M("Movie_type");
         $t = M("Type");
-        //根据幻灯片mid查询其所属电影的相关信息
+        //根据电影id mid查询电影的相关信息
         foreach($ppt as &$v1){
             $mo = $movie->where("id={$v1['mid']}")->select();
             $v1['nation'] = $mo[0]['nation'];   //注意查询出来只会有一个结果，因为每部电影都是唯一的，且查询的结果是多维数组
@@ -60,7 +60,7 @@ class IndexController extends Controller {
                 $v1['typename'][] = $t1[0]['typename'];
             }
         }
-        //现在PPT的相关信息已拼接在$v1中，分类过去就行
+        //现在PPT的相关信息已拼接在$ppt中，分配过去就行
         $this->assign("ppt", $ppt);
     }
 
