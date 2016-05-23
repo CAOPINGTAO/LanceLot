@@ -3,7 +3,7 @@
  * 定义收藏的视图模型
  * 当前模型拥有多个用户回复
  * User: Lancelot
- * Date: 2016/5/6
+ * Date: 2016/5/1
  * Time: 16:10
  */
 namespace Home\Model;

@@ -3,7 +3,7 @@
  * 影片关联模型
  * 当前模型有多种类型、多个演员、多张剧照
  * User: Lancelot
- * Date: 2016/5/5
+ * Date: 2016/4/20
  * Time: 2:3
  */
 namespace Home\Model;

@@ -3,7 +3,7 @@
  * 影评关联模型
  * 当前模型从属于某一个用户、从属于某一部电影
  * User: Lancelot
- * Date: 2016/5/4
+ * Date: 2016/5/1
  * Time: 19:30
  */
 namespace Home\Model;

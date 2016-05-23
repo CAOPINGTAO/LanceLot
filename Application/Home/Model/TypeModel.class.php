@@ -3,7 +3,7 @@
  * 类型关联模型
  * 当前模型拥有多部电影，每部电影拥有多个类型
  * User: Lancelot
- * Date: 2016/5/5
+ * Date: 2016/4/27
  * Time: 14:17
  */
 namespace Home\Model;
