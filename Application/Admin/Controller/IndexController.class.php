@@ -18,31 +18,36 @@ class IndexController extends CommonController {
     }
 
     //修改密码
-    public function updatePassword(){
+    public function updatePasswd(){
 
         $id = session('uid');
-        $user = M("auser")->where("id={$id}")->find();
+        $user = M('auser')->where("id={$id}")->find();
+        $result = array();
+        $callbackType = $_REQUEST['callbackType'];
 
         if(md5($_POST['prepasswd']) != $user['password']){
-            $this->error('原密码错误请重新输入！');
+            $result = getReturnArray(300, "原密码错误，请重新输入！", $callbackType);
+            $this->ajaxReturn($result);exit();
         }
 
-        if($_POST['password'] != $_POST['repasswd']){
-            $this->error('两次密码不一致');
+        if ($_POST['password'] != $_POST['repasswd']) {
+            $result = getReturnArray(300, "两次输入的密码不相同!", $callbackType);
+            $this->ajaxReturn($result);exit();
         }
-
+        
         $data = array(
-            'id'    =>  $id,
-            'password'  =>  md5($_POST['password']),
-        );
-
-        if(M('auser')->save($data)){
-            $this->success('修改密码成功');
-            file_put_contents(C("LOG_PATH"),$id." update password success.\n");
+            'id' => session('uid'),
+            'password' => md5($_POST['password']),
+            );
+        
+        if (M('auser')->save($data)) {
+            $result = getReturnArray(200, "修改密码成功", $callbackType);
+            $this->ajaxReturn($result);exit(); 
         }else{
-            $this->error('修改密码失败');
-            file_put_contents(C("LOG_PATH"),$id." update password fail.\n");
+            $result = getReturnArray(300, "修改密码失败", $callbackType);
+            $this->ajaxReturn($result);exit();
         }
+
     }
 
     //登出

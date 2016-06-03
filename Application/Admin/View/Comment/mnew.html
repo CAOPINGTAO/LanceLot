@@ -1,0 +1,75 @@
+<form id="pagerForm" action="__CONTROLLER__/index1" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
+	<input type="hidden" name="_order" value="{$Think.request._order}"/>
+	<input type="hidden" name="_sort" value="{$Think.request._sort}"/>
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					<b>搜索</b>
+				</td>
+				<td>&nbsp; 状态：
+					<select name="state" >
+						<option value="" >-选择-</option>
+						<if condition="$Think.request.state eq 1">
+						<option value="1" selected>正常</option>
+						<option value="2" >禁止</option>
+						<elseif condition="$Think.request.state eq 2" />
+						<option value="1" >正常</option>
+						<option value="2" selected>禁止</option>
+						<else />
+						<option value="1" >正常</option>
+						<option value="2" >禁止</option>
+						</if>
+					</select>
+				</td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="edit" href="__CONTROLLER__/medit/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  width="400" height="240" target="dialog"><span>修改状态</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<th width="40">ID</th>
+				<th width="40">新闻标题</th>
+				<th width="40">发表用户</th>
+				<th width="40">内容</th>
+				<th width="40">评论时间</th>				
+				<th width="40">评论状态</th>	
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="v">
+			<tr target="item_id" rel="{$v.id}">
+				<td>{$v.id}</td>
+				<td>{$v.title}</td>
+				<td>{$v.username}</td>
+				<td><a style="color:blue;"href="__CONTROLLER__/mcontent/id/{$v.id}" target="dialog">查看内容</a></td>
+				<td>{$v.addtime|date="Y-m-d H:i:s",###}</td>
+				<if condition="$v.state eq 1">
+				<td>正常</td>
+				<else />
+				<td>禁止</td>
+				</if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	
+	<include file="Public/panelBar" />
+</div>

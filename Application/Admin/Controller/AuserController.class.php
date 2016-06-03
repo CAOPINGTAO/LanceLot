@@ -95,10 +95,9 @@ class AuserController extends CommonController{
     public function setRole(){
 
         $id = $_GET['id'];
-        //获取用户的基本信息
         $user = M('Auser')->field('id,username,fullname')->where(array('id'=>$id))->find();
-        //获取角色列表
         $role = M('role')->select();
+
         $this->assign('user', $user);
         $this->assign('role', $role);
         $this->display();
@@ -108,9 +107,6 @@ class AuserController extends CommonController{
     public function setRoleHandle(){
 
         $uid = $_POST['uid'];   //用户id
-
-        var_dump($_POST);
-        // die();
         //删除用户原有角色
         M('Role_user')->where(array('user_id'=>$uid))->delete();
 

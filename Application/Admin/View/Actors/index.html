@@ -1,10 +1,4 @@
-<form id="pagerForm" action="__CONTROLLER__/index" method="post">
-	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
-	<input type="hidden" name="numPerPage" value="{$numPerPage}" />
-	<input type="hidden" name="_order" value="{$Think.request._order}"/>
-	<input type="hidden" name="_sort" value="{$Think.request._sort}"/>
-</form>
-
+<include file="Public/pagerForm" />
 
 <div class="pageHeader">
 	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
@@ -15,7 +9,6 @@
 						<label>搜索演员：</label>
 						<input type="text" name="keyword" value="{$Think.post.keyword}"/> [关键字：中文名、外文名]
 					</td>
-				
 					<td>
 						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
 					</td>	

@@ -1,0 +1,36 @@
+<div class="pageContent">
+	<form method="post"  enctype="multipart/form-data" action="__CONTROLLER__/insertpic/navTabId/listprevue/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+		
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+				<input type="hidden" name="id" value="{$list.id}"/>
+				<dl >
+					<dt>&nbsp;&nbsp;电影名：</dt>
+					<dd>
+						{$list.filmname}
+					</dd>
+				</dl>
+				<dl>
+					<dt>预告片标题：</dt>
+					<dd>{$list.title}</dd>
+				</dl>
+				<dl>
+					<dt>&nbsp;&nbsp;封面图：</dt>
+					<dd><input type="file" name="picname" /></dd>
+				</dl>
+				<if condition="$list.picname eq '无'">
+				<dl>
+					<dt>&nbsp;原封面图：</dt>
+					<dd><img src="__ROOT__/Uploads/Prevue/b_{$list.picname}"  /></dd>
+				</dl>
+				</if>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">设置</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

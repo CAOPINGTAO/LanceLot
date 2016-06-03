@@ -17,13 +17,12 @@ class CommonController extends Controller{
         if (!isset($_SESSION[C('USER_AUTH_KEY')])) {
             $this->redirect('Login/index');
         }
-        //echo MODULE_NAME;
 
         //判断该控制器/方法 是否需要验证
         $notAuth = in_array(MODULE_NAME, explode(',',C('NOT_AUTH_ACTION'))) || in_array(ACTION_NAME, explode(',',C('NOT_AUTH_ACTION')));
 
         if (C('USER_AUTH_ON') && !$notAuth) {
-            // import('ORG.Util.RBAC');
+
             \Org\Util\Rbac::AccessDecision() || $this->error("没有权限");
         }
     }
@@ -56,10 +55,12 @@ class CommonController extends Controller{
 
     public function insert(){
 
+        $returnArr = array();
         $model = D(CONTROLLER_NAME);
-        unset( $_POST[$model->getPk()]);
+        unset($_POST[$model->getPk()]);
 
         if($model->create() === false) {
+            // $this->ajaxReturn(300, (string)($model->getError()),"", "listactor");exit();
             $this->error($model->getError());
         }
         //保存当前数据对象
@@ -69,30 +70,34 @@ class CommonController extends Controller{
                 $model->id = $result;
                 $this->_tigger_insert($model);
             }
-            var_dump($result);
             //成功提示
-            $this->success('新增成功');
+            $returnArr = getReturnArray(200, "新增成功");
+            $this->ajaxReturn($returnArr);exit();
         } else {
             //失败提示
-            var_dump($result);
-            $this->error('新增失败'.$model->getLastSql());
+            $returnArr = getReturnArray(300, "新增失败".$model->getLastSql());
+            $this->ajaxReturn($returnArr);exit();
         }
-
     }
 
     public function edit(){
         $model = M(CONTROLLER_NAME);
         $id = $_REQUEST[$model->getPk()];
         $vo = $model->find($id);
+
         $this->assign('vo', $vo);
         $this->display('edit');
     }
 
     public function update(){
+
+        $navTabId = $_REQUEST['navTabId'];
+        $callbackType = $_REQUEST['callbackType'];
         $model = D(CONTROLLER_NAME);
 
         if($model->create() === false) {
-            $this->error($model->getError());
+            $returnArr = getReturnArray(300, (string)($model->getError()));
+            $this->ajaxReturn($returnArr);exit();
         }
         //更新数据
         if($model->save() !== false) {
@@ -101,14 +106,18 @@ class CommonController extends Controller{
                 $this->_tigger_update($model);
             }
             //成功提示
-            $this->success(L('更新成功'));
+            $returnArr = getReturnArray(200, "更新成功",$callbackType,$navTabId);
+            $this->ajaxReturn($returnArr);exit();
         } else {
             //失败提示
-            $this->error(L('更新失败'));
+            $returnArr = getReturnArray(300, "更新失败",$callbackType,$navTabId);
+            $this->ajaxReturn($returnArr);exit();
         }
     }
 
     public function delete(){
+
+        $navTabId = $_REQUEST['navTabId'];
         //删除指定记录
         $model = M(CONTROLLER_NAME); //实例化控制器模型
         if (!empty($model)) {
@@ -117,9 +126,11 @@ class CommonController extends Controller{
             if (isset($id)) {   //如果设置了主键给予删除，否则为非法操作
                 $condition = array($pk => array('in', explode(',', $id))); //设置删除条件
                 if ($model->where($condition)->delete() !== false) {
-                    $this->success('删除成功');
+                    $returnArr = getReturnArray(200, "删除成功","",$navTabId);
+                    $this->ajaxReturn($returnArr);exit();
                 } else {
-                    $this->error('删除失败');
+                    $returnArr = getReturnArray(300, "删除失败","",$navTabId);
+                    $this->ajaxReturn($returnArr);exit();
                 }
             } else { //没有设置主键，则为非法操作
                 $this->error('非法操作');
@@ -129,6 +140,7 @@ class CommonController extends Controller{
 
     //将删除状态置为1
     public function delete_tag(){
+
         $model = M(CONTROLLER_NAME);
         if (!empty($model)) {
             $pk = $model->getPk();

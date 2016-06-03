@@ -129,7 +129,6 @@ class MovieController extends CommonController{
 		}
 
 		$_POST['picname'] = $info[0]['savename'];
-		var_dump($_POST);die();
 		$_POST['content'] = strip_tags($_POST['content']);
 		parent::update();
 	}
@@ -283,19 +282,18 @@ class MovieController extends CommonController{
 					$data['fid'] = $fid;
 					$data['tid'] = $v;
 					if (!$movie_type->data($data)->add()) {
-						$this->error("设置失败！");
+						$this->ajaxReturn(getReturnArray(300, "设置失败"));exit();
 					}	
 				}
 			}else{
 				$data['fid'] = $fid;
 				$data['tid'] = $value;
 				if (!$movie_type->data($data)->add()) {
-					$this->error("设置失败！");
+					$this->ajaxReturn(getReturnArray(300, "设置失败"));exit();
 				}	
 			}
 		}
-		
-		$this->success("设置成功！");
+		$this->ajaxReturn(getReturnArray(200, "设置成功"));exit();
 	}
 
 	// 查看影片分类
@@ -362,18 +360,18 @@ class MovieController extends CommonController{
 					$data['fid'] = $fid;
 					$data['tid'] = $v;
 					if (!$movie_type->data($data)->add()) {
-						$this->error("设置失败！");
+						$this->ajaxReturn(getReturnArray(300, "设置失败"));exit();
 					}	
 				}
 			}else{
 				$data['fid'] = $fid;
 				$data['tid'] = $value;
 				if (!$movie_type->data($data)->add()) {
-					$this->error("设置失败！");
+					$this->ajaxReturn(getReturnArray(300, "设置失败"));exit();
 				}	
 			}
 		}
-		$this->success("设置成功！");
+		$this->ajaxReturn(getReturnArray(200, "设置成功"));exit();
 	}
 
 	// 上传剧照视图
@@ -398,6 +396,7 @@ class MovieController extends CommonController{
 		$upload->thumbPrefix = "m_";
 
 		if(!$upload->upload()) {// 上传错误提示错误信息
+			$this->ajaxReturn(getReturnArray(300, "上传失败".(string)($upload->getErrorMsg())));exit();
 			$this->error($upload->getErrorMsg());
 		}else{// 上传成功 获取上传文件信息
 			$info =  $upload->getUploadFileInfo();
@@ -410,11 +409,11 @@ class MovieController extends CommonController{
 			$data['picname'] = $val['savename'];
 
 			if (!$pic->add($data)) {
-				$this->error('添加剧照失败！');
+				$this->ajaxReturn(getReturnArray(300, "添加剧照失败"));exit();
 			}
 		}
 
-		$this->success('成功设置影片剧照信息！');
+		$this->ajaxReturn(getReturnArray(200, "成功设置影片剧照信息"));exit();
 	}
 
 	//修改剧照视图
@@ -467,25 +466,26 @@ class MovieController extends CommonController{
 		$map['cname'] = $_POST['name'];
 		$movid = $_POST['id'];
 
-		//查找 是否存在该演员
+		// 查找
 		$name = M('actors')->field('id')->where($map)->find();
+
 		if ($name && count($name)) {
-			$data['id'] = $movid;
+			$data['fid'] = $movid;
 			$data['aid'] = $name['id'];
 			$mactor = M('movie_actor');
 
-			// 如果电影-演员中间表中没有该演员和电影的对应记录，则进行添加
 			if (!$mactor->where($data)->find()) {
-				
-				if ($mactor->add($data)) {
+
+				if ($mactor->add($data)){
 					echo "true";
 				} else {
-					echo  "设置演员失败，请重试";
+					echo "演员设置失败，请重试";
 				}
+
 			} else {
 				echo "此演员已添加，请添加其他演员";
 			}
-		} else {
+		}else {
 			echo "演员不存在，请设置相关信息";
 		}
 	}

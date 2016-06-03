@@ -1,0 +1,154 @@
+<include file="Public/pagerForm" />
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						<label>搜索标题、作者：</label>
+						<input type="text" name="keyword" value="{$Think.request.keyword}" /> 
+					</td>
+					<td>&nbsp; 状态：
+						<select name="state" >
+							<option value="" >-选择-</option>
+							<if condition="$Think.request.state eq 1">
+							<option value="1" selected>新添加</option>
+							<option value="2">前台显示</option>
+							<option value="3">已下架</option>
+							<elseif condition="$Think.request.state eq 2" />
+							<option value="1">新添加</option>
+							<option value="2" selected>前台显示</option>
+							<option value="3">已下架</option>
+							<elseif condition="$Think.request.state eq 3" />
+							<option value="1">新添加</option>
+							<option value="2">前台显示</option>
+							<option value="3" selected>已下架</option>
+							<else />
+							<option value="1">新添加</option>
+							<option value="2">前台显示</option>
+							<option value="3">已下架</option>
+							</if>
+						</select>
+					</td>
+					<td>&nbsp; 类型：
+						<select name="status" >
+							<option value="" >-选择-</option>
+							<if condition="$Think.request.status eq 1">
+							<option value="1" selected>一般新闻</option>
+							<option value="2">专题策划</option>
+							<option value="3">影视前瞻</option>
+							<option value="4">精彩推荐</option>
+							<elseif condition="$Think.request.status eq 2" />
+							<option value="1">一般新闻</option>
+							<option value="2" selected>专题策划</option>
+							<option value="3">影视前瞻</option>
+							<option value="4">精彩推荐</option>
+							<elseif condition="$Think.request.status eq 3" />
+							<option value="1">一般新闻</option>
+							<option value="2">专题策划</option>
+							<option value="3" selected>影视前瞻</option>
+							<option value="4">精彩推荐</option>
+							<elseif condition="$Think.request.status eq 4" />
+							<option value="1">一般新闻</option>
+							<option value="2">专题策划</option>
+							<option value="3">影视前瞻</option>
+							<option value="4" selected>精彩推荐</option>
+							<else />
+							<option value="1">一般新闻</option>
+							<option value="2">专题策划</option>
+							<option value="3">影视前瞻</option>
+							<option value="4">精彩推荐</option>
+							</if>
+						</select>
+					</td>
+					<td>
+						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</form>	
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="navTab" rel="user_msg" title="添加"><span>添加</span></a></li>
+			
+			<li class="line">line</li>			
+			<li><a class="delete" href="__CONTROLLER__/del/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			
+			<li class="line">line</li>			
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="navTab"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div id="w_list_print">
+	<table class="list" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="90">
+		<thead>
+			<tr>
+				<th width="30">序号</th>
+				<th width="100">标题1</th>
+				<th width="50">作者</th>
+				<th width="50">编辑</th>
+				<th width="50">来源</th>
+				<if condition="$Think.request._order eq 'looknum'">
+				<th width="30" orderField="looknum" class="{$Think.request._sort}">浏览次数</th>
+				<else />
+				<th width="30" orderField="looknum">浏览次数</th>
+				</if>
+				<th width="70">图片</th>
+				<th width="60">内容</th>
+				<if condition="$Think.request._order eq 'addtime'">
+				<th width="60" orderField="addtime" class="{$Think.request._sort}">添加时间</th>
+				<else />
+				<th width="60" orderField="addtime">添加时间</th>
+				</if>
+				<th width="40">类型</th>
+				<th width="40">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="vo">
+				<tr target="item_id" rel="{$vo.id}">
+				<td>{$vo.id}</td>
+				<td>{$vo.title}</td>
+				<td>{$vo.author}</td>
+				<td>{$vo.edit}</td>
+				<td>{$vo.source}</td>
+				<td>{$vo.looknum}</td>
+				<td>
+					<img src="__ROOT__/Uploads/News/article/e_{$vo.picname}"/>
+				</td>
+				<td><a href="__APP__/Mnews/detail/id/{$vo.id}" target="navTab" width="600" height="300">查看详情</a></td>
+				<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+
+				<if condition="$vo.status eq 2">
+				<td>专题策划</td>				
+				<elseif condition="$vo.status eq 3" />
+				<td>影视前瞻</td>
+				<elseif condition="$vo.status eq 4" />
+				<td>精彩推荐</td>
+				<else />
+				<td>一般新闻</td>
+				</if>
+
+				<if condition="$vo.state eq 1">
+				<td>新添加</td>
+				<elseif condition="$vo.state eq 2" />
+				<td>显示中</td>
+				<else />
+				<td>已下架</td>
+				</if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	</div>
+	
+	<include file="Public/panelBar" />
+</div>

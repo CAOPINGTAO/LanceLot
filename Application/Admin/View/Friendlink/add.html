@@ -1,0 +1,33 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/insert/navTabId/linklist/callbackType/closeCurrent" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this,dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>链接名称：</dt>
+				<dd><input type="text" class="required" style="width:100%" name="linkname" /></dd>
+			</dl>
+			<dl>
+				<dt>链接地址：</dt>
+				<dd><input type="text" class="required" style="width:100%" name="url" /></dd>
+			</dl>
+			<dl>
+				<dt>LOGO：</dt>
+				<dd><input type="file" class="required" style="width:100%" name="picname" /></dd>
+			</dl>
+			<dl>
+				<dt>状态：</dt>
+				<dd>
+					<input type="radio" name="state" value="1" checked />新添加
+					<input type="radio" name="state" value="2" />显示中
+					<input type="radio" name="state" value="3" />已过期
+				</dd>
+			</dl>
+		</div>
+
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContentn"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

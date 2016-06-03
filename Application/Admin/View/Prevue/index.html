@@ -1,0 +1,110 @@
+<include file="Public/pagerForm" />
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					<b>搜索</b> &nbsp; 关键字：<input type="text" name="keyword" value="{$Think.request.keyword}" /> [标题]
+				</td>
+				<td>&nbsp; 状态：
+					<select name="status" >
+						<option value="">-选择-</option>
+	 					<if condition="$Think.request.status eq '0'">
+	 					<option value="0" selected>新添加</option>
+	 					<else />
+	 					<option value="0">新添加</option>
+	 					</if>
+	 					<if condition="$Think.request.status eq '1'">
+	 					<option value="1" selected>显示</option>
+	 					<else />
+	 					<option value="1">显示</option>
+	 					</if>
+	 					<if condition="$Think.request.status eq '2'">
+	 					<option value="2" selected>隐藏</option>
+	 					<else />
+	 					<option value="2">隐藏</option>
+	 					</if>
+					</select>
+				</td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			
+			<li class="line">line</li>			
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" width="600" height="400"  title="添加"><span>添加</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}"  width="830" height="350" target="dialog"><span>修改</span></a></li>	
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listprevue" target=	"ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="add" href="__CONTROLLER__/addpic/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog" width="830" height="450" rel="listprevue" title="设置封面"><span>设置封面</span></a></li>
+			
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+	
+	<div id="w_list_print">
+	<table class="list" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th width="40" orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th width="40" orderField="id">ID</th>
+				</if>
+				<th width="100">影片</th>
+				<th width="140">标题</th>
+				<th width="40">预告片名</th>
+				<th width="40">预告封面</th>
+				<if condition="$Think.request._order eq 'clicknum'">
+				<th width="30" orderField="clicknum" class="{$Think.request._sort}">点击数</th>
+				<else />
+				<th width="30" orderField="clicknum">点击数</th>
+				</if>
+				<if condition="$Think.request._order eq 'addtime'">
+				<th width="40" orderField="addtime" class="{$Think.request._sort}">添加时间</th>
+				<else />
+				<th width="40" orderField="addtime">添加时间</th>
+				</if>
+				<th width="40">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="v">
+			<tr target="item_id" rel="{$v.id}">
+				<td>{$v.id}</td>
+				<td>{$v.fid}</td>
+				<td>{$v.title}</td>
+				<td>{$v.videoname}</td>
+				<td><img src="__ROOT__/Uploads/Prevue/a_{$v.picname}" alt="" /></td>
+				<td>{$v.clicknum}</td>
+				<td>{$v.addtime|date="Y-m-d H:i:s",###}</td>
+				
+				<if condition="$v.status eq '新添加'">
+				<td style="color:red;">{$v.status}</td>
+				<elseif condition="$v.status eq '显示'" />
+				<td style="color:blue;">{$v.status}</td>
+				<else />
+				<td style="color:#666;">{$v.status}</td>
+				</if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	</div>
+
+	<include file="Public/panelBar" />
+</div>

@@ -1,0 +1,90 @@
+<include file="Public/pagerForm" />
+<div class="pageHeader">
+	<form action="" method="post" rel="pagerForm" onsubmit="return navTabSearch(this);">
+		 <div class="searchBar">
+		 	<table class="searchContent">
+		 		<tr>
+		 			<td><label>搜索名称：</label><input type="text" name="keyword" value="{$Think.request.keyword}" /></td>
+		 			<td>&nbsp;状态
+		 				<select name="state">
+		 					<option value="">-选择-</option>
+		 					<if condition="$Think.request.state eq 1">
+		 					<option value="1" selected>新添加</option>
+		 					<else />
+		 					<option value="1">新添加</option>
+		 					</if>
+		 					<if condition="$Think.request.state eq 2">
+		 					<option value="2" selected>前台显示</option>
+		 					<else />
+		 					<option value="2">前台显示</option>
+		 					</if>
+		 					<if condition="$Think.request.state eq 3">
+		 					<option value="3" selected>已下架</option>
+		 					<else />
+		 					<option value="3">已下架</option>
+		 					</if>
+		 				</select>
+		 			</td>
+		 			<td>
+		 				<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+		 			</td>
+		 		</tr>
+		 	</table>
+		 </div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" rel="user_msg" title="添加幻灯片"><span>添加</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/del/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/__MODULE__" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" target="dialog"><span>修改</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+
+	<div class="W_list_print">
+		<table class="list" width="100%" targetType="navTab" asc="asc" desc="desc" layoutH="90">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th width="150">链接名称</th>
+					<th width="150">链接地址</th>
+					<th width="150">网站LOGO</th>
+					<if condition="$Think.request._order eq 'dtime'">
+					<th width="150" orderField="dtime" class="$Think.request._sort">添加时间</th>
+					<else />
+					<th width="150" orderField="dtime">添加时间</th>
+					</if>
+					<th width="150">显示状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="list" item="vo">
+					<tr target="item_id" rel="{$vo.id}">
+						<td>{$vo.id}</td>
+						<td>{$vo.linkname}</td>
+						<td>{$vo.url}</td>
+						<td><img src="__ROOT__/Uploads/News/mypic/c_{$vo.picname}" /></td>
+						<td>{$vo.dtime|date="Y-m-d",###}</td>
+						<td>
+							<if condition="$vo.state eq 1">新添加
+							<elseif condition="$vo.state eq 2" />前台显示
+							<else />已下架
+							</if>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+
+	<include file="Public/panelbar" />
+</div>

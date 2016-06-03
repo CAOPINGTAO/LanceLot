@@ -1,0 +1,52 @@
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/updatestatus/navTabId/listdialogue/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+			<input type="hidden"  name="id" value="{$vo.id}"/>
+				<dl class="nowrap">
+					<dt>英文台词：</dt>
+					<dd><textarea name="en_dialogue" cols="80" rows="2" disabled >{$vo.en_dialogue}</textarea></dd>
+				</dl>
+				<dl class="nowrap">
+					<dt>中文台词：</dt>
+					<dd><textarea name="cn_dialogue" class="required" cols="80" rows="2" disabled>{$vo.cn_dialogue}</textarea></dd>
+				</dl>
+				<dl>
+					<dt>来源影片：</dt>
+					<dd><input name="source" type="text" value="{$vo.source}" style="width:100%" disabled /></dd>
+				</dl>
+				<dl>
+					<dt>添加时间：</dt>
+					<dd>{$vo.addtime|date="Y-m-d H:i:s",###}</dd>
+				</dl>
+				
+				<dl >
+					<dt>状态：</dt>
+					<dd><select name="status"  style="width:100px;">
+						<if condition="$vo.status eq 0">
+						<option value="0" selected>新添加</option>
+						<option value="1">显示</option>
+						<option value="2">隐藏</option>
+						<elseif condition="$vo.status eq 1" />
+						<option value="0">新添加</option>
+						<option value="1" selected>显示</option>
+						<option value="2">隐藏</option>
+						<else />
+						<option value="0">新添加</option>
+						<option value="1">显示</option>
+						<option value="2" selected>隐藏</option>
+						</if>
+						</select>
+					</dd>
+				</dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

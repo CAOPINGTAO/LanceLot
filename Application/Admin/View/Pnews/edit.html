@@ -1,0 +1,101 @@
+<h2 class="contentTitle">文章标题信息</h2>
+<style>
+	.pageFormContent dl{ width:680px}/*表单项宽度*/
+	.pageFormContent dl dt{ width:60px;text-align:right;margin-right:5px;font-weight:bold;} /*表单标题加粗 font-weight:bold;*/ 
+	span.error{ left:300px;}/*错误信息浮动位置*/
+</style>
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/update/navTabId/pnewslist/callbackType/closeCurrent" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, navTabAjaxDone);">
+		<input type="hidden" name="id" value="{$vo.id}"/>
+		<div class="pageFormContent" layoutH="97">
+			<dl>
+				<dt>标题1:</dt>
+				<dd><input type="text" class="required" name="title" size="60" value="{$vo.title}"/></dd>
+			</dl>
+			<dl>
+				<dt>标题2:</dt>
+				<dd><input type="text" class="required" name="title2" size="60" value="{$vo.title2}"/></dd>
+			</dl>
+			<dl>
+				<dt>作者:</dt>
+				<dd><input type="text" class="required" name="author" size="40" value="{$vo.author}"/></dd>
+			</dl>
+			<dl>
+				<dt>编辑:</dt>
+				<dd><input type="text" class="required" name="edit" size="40" value="{$vo.edit}"/></dd>
+			</dl>
+			<dl>
+				<dt>来源:</dt>
+				<dd><input type="text" class="required" name="source" size="40" value="{$vo.source}"/></dd>
+			</dl>
+			<dl>
+				<dt>图片:</dt>
+				<dd><input type="file"  style="width:100%" name="picname" value="{$vo.picname}"/></dd>
+			</dl>
+			<dl>
+				<dt>简介短:</dt>
+				<dd><input type="text" class="required" name="summary" size="80" value="{$vo.summary}"/></dd>
+			</dl>
+			<dl>
+				<dt>简介长:</dt>
+				<dd><input type="text" class="required" name="explain" size="100" value="{$vo.explain}"/></dd>
+			</dl>
+			<dl>
+				<dt>类型:</dt>
+				<dd>
+					<if condition="$vo.status eq 1">
+					<input type="radio" name="status" value="1" checked />一般新闻
+					<input type="radio" name="status" value="2" />人物专访
+					<input type="radio" name="status" value="3" />精彩推荐
+					<elseif condition="$vo.status eq 2" />
+					<input type="radio" name="status" value="1" />一般新闻
+					<input type="radio" name="status" value="2" checked />人物专访
+					<input type="radio" name="status" value="3" />精彩推荐
+					<elseif condition="$vo.status eq 3" />
+					<input type="radio" name="status" value="1" />一般新闻
+					<input type="radio" name="status" value="2" />人物专访
+					<input type="radio" name="status" value="3" checked />精彩推荐
+					<else />
+					<input type="radio" name="status" value="1" />一般新闻
+					<input type="radio" name="status" value="2" />人物专访
+					<input type="radio" name="status" value="3" />精彩推荐
+					</if>
+				</dd>
+			</dl>
+			<dl>
+				<dt>状态:</dt>
+				<dd>
+					<if condition="$vo.state eq 1">
+					<input type="radio" name="state" value="1" checked />新添加
+					<input type="radio" name="state" value="2" />显示中
+					<input type="radio" name="state" value="3" />已过期
+					<elseif condition="$vo.state eq 2" />
+					<input type="radio" name="state" value="1" />新添加
+					<input type="radio" name="state" value="2" checked />显示中
+					<input type="radio" name="state" value="3" />已过期
+					<elseif condition="$vo.state eq 3" />
+					<input type="radio" name="state" value="1" />新添加
+					<input type="radio" name="state" value="2" />显示中
+					<input type="radio" name="state" value="3" checked />已过期
+					<else />
+					<input type="radio" name="state" value="1" />新添加
+					<input type="radio" name="state" value="2" />显示中
+					<input type="radio" name="state" value="3" />已过期
+					</if>
+				</dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>内容：</dt>
+				<dd><textarea class="editor" name="content" rows="25" cols="82" upImgUrl="__APP__/Pnews/doupload" upImgExt="jpg,jpeg,gif,png" tools="mfull">{$vo.content}</textarea></dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

@@ -1,0 +1,32 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/update/navTabId/listdialogue/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+			<input type="hidden"  name="id" value="{$vo.id}"/>
+				<dl class="nowrap">
+					<dt>英文台词：</dt>
+					<dd><textarea name="en_dialogue" cols="80" rows="2" >{$vo.en_dialogue}</textarea></dd>
+				</dl>
+				<dl class="nowrap">
+					<dt>中文台词：</dt>
+					<dd><textarea name="cn_dialogue" class="required" cols="80" rows="2">{$vo.cn_dialogue}</textarea></dd>
+				</dl>
+				<dl>
+					<dt>来源影片：</dt>
+					<dd><input name="source" type="text" value="{$vo.source}" style="width:100%"/></dd>
+				</dl>
+				<dl>
+					<dt>添加时间：</dt>
+					<dd>{$vo.addtime|date="Y-m-d H:i:s",###}</dd>
+				</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

@@ -1,0 +1,53 @@
+<div class="pageContent">
+	<form method="post" enctype="multipart/form-data" action="__CONTROLLER__/update/navTabId/listprevue/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+			<input type="hidden"  name="id" value="{$vo.id}"/>
+				<dl >
+					<dt>电影名：</dt>
+					<dd><select name="fid"  style="width:200px;">
+						<option value="">选择影片</option>
+						<foreach name="list" item="v">
+						<if condition="$vo.fid eq $v.id">
+						<option value="{$v.id}" selected>{$v.filmname}</option>
+						</if>
+						</foreach>
+					</select></dd>
+				</dl>
+				<dl>
+					<dt>标题：</dt>
+					<dd><input type="text" name="title" value="{$vo.title}"/></dd>
+				</dl>
+				<dl >
+					<dt>状态：</dt>
+					<dd><select name="status"  style="width:100px;">
+						<if condition="$vo.status eq '1'">
+						<option value="0">新添加</option>
+						<option value="1" selected>显示</option>
+						<option value="2">隐藏</option>
+						<elseif condition="$vo.status eq '2'" />
+						<option value="0">新添加</option>
+						<option value="1">显示</option>
+						<option value="2" selected>隐藏</option>
+						<else />
+						<option value="0" selected>新添加</option>
+						<option value="1">显示</option>
+						<option value="2">隐藏</option>
+						</if>
+					</select></dd>
+				</dl>
+				<dl>
+					<dt>预告片：</dt>
+					<dd><input type="file" name="videoname" value="{$vo.videoname}"/></dd>
+				</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">修改</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

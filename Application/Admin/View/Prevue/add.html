@@ -1,0 +1,31 @@
+<div class="pageContent">		
+		<form method="post"  enctype="multipart/form-data" action="__URL__/insert/navTabId/listprevue/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">	
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+			<dl>
+				<dt>电影名：</dt>
+				<dd>
+					<select name="fid"  style="width:200px;">
+					<option value="">选择影片</option>
+					<foreach name="list" item="v">
+					<option value="{$v.id}">{$v.filmname}</option>
+					</foreach>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt>预告片标题：</dt>
+				<dd><input type="text" name="title" size="50"/></dd>
+			</dl>
+			<dl>
+				<dt>预告片上传：</dt>
+				<dd><input type="file" name="videoname" /></dd>
+			</dl>
+		</div>	
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">添加</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

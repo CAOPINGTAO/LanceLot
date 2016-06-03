@@ -1,0 +1,46 @@
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/update/navTabId/linklist/callbackType/closeCurrent"  class="pageForm required-validate" enctype="multipart/form-data"
+		onsubmit="return iframeCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="{$vo.id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>链接名称:</dt>
+				<dd><input type="text"  style="width:100%" name="linkname" value="{$vo.linkname}"/></dd>
+			</dl>
+			<dl>
+				<dt>链接地址:</dt>
+				<dd><input type="text"  style="width:100%" name="url" value="{$vo.url}"/></dd>
+			</dl>
+			<dl>
+				<dt>LOGO:</dt>
+				<dd><input type="file"  style="width:100%" name="picname" value="{$vo.picname}"/></dd>
+			</dl>
+			<dl>
+				<dt>显示状态:</dt>
+				<dd>
+					<if condition="$vo.state eq 1">
+					<input type="radio" name="state" value="1" checked />新添加
+					<input type="radio" name="state" value="2" />正显示
+					<input type="radio" name="state" value="3" />已下架
+					<elseif condition="$vo.state eq 2" />
+					<input type="radio" name="state" value="1" />新添加
+					<input type="radio" name="state" value="2" checked />正显示
+					<input type="radio" name="state" value="3" />已下架
+					<else />
+					<input type="radio" name="state" value="1" />新添加
+					<input type="radio" name="state" value="2" />正显示
+					<input type="radio" name="state" value="3" checked />已下架
+					</if>
+				</dd>
+			</dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

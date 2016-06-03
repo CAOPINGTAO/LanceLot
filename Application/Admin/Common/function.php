@@ -26,3 +26,22 @@ function node_merge($node, $pid=0){
 
 	return $array;
 }
+
+/**
+ * 生成返回数组
+ * @param int 	 $statusCode 返回响应状态码
+ * @param String $message 	 返回信息
+ * @param type 	 $type 		 回调方式
+ * @param nav 	 $nav 		 返回以后要进行刷新的页面
+ * @param for 	 $for 		 rel
+ */
+function getReturnArray($statusCode, $message, $type="closeCurrent", $nav="", $for=""){
+
+	return array(
+		"statusCode"	=>	$statusCode,
+		"message"		=>	$message,
+		"navTabId"		=>	$nav,
+		"forwardUrl"	=>	$for,
+		"callbackType"	=>	$type
+	);
+}

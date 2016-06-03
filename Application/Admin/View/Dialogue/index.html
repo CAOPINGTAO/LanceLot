@@ -1,0 +1,97 @@
+<include file="Public/pagerForm" />
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					<b>搜索</b> &nbsp; 关键字：<input type="text" name="keyword" value="{$Think.request.keyword}" /> [ID,台词,影片]
+				</td>
+				<td>&nbsp; 状态：
+					<select name="status" >
+						<option value="" >-选择-</option>
+						<if condition="$Think.request.status eq 0">
+						<option value="0" selected>新添加</option>
+						<else />
+						<option value="0">新添加</option>
+						</if>
+						<if condition="$Think.request.status eq 1">
+						<option value="1" selected>显示</option>
+						<else />
+						<option value="1">显示</option>
+						</if>
+						<if condition="$Think.request.status eq 2">
+						<option value="2" selected>不显示</option>
+						<else />
+						<option value="2">不显示</option>
+						</if>
+					</select>
+				</td>				
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__CONTROLLER__/add" target="dialog" width="830" height="350" rel="user_msg" title="添加台词"><span>添加</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="delete" href="__CONTROLLER__/delete/id/{$Think.LDELIM}item_id{$Think.RDELIM}/navTabId/listdialogue" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/edit/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="830" height="350" target="dialog"><span>修改信息</span></a></li>
+
+			<li class="line">line</li>
+			<li><a class="edit" href="__CONTROLLER__/editstatus/id/{$Think.LDELIM}item_id{$Think.RDELIM}" width="830" height="350" target="dialog"><span>修改状态</span></a></li>
+		
+			<li class="line">line</li>
+			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<if condition="$Think.request._order eq 'id'">
+				<th width="40" orderField="id" class="{$Think.request._sort}">ID</th>
+				<else />
+				<th width="40" orderField="id">ID</th>
+				</if>
+				<th width="100">英文台词内容</th>
+				<th width="100">中文台词内容</th>
+				<th width="80">来源影片</th>
+
+				<if condition="$Think.request._order eq 'addtime'">
+				<th width="20" orderField="addtime" class="{$Think.request._sort}">添加时间</th>
+				<else />
+				<th width="20" orderField="addtime">添加时间</th>
+				</if>
+				<th width="20">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="list" item="v">
+			<tr target="item_id" rel="{$v.id}">
+				<td>{$v.id}</td>
+				<td>{$v.en_dialogue}</td>
+				<td>{$v.cn_dialogue}</td>
+				<td>{$v.source}</td>
+				<td>{$v.addtime|date="Y-m-d H:i:s",###}</td>
+				
+				<if condition="$v.status eq 1">
+				<td style="color:blue;">显示</td>
+				<elseif condition="$v.status eq 0" />
+				<td style="color:red;">新添加</td>
+				<else />
+				<td style="color:#666;">不显示</td>
+				</if>
+			</tr>
+			</foreach>
+		</tbody>
+	</table>
+	<include file="Public/panelBar" />
+</div>

@@ -1,0 +1,30 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/pupdate/navTabId/pcommentlist/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="60">
+			<input type="hidden" name="id" value="{$vo.id}" />
+				<dl>
+					<dt>状态:</dt>
+					<dd>
+						<if condition="$vo.state eq 1">
+						<input type="radio" name="state" value="1" checked />正常
+						<else />
+						<input type="radio" name="state" value="1" />正常
+						</if>
+						<if condition="$vo.state eq 2">
+						<input type="radio" name="state" value="2" checked />禁止
+						<else />
+						<input type="radio" name="state" value="2" />禁止
+						</if>
+					</dd>
+				</dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

@@ -23,8 +23,10 @@ class ActorsController extends CommonController{
 
 	// 添加演员表单处理
 	public function insert(){
+
+		$result = array();
 		// 文件上传
-		$upload = new \Think\uploadFile(); //实例化上传类
+		$upload = new \Think\UploadFile(); //实例化上传类
 		$upload->maxSize = 3145728;
 		$upload->thumb = true;
 		$upload->thumbMaxWidth = '35,140';
@@ -34,8 +36,8 @@ class ActorsController extends CommonController{
 		$upload->savePath = './Uploads/Actor/Photo/'; //设置附件上传目录
 
 		if (!$upload->upload()) {
-			// 上传错误提示错误信息
-			$this->error($upload->getErrorMsg());
+			$result = getReturnArray(300, "上传图片失败", "", "listactor");
+			$this->ajaxReturn($result);exit();
 		} else {
 			// 上传成功 获取上传文件信息
 			$info = $upload->getUploadFileInfo();
@@ -45,17 +47,22 @@ class ActorsController extends CommonController{
 		$_POST['birthday'] = strtotime($_POST['birthday']);
 		$_POST['addtime'] = time();
 
-		// 添加影片基本信息
-		if (M('actors')->add($_POST)) {
-			$this->success('添加成功！');
-		} else {
-			$this->error('添加失败！');
-		}
+		unset($_POST['ajax']);
+		parent::insert();
+		// // 添加影片基本信息
+		// if (M('actors')->add($_POST)) {
+		// 	$result = getReturnArray(200, "新增演员成功", "", "listactor");
+		// } else {
+		// 	$result = getReturnArray(300, "新增演员失败", "", "listactor");
+		// }
+		// $this->ajaxReturn($result);exit();
 	}
 
 	// 处理修改演员信息表单
 	public function update(){
 
+		$navTabId = $_REQUEST['navTabId'];
+		$_POST['birthday'] = strtotime($_POST['birthday']);
 		// 未修改演员图片,则直接修改其他信息
 		if ($_FILES['picname']['name'] == "") {
 			parent::update();
@@ -73,8 +80,8 @@ class ActorsController extends CommonController{
 		$upload->savePath = './Uploads/Actor/Photo/';  //设置附件上传目录
 
 		if (!$upload->upload()) {
-			// 上传错误提示错误信息
-			$this->error($upload->getErrorMsg());
+			$result = getReturnArray(300, "上传图片失败", "closeCurrent", $navTabId);
+			$this->ajaxReturn($result);exit();
 		} else {
 			// 上传成功 获取上传文件信息
 			$info = $upload->getUploadFileInfo();
@@ -103,8 +110,9 @@ class ActorsController extends CommonController{
 	// 处理添加演员剧照表单
 	public function uploadsHandle(){
 
+		$result = array();
 		$aid = $_POST['aid']; //演员ID
-		$upload = new \Think\uploadFile();
+		$upload = new \Think\UploadFile();
 
 		$upload->maxSize = 3145728; 
 		$upload->allowExts = array('jpg', 'gif', 'png', 'jpeg');
@@ -116,7 +124,8 @@ class ActorsController extends CommonController{
 		$upload->thumbPrefix = "s_,m_";
 
 		if (!$upload->upload()) { //上传错误提示错误信息
-			$this->error($upload->getErrorMsg());
+			$result = getReturnArray(300, "上传图片失败", "closeCurrent", "listactor");
+			$this->ajaxReturn($result);exit();
 		} else { //上传成功 获取上传文件信息
 			$info = $upload->getUploadFileInfo();
 		}
@@ -127,14 +136,14 @@ class ActorsController extends CommonController{
 			$data['aid'] = $_POST['id'];
 			$data['picname'] = $val['savename'];
 			$data['addtime'] = time();
-
 			if (!$pic->add($data)) {
-				$this->error('添加演员剧照信息失败！');
-				exit();
+				$result = getReturnArray(300, "添加剧照信息失败", "closeCurrent", "listactor");
+				$this->ajaxReturn($result);exit();
 			}
 		}
 
-		$this->success("成功添加剧照信息！");
+		$result = getReturnArray(200, "成功添加剧照信息", "closeCurrent", "listactor");
+		$this->ajaxReturn($result);exit();
 	}
 
 	// 删除演员时
@@ -166,7 +175,7 @@ class ActorsController extends CommonController{
 	public function showpics(){
 
 		$imgs = M('picactor')->where("aid={$_GET['id']}")->select();
-		// var_dump($imgs);die();
+		
 		$this->assign('pic', $imgs);
 		$this->display();
 	}
@@ -177,7 +186,6 @@ class ActorsController extends CommonController{
 		$aid = $_GET['id']; //演员ID
 		$map['aid'] = $aid;
 		$imgs = M('picactor')->where($map)->select();
-		// var_dump($imgs);die();
 
 		$this->assign("imgs", $imgs);
 		$this->display();
