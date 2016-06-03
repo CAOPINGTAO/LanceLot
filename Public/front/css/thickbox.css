@@ -23,7 +23,7 @@ html>body{font:12px Arial, Helvetica, sans-serif;color:#333333}
 	z-index: 102;
 	color:#000000;
 	display:none;
-	border:5px solid #666;
+	border:1px solid #DBE8EA;
 	z-index:10000px;
 }
 #TB_caption{
@@ -39,7 +39,6 @@ html>body{font:12px Arial, Helvetica, sans-serif;color:#333333}
 	padding:5px 10px 7px 0;
 	margin-bottom:1px;
 	text-align:right;
-	background-color:#e8e8e8;
 }
 #TB_ajaxContent{
 	padding:2px 15px 15px 15px;

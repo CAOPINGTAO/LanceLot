@@ -28,14 +28,14 @@ img{ border:0 none;}
 /* header页头开始 */
 #header{
 	width:100%;
-	background:#F0F3F5;
+	background:url("../images/header_banner.jpg");
 }
 
 /* top 头 */
 #header .h_top{
 	width:100%;
 	height:28px;
-	background:#545652;
+	background-color: rgba(255,255,255,0.4);
 	z-index:10000;
 }
 
@@ -79,7 +79,7 @@ img{ border:0 none;}
 #header .h_top .con .right li{
 	float:left;
 	display:block;
-	width:40px;
+	width:80px;
 	height:30px;
 	line-height:30px;
 
@@ -92,16 +92,19 @@ img{ border:0 none;}
 
 
 #header .h_top .con .right li a{
-	float:right;	
-	color:#D5D5D5;
-	margin-right:10px;
-	text-align:center;
-	text-decoration:none;
+	float: right;
+    color: #fff;
+    margin-right: -240px;
+    padding-left: 4px;
+    text-align: center;
+    width: 80px;
+    background-color: #ffafc9;
+    text-decoration: none;
 }
 
 
 #header .h_top .con .right li a:hover{
-	color:#fff;
+	color:#17a;
 	text-decoration:none;
 	
 }
@@ -109,7 +112,7 @@ img{ border:0 none;}
 #header .h_center{
 	width:100%;
 	height:80px;
-	border-bottom:1px solid #e5ebe4;
+	background-color: rgba(255,255,255,0.4);
 }
 
 #header .h_center .con{
@@ -141,18 +144,19 @@ img{ border:0 none;}
 
 #header .h_center .con .search .inp{
 	float:left;
-	width:400px;
-	height:29px;
+	width:430px;
+	height:30px;
 	border:1px solid #DBE8EA;
 	margin-top:25px;
 	border-radius: 5px 0 0 5px;
+	outline: none;
 }
 
 #header .h_center .con .search .sub{
 	float:left;
 	list-style:none;
 	width:38px;
-	height:29px;
+	height:32px;
 	background:url("../images/search.jpg");
 	margin-top:25px;
 	border:none;
@@ -172,9 +176,8 @@ img{ border:0 none;}
 #header .h_down{
 	width:100%;
 	height:35px;
-	border-bottom:1px solid #F0F3F5;
-	
-	/* background:#000; */
+	background-color: rgba(255,255,255,0.9);
+    box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
 }
 
 #header .h_down .menu{
@@ -202,7 +205,7 @@ img{ border:0 none;}
 }
 
 #header .h_down .menu ul li a:hover{
-	background:#fff;
+	background-color: rgba(255,255,255,0);
 }
 
 /* header页头结束 */
@@ -235,9 +238,9 @@ img{ border:0 none;}
 #person_menu ul li a{
 	position:absolute;
 	display:block;
-	width:100px;
-	height:50px;
-	line-height:50px;	
+	width:80px;
+	height:40px;
+	line-height:40px;	
 	text-align:center;
 	text-decoration:none;
 	margin:0px;
@@ -248,18 +251,66 @@ img{ border:0 none;}
 	border-top-right-radius:5px;
 	border-bottom-right-radius:5px;
 }
-#person_menu .nav0 a{background:#17a;}
-#person_menu .nav1 a{background:#17a;}
-#person_menu .nav2 a{background:#17a;}
-#person_menu .nav3 a{background:#17a;}
-#person_menu .nav4 a{background:#17a;}
-#person_menu .nav5 a{background:#17a;}
-#person_menu .nav6 a{background:#17a;}
-#person_menu .nav7 a{background:#17a;}
-#person_menu .nav8 a{background:#17a;}
-#person_menu .nav9 a{background:#17a;}
-#person_menu .nav10 a{background:#17a;}
-#person_menu .nav11 a{background:#17a;}
+#person_menu .nav0 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav1 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav2 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav3 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav4 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav5 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav6 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav7 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav8 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav9 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav10 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+#person_menu .nav11 a{
+	color: #fff;
+    background-color: #ffafc9;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
 
 /* 个人中心菜单结束 */
 
@@ -310,10 +361,8 @@ img{ border:0 none;}
 	width:300px;
 	height:180px;
 	border-radius:10px;
-	border:4px solid #7F9DB9;
-	 background:#A4C7FF; 
-	 /* background:url("../images/space_bg.jpg");  */
-	 
+	border:1px solid #7F9DB9;
+	background:#ffafc9; 
 	
 	 z-index:99999999;
 	 display:none;

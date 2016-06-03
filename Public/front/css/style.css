@@ -251,7 +251,7 @@ img{ border:0 none;}
 
 #main_left .movie_review .review_list{
 	width:590px;
-	height:190px;
+	height:160px;
 	margin-top:18px;
 	border-bottom:1px solid #EAEAEA;
 }
@@ -304,7 +304,10 @@ img{ border:0 none;}
 	height:25px;
 }
 #main_left .movie_review .review_list .rr .point span{
-	color:red;
+	color:#37a;
+}
+#main_left .movie_review .review_list .rr .point span strong{
+	color:#e09015;
 }
 #main_left .movie_review .review_list .rr .point a{
 	color:#3377AA;
@@ -1468,7 +1471,6 @@ img{ border:0 none;}
 	color:#7F9DB9;
 	font-size:14px;
 	margin:10px 0;
-	background-color: #FCEFE3;
 	border:2px solid #7F9DB9;
 	border-radius:3px;
 }
@@ -1492,16 +1494,15 @@ img{ border:0 none;}
 	margin:10px;
 }
 #review_edit .acon .wsub{
-	width:150px;
+	width:100px;
 	height:30px;
 	margin:10px;
-	border:none;
+	border:1px solid #528641;
 	border-radius:5px;
 	float:left;
 	color:#fff;
 	cursor:pointer;
-	background-color:#00BDFA;
-	
+	background-color:#3fa156;	
 }
 
 #review_edit .acon .back{
@@ -1511,13 +1512,13 @@ img{ border:0 none;}
 	line-height:30px;
 	margin:10px;
 	display:block;
-	border:none;
+	border:1px solid #528641;
 	border-radius:5px;
 	color:#fff;
 	text-align:center;
 	text-decoration:none;
 	cursor:pointer;
-	background-color:#00BDFA;
+	background-color:#3fa156;
 	
 }
 
