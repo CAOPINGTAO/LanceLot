@@ -55,7 +55,7 @@ class ListController extends Controller{
 
 		$this->assign("toptitle",$toptitle);
 		//设置分页样式
-		$page->setConfig(theme,"%totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% ");
+		//$page->setConfig(theme,"%totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% ");
 		$this->assign("pageshow",$page->show());
 		$this->assign("list",$list);
 		//台词

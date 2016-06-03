@@ -29,10 +29,7 @@
 		
 		//影片详情
 		$movie=D("Movie")->relation(true)->find($fid);
-		//处理影片简介
-		// $movie['content'] = strip_tags($movie['content']);
-		// $movie['conent'] = preg_replace("/[\s\ ]*/", "", strip_tags($movie['content']));
-		// var_dump($movie);die();
+		
 		//添加影片的评论数
 		$sum=0;
 		$sum+=M("Longreview")->where("fid=".$fid)->count();

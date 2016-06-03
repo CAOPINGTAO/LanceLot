@@ -6,6 +6,8 @@ class IndexController extends Controller {
     //前台主页
     public function index(){
 
+        //幻灯片
+        $this->ppt();
         //首页影评列表
         $this->reviewlist();
         //调用台词的方法
@@ -24,6 +26,42 @@ class IndexController extends Controller {
         $this->clicknum();
 
         $this->display("index");
+    }
+
+    //幻灯片
+    public function ppt(){
+
+        //实例化 加载PPt表，等同于$m = new \Think\Model('Ppt');
+        $m = M("Ppt");
+        $ppt = $m->where("state=1")->limit(7)->select();
+        //实例化各个模型
+        $movie = M("Movie");
+        $ma = M("Movie_actor");
+        $a = M("Actors");
+        $mt = M("Movie_type");
+        $t = M("Type");
+        //根据电影id mid查询电影的相关信息
+        foreach($ppt as &$v1){
+            $mo = $movie->where("id={$v1['mid']}")->select();
+            $v1['nation'] = $mo[0]['nation'];   //注意查询出来只会有一个结果，因为每部电影都是唯一的，且查询的结果是多维数组
+            $v1['language'] = $mo[0]['language'];
+            $v1['replynum'] = $mo[0]['replynum'];
+            $v1['showtime'] = $mo[0]['showtime'];
+            //查询影片相关演员
+            $ma1 = $ma->field("aid")->where("fid={$v1['mid']}")->limit(2)->select();
+            foreach($ma1 as $av){
+                $a1 = $a->field("cname")->where("id={$av['aid']}")->select();
+                $v1['cname'][] = $a1[0]['cname'];
+            }
+            //查询电影所属类型
+            $mt1 = $mt->field("tid")->where("fid={$v1['mid']}")->select();
+            foreach($mt1 as $tv){
+                $t1 = $t->field("typename")->where("fid=1 and id={$tv['tid']}")->select();
+                $v1['typename'][] = $t1[0]['typename'];
+            }
+        }
+        //现在PPT的相关信息已拼接在$ppt中，分配过去就行
+        $this->assign("ppt", $ppt);
     }
 
     //最受欢迎的影评
@@ -66,11 +104,11 @@ class IndexController extends Controller {
         $this->assign("link", $link);
     }
 
-    //口碑榜
+    //正在热映
     public function hot(){
 
-        $hot = M("Movie")->field('id,filmname,picname,rate')->order("rate desc")->limit("0,4")->select();
-        $hide = M("Movie")->field('id,filmname,picname,rate')->order("rate desc")->limit("4,4")->select();
+        $hot = M("Movie")->field('id,filmname,picname,rate')->order("id asc")->limit("0,4")->select();
+        $hide = M("Movie")->field('id,filmname,picname,rate')->order("id asc")->limit("4,4")->select();
         $this->assign("hot", $hot);
         $this->assign("hide", $hide);
     }
@@ -78,7 +116,7 @@ class IndexController extends Controller {
     //近期热播
     public function recent(){
 
-        $recent = M("Movie")->field('id,filmname,picname')->order('showtime desc')->limit(10)->select();
+        $recent = M("Movie")->field('id,filmname,picname')->order('addtime desc')->limit(10)->select();
         $this->assign("recent", $recent);
     }
 

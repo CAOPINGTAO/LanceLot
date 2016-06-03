@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>My Movie</title>
+		<title>LanceLot</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css"/>
 		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
@@ -73,15 +73,12 @@
 										{$vo['filmname']}
 										</a> 
 									</div>
-									<!-- <div class="acthor">
-										 Miss Sajarevo 评论: <a href="">《地心引力》 </a>
-									</div> -->
 									<div class="content">
 										{$vo['showtime']|date="Y-m-d",###}({$vo['nation']}) / {$vo['director']} / {$vo.editor} / <foreach name="vo['actorlist']" item="v">{$v['cname']} /</foreach> {$vo['petname']}
 									</div>
 								
 									<div class="point">
-										<span>综合评分：{$vo['rate']} </span><span style="font-style: italic;color:#000">( {$vo['ratenum']} 人回复 )</span>
+										<span>综合评分：<strong>{$vo['rate']|round=###,1}</strong></span><span style="font-style: italic;color:#000">( {$vo['ratenum']} 人回复 )</span>
 									</div> 
 									
 									<div class=""></div>	

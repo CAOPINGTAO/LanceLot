@@ -15,13 +15,6 @@ class LoginController extends Controller{
 		
 		$this->display("login");
 	}
-	
-	// //验证码
-	// Public function verify(){
-		
-	// 	import('ORG.Util.Image');
-	// 	Image::buildImageVerify();
-	// }
 
 	//获取验证码 $id用于生成不同的验证码
     public function verify($id = 1){
