@@ -60,11 +60,11 @@
                 <li><a href="/LanceLot/index.php/Index/index" class="title"></a></li>
             </ul>
             <ul class="right">
-                <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
-                <li><a href="/LanceLot/index.php/Register/register">注册</a></li>
+                <?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" style="border-radius:0px 0px 0px 10px" class="thickbox"  title="登录">登录</a></li>
+                <li><a href="/LanceLot/index.php/Register/register" style="border-radius:0px 0px 10px 0px">注册</a></li>
                 <?php else: ?>
-                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>" style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
-                <li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>
+                <li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>" style="color:#fff;border-radius:0px 0px 0px 10px"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
+                <li><a href="/LanceLot/index.php/Login/loginout" style="border-radius:0px 0px 10px 0px">退出</a></li><?php endif; ?>
             </ul>
         </div>
     </div>
@@ -76,13 +76,10 @@
             </div>
             <div class="search">
                 <form action="/LanceLot/index.php/Index/search" method="post">
-                    <input type="text" class="inp" placeholder="电影、分类" style="font-size: 12px;padding-left: 5px;" name="key" />
+                    <input type="text" class="inp" placeholder="电影、分类" style="font-size: 12px;padding-left: 13px;" name="key" />
                     <input type="submit" class="sub" value="" />
                 </form>
             </div>
-           <!--  <div class="logoimg">
-                <img src="/LanceLot/Public/front/images/logo.jpg" alt=""/>
-            </div> -->
         </div>
     </div>
     <!--menu菜单-->
@@ -405,12 +402,11 @@
 					<div class="p_content">
 					<?php echo ($movie["content"]); ?>
 					</div>
-			
 				</div>
+
 				<div class="nav"></div>
-				<?php if(!empty($video['id'])): ?><!-- {if !empty($video.id)} -->
-				<div class="prevue_video">
-					
+
+				<?php if(!empty($video['id'])): ?><div class="prevue_video">	
 					<div class="video_item">
 						<div class="t"><a href="/LanceLot/index.php/Prevue/play/id/<?php echo ($video["id"]); ?>" >预告片</a></div>
 						<div class="c">
@@ -422,7 +418,6 @@
 						</div>
 					</div>
 				</div><?php endif; ?>
-				<!-- {/if} -->
 				<div class="nav"></div>
 				
 				<div class="relative_pic_title">
@@ -431,11 +426,9 @@
 				<!--  影片相关图片 -->
 				<div class="relative_pic" >
 					<ul id="js_relative_pic">
-						<?php if(is_array($movie['piclist'])): $i = 0; $__LIST__ = $movie['piclist'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$plist): $mod = ($i % 2 );++$i;?><li><img src="/LanceLot/Uploads/Movie/mPhotos/<?php echo ($plist["picname"]); ?>" /></li><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($movie['piclist'])): $i = 0; $__LIST__ = array_slice($movie['piclist'],1,5,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$plist): $mod = ($i % 2 );++$i;?><li><img src="/LanceLot/Uploads/Movie/mPhotos/<?php echo ($plist["picname"]); ?>" /></li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
-				</div>
-				
-			
+				</div>							
 				
 				<!-- js	特效-->
 				<script type="text/javascript">
@@ -690,8 +683,7 @@
 						<a href="/LanceLot/index.php/List/index/fid/<?php echo ($movie["id"]); ?>">更多相关影评</a>
 						<button  class="post alert_post_review">我来评论这部电影</button>
 					</div>
-					<?php if(is_array($viewlist)): $i = 0; $__LIST__ = $viewlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$review): $mod = ($i % 2 );++$i;?><div class="review_list">
-							
+					<?php if(is_array($reviewlist)): $i = 0; $__LIST__ = $reviewlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$review): $mod = ($i % 2 );++$i;?><div class="review_list">
 							<div class="title">
 								<div class="user_pic">
 									<a href="/LanceLot/index.php/User/index/uid/<?php echo ($review["user"]["id"]); ?>"><img src="/LanceLot/Uploads/User/Headpic/<?php echo ($review["user"]["headpic"]); ?>" alt="" width="40" height="40"/></a>
@@ -701,21 +693,19 @@
 								</a> 
 							</div>
 							<div class="acthor">
-								  <a href="/LanceLot/index.php/User/index/uid/<?php echo ($review["user"]["id"]); ?>"><?php echo ($review["user"]["username"]); ?> </a> <?php echo (date("y-m-d H:i:s",$review["ptime"])); ?>
+								  <a href="/LanceLot/index.php/User/index/uid/<?php echo ($review["user"]["id"]); ?>"><?php echo ($review["user"]["username"]); ?> </a> <?php echo (date("Y-m-d H:i:s",$review["ptime"])); ?>
 							</div>
 							<div class="content">
 								<?php echo ($review["content"]); ?>
 							</div>
 							<div class="point">
-								<!-- <span>546/678&nbsp;&nbsp;有用</span> --><a href="/LanceLot/index.php/Review/index/id/<?php echo ($review["id"]); ?>">(<?php echo ($review["countreply"]); ?>人回复)</a>
+								<a href="/LanceLot/index.php/Review/index/id/<?php echo ($review["id"]); ?>">(<?php echo ($review["countreply"]); ?>人回复)</a>
 							</div> 	
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>
 					<div class="nobody">
 						还没有人评论哦,快来抢占评论吧！！！
 					</div>
-<!-- 					</foreach>	 -->
 				</div>
-			
 			</div>
 			
 			<!-- 右侧内容 -->
@@ -753,19 +743,16 @@
 				<!-- 评论榜 -->
 				<div class="movie_rank">
 					<div class="rank_head">
-						<span>MyMovie热评榜</span><!-- 
+						<span>LanceLot热评榜</span><!-- 
 						<span style="float:right;padding-top:10px;"><a href="">更多榜单 >>></a></span> -->
 					</div>
 					<div class="rank_list">
 						<ul>
 							<?php if(is_array($num)): foreach($num as $key=>$vo): ?><li>
 								<span style="display:inline-block; width:200px;"><a href="/LanceLot/index.php/Detail/index/id/<?php echo ($vo["id"]); ?>"><?php echo ($vo["filmname"]); ?></a></span>
-								<span style="display:inline-block; width:50px; color:#8CB5C3;">评论数：</span>
+								<span style="display:inline-block; color:#8CB5C3;">评论数：</span>
 								<span style="color:#8CB5C3;"><?php echo ($vo["replynum"]); ?></span>
 							</li><?php endforeach; endif; ?>
-
-							<!-- margin-left:120px;color:#8CB5C3; -->
-							
 						</ul>
 					</div>
 				</div>

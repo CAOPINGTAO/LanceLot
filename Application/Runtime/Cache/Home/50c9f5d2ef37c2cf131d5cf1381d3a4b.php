@@ -12,7 +12,7 @@ iVBORw0KGgoAAAANSUhEUgAAANcAAAAeCAMAAACIRHv7AAAAYFBMVEWq1LBksW/3xpDQ6fVhs9v8/fz6
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">
 		<meta property="wb:webmaster" content="f307b26227e4f2c3">
-		<title>登录MyMovie</title>
+		<title>登录LanceLot</title>
 			<style type="text/css">
 			/* Reset */
 			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
@@ -27,8 +27,8 @@ iVBORw0KGgoAAAANSUhEUgAAANcAAAAeCAMAAACIRHv7AAAAYFBMVEWq1LBksW/3xpDQ6fVhs9v8/fz6
 
 			/* Font,  Link & Container */
 			body { font:12px/1.6 arial,helvetica,sans-serif; background:url(/LanceLot/Public/front/images/bg_forum.jpg);}
-			a:link { color:;text-decoration:none; }
-			a:visited { color:#669;text-decoration:none; }
+			a:link { color:#369;text-decoration:none; }
+			a:visited { color:#369;text-decoration:none; }
 			a:hover { color:red;text-decoration:none;background:; }
 			a:active { color:#fff;text-decoration:none;background:; }
 			button { cursor:pointer;line-height:1.2; }
@@ -97,7 +97,7 @@ iVBORw0KGgoAAAANSUhEUgAAANcAAAAeCAMAAACIRHv7AAAAYFBMVEWq1LBksW/3xpDQ6fVhs9v8/fz6
 				<a href="#" class="logo"><span style="color:red;"></span></a>
 			</div>
 			<div id="content">
-				<h1>登录MyMovie</h1>
+				<h1>登录LanceLot</h1>
 				<div class="article">
 					<form id="lzform" name="lzform" method="post" action="/LanceLot/index.php/Login/login" onsubmit="return validateForm(this);">
 						<div style="display:none;">
@@ -144,7 +144,7 @@ iVBORw0KGgoAAAANSUhEUgAAANcAAAAeCAMAAACIRHv7AAAAYFBMVEWq1LBksW/3xpDQ6fVhs9v8/fz6
 					</form>
 				</div>
 					 <ul id="side-nav" class="aside">
-						<li>&gt;&nbsp;还没有帐号？<a rel="nofollow" href="/LanceLot/index.php/Reqister/reqister">立即注册</a></li>
+						<li>&gt;&nbsp;还没有帐号？<a rel="nofollow" href="/LanceLot/index.php/Register/register">立即注册</a></li>
 						<li>&gt;&nbsp;<a href="/LanceLot/index.php/Index/index" style="color:red;">去首页</a></li>
 					 </ul>
 			</div>
@@ -156,12 +156,9 @@ iVBORw0KGgoAAAANSUhEUgAAANcAAAAeCAMAAACIRHv7AAAAYFBMVEWq1LBksW/3xpDQ6fVhs9v8/fz6
 					<a href="#">关于</a>
 					· <a href="#">联系我们</a>
 					· <a href="#">网站地图</a>
-					· <a href="#">免责声明</a>
 					
 					· <a href="#">帮助中心</a>
 					· <a href="#">友情链接</a>
-					· <a href="#">移动应用</a>
-					· <a href="#">广告</a>
 				</span>
 			</div>
 		</div>

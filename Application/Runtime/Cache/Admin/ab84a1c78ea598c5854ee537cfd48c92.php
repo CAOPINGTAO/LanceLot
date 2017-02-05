@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><div class="pageContent">
-	<form method="post" action="/LanceLot/admin.php/Role/insert/navTabId/listrole/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);">
+	<form method="post" action="/lancelot/admin.php/Role/insert/navTabId/listrole/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);">
 		<div class="pageFormContent" layoutH="60">
 			<dl>
 				<dt>角色：</dt>

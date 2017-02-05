@@ -92,7 +92,7 @@ class IndexController extends Controller {
     //Top10点击排行榜
     public function clicknum(){
 
-        $clicknum = M("Movie")->field('id,filmname,picname,clicknum')->order('clicknum desc')->limit(8)->select();
+        $clicknum = M('movie')->field('id,filmname,picname,clicknum')->order('clicknum desc')->limit(8)->select();
         $this->assign("clicknum", $clicknum);
     }
 
@@ -102,51 +102,54 @@ class IndexController extends Controller {
         $key = trim($_POST['key']);
         //调用台词方法
         $this->dialogue();
-        //1 搜电影
+        //1. 搜索电影
         $mv['filmname'] = array('like', "%{$key}%");
         $mv['status'] = array('in', '1,2');
         $mv['_logic'] = 'and';
 
-        //2 按分类搜索
+        //搜索分类
         $mt['typename'] = array('like',"%{$key}%");
 
-        //3 搜索长评
+        // 搜索长评
         $map['title'] = array('like', "%{$key}%");
 
-        $findmv = M("Movie")->where($mv)->select();
-        $findty = M("Type")->where($mt)->select();
-        $findmap= M("Longreview")->where($map)->select();
+        $findmv = M('movie')->where($mv)->select();
+        $findty = M('type')->where($mt)->select();
+        $findlr= M('longreview')->where($map)->select();
 
         if($findmv && count($findmv)) {
             $where['filmname'] = array('like',"%{$key}%");
             $where['status'] = array('in', '1,2');
             $where['_logic'] = 'and';
 
-            $count = M("Movie")->where($where)->count();        //分页总记录数
-            $Page = new \Think\Page($count,C("PAGE_COUNT_ONE"));    //分页实例化
+            $count = M('movie')->where($where)->count();        //分页总记录数
+            $Page = new \Think\Page($count,10);    //分页实例化
             $show = $Page->show();  //分页显示输出
 
             $Mactor = D('Movie');
             $list = $Mactor->relation('actorlist')->where($where)->order('clicknum desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
             $this->assign('tag', "电影搜索："." ".$key);
-            $this->assign('list', $list);   //赋值数据集
-            $this->assign('page', $show);   //赋值分页输出
+            $this->assign('list', $list);   
+            $this->assign('page', $show);   
 
+	    //友情链接
             $this->link();
             $this->display("Typelist/tags");
 
         } elseif ($findty && count($findty)) {
+	    // 2. 搜索分类
+            $tags = $findty;
             $tid = $findty[0]['id'];
             $typename = $findty[0]['typename'];
             //分页
             $Model = new \Think\Model();
             $movies = $Model->query("SELECT m.* FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE mt.tid={$tid} AND m.status in (1,2)");
             $count = count($movies);
-            $Page = new \Think\Page($count, C("PAGE_COUNT_ONE"));
+            $Page = new \Think\Page($count, 10);
             $show  = $Page->show();
             //分页数据查询
-            $list = $Model->query("SELECT m.* FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE mt.tid={$tid} AND m.stauts in (1,2) ORDER BY clicknum DESC LIMIT {$Page->firstRow},{$Page->listRows}");
+            $list = $Model->query("SELECT m.* FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE mt.tid={$tid} AND m.status in (1,2) ORDER BY clicknum DESC LIMIT {$Page->firstRow},{$Page->listRows}");
 
             $this->assign('tag',"电影标签：".$typename);
             $this->assign('list', $list);
@@ -155,7 +158,7 @@ class IndexController extends Controller {
             $this->link();
             $this->display("Typelist/tags");
         } else {
-            $this->assign('tag',"搜索：".$key);
+            $this->assign("tag","搜索：".$key);
             $this->hot();
             $this->dialogue();
             $this->link();

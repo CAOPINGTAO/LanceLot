@@ -197,21 +197,21 @@ class MovieController extends CommonController{
 		$Model = new \Think\Model();
 		$hasPhotos = $Model->query("SELECT COUNT(mp.fid) 'pnum' FROM ll_movie m LEFT JOIN ll_filmpic mp ON mp.fid=m.id WHERE m.id={$fid}");
 		if ($hasPhotos[0]['pnum'] == 0) {
-			$this->error("未上传剧照!");
+			$this->ajaxReturn(getReturnArray(300, "未上传剧照!"));
 			exit();
 		}
 
 		//2. 是否设置类型信息
 		$hastypes = $Model->query("SELECT COUNT(mt.fid) 'tnum' FROM ll_movie m LEFT JOIN ll_movie_type mt ON mt.fid=m.id WHERE m.id={$fid}");
 		if ($hastypes[0]['tnum'] == 0) {
-			$this->error("未设置影片类型！");
+			$this->ajaxReturn(getReturnArray(300, "未设置影片类型！"));
 			exit();
 		}
 
 		//3. 是否设置演员信息
 		$hasactors = $Model->query("SELECT COUNT(ma.fid) 'anum' FROM ll_movie m LEFT JOIN ll_movie_actor ma ON ma.fid=m.id WHERE m.id={$fid}");
 		if ($hasactors[0]['anum'] == 0) {
-			$this->error("未设置演员信息！");
+			$this->ajaxReturn(getReturnArray(300, "未设置演员信息！"));
 			exit();
 		}
 
@@ -219,9 +219,9 @@ class MovieController extends CommonController{
 		$map['id'] = $_POST['id'];
 
 		if (M('Movie')->where($map)->save($data)) {
-			$this->success('修改成功！');
+			$this->ajaxReturn(getReturnArray(200, "修改成功！"));exit();
 		} else {
-			$this->error('修改影片状态失败！');
+			$this->ajaxReturn(getReturnArray(300, "修改影片状态失败！"));exit();
 		}
 	}
 

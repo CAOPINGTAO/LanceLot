@@ -3,16 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lancelot</title>
-    <link href="/LanceLot/Public/dwz/themes/css/login.css" rel="stylesheet" type="text/css" />
-    <script src="/LanceLot/Public/dwz/js/jquery-1.7.1.js" type="text/javascript"></script>
+    <link href="/lancelot/Public/dwz/themes/css/login.css" rel="stylesheet" type="text/css" />
+    <script src="/lancelot/Public/dwz/js/jquery-1.7.1.js" type="text/javascript"></script>
     <script type="text/javascript">
         function fleshVerify(type){
             //重载验证码
             var timenow = new Date().getTime();
             if (type){
-                $('#verifyImg').attr("src", '/LanceLot/admin.php/Login/verify/'+timenow);
+                $('#verifyImg').attr("src", '/lancelot/admin.php/Login/verify/'+timenow);
             }else{
-                $('#verifyImg').attr("src", '/LanceLot/admin.php/Login/verify/'+timenow);
+                $('#verifyImg').attr("src", '/lancelot/admin.php/Login/verify/'+timenow);
             }
         }
     </script>
@@ -24,7 +24,7 @@
 <div id="login">
     <div id="login_header">
         <h1 class="login_logo">
-            <a href="/LanceLot/admin.php" style="font-size: 35px;color: #00B1F6;text-decoration: none;">Lancelot</a>
+            <a href="/lancelot/admin.php" style="font-size: 35px;color: #00B1F6;text-decoration: none;">Lancelot</a>
         </h1>
         <div class="login_headerContent">
             <div class="navList">
@@ -34,7 +34,7 @@
     </div>
     <div id="login_content">
         <div class="loginForm">
-            <form action="/LanceLot/admin.php/Login/checkLogin/" method="post">
+            <form action="/lancelot/admin.php/Login/checkLogin/" method="post">
                 <p>
                     <label>帐号：</label><br>
                     <input type="text" name="username" size="20" class="login_input">
@@ -46,14 +46,14 @@
                 <p>
                     <label>验证码：</label>
                     <input class="code" name="code" type="text" size="20"/>
-                    <span><img id="verifyImg" src="/LanceLot/admin.php/Login/verify" onClick="fleshVerify()" border="0" alt="点击刷新验证码" style="cursor:pointer" align="absmiddle" /></span>
+                    <span><img id="verifyImg" src="/lancelot/admin.php/Login/verify" onClick="fleshVerify()" border="0" alt="点击刷新验证码" style="cursor:pointer" align="absmiddle" /></span>
                 </p>
                 <div class="login_bar">
                     <input class="sub" type="submit" value=" " />
                 </div>
             </form>
         </div>
-        <div class="login_banner"><img src="/LanceLot/Public/dwz/themes/default/images/login_banner.jpg" /></div>
+        <div class="login_banner"><img src="/lancelot/Public/dwz/themes/default/images/login_banner.jpg" /></div>
         <div class="login_main"></div>
     </div>
     <div id="login_footer">

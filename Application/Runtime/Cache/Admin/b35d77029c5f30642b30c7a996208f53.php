@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/LanceLot/admin.php/Role/index" method="post">
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/lancelot/admin.php/Role/index" method="post">
 	<input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
 	<input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
 	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>" />
@@ -26,19 +26,19 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="/LanceLot/admin.php/Role/add" target="dialog" width="480" height="270" rel="user_msg" title="添加角色"><span>添加角色</span></a></li>
+			<li><a class="add" href="/lancelot/admin.php/Role/add" target="dialog" width="480" height="270" rel="user_msg" title="添加角色"><span>添加角色</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="delete" href="/LanceLot/admin.php/Role/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listrole" target="ajaxTodo" title="确定要删除吗?"><span>删除角色</span></a></li>
+			<li><a class="delete" href="/lancelot/admin.php/Role/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listrole" target="ajaxTodo" title="确定要删除吗?"><span>删除角色</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="edit" href="/LanceLot/admin.php/Role/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="270" target="dialog" title="修改角色"><span>修改角色</span></a></li>
+			<li><a class="edit" href="/lancelot/admin.php/Role/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="270" target="dialog" title="修改角色"><span>修改角色</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="edit" height="480" width="800" title="配置权限信息" max="true" target="dialog" href="/LanceLot/admin.php/Role/access/rid/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><span>配置权限</span></a></li>
+			<li><a class="edit" height="480" width="800" title="配置权限信息" max="true" target="dialog" href="/lancelot/admin.php/Role/access/rid/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><span>配置权限</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="edit" height="480" width="800" title="查看权限信息" target="dialog" href="/LanceLot/admin.php/Role/showAccess/rid/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><span>查看权限信息</span></a></li>
+			<li><a class="edit" height="480" width="800" title="查看权限信息" target="dialog" href="/lancelot/admin.php/Role/showAccess/rid/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><span>查看权限信息</span></a></li>
 
 			<li class="line">line</li>
 			<li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>

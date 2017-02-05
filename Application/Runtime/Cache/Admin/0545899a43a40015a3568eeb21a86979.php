@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?>
 <div class="pageContent">
 
-	<form method="post" enctype="multipart/form-data" action="/LanceLot/admin.php/Actors/update/navTabId/listactor" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone);">
+	<form method="post" enctype="multipart/form-data" action="/LanceLot/admin.php/Actors/update/navTabId/listactor/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone);">
 
 		<input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>" />
 		<input type="hidden" name="ppicname" value="<?php echo ($vo["picname"]); ?>" />
@@ -68,7 +68,7 @@
 			</p>
 			<p>
 				<label>出生日期：</label>
-				<input type="text" name="birthday" class="date" size="30" value="<?php echo (date("Y-m-d",$vo["birthday"])); ?>" /><a class="inputDateButton" href="javascript:;">选择</a>
+				<input type="text" name="birthday" class="date" size="30" value="<?php echo (date('Y-m-d',$vo["birthday"])); ?>" /><a class="inputDateButton" href="javascript:;">选择</a>
 			</p>
 			<p>
 				<label>出 生 地：</label>

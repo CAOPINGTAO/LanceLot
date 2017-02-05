@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>LanceLot</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/prevue.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<!-- 图片特效 -->
+		<script src="__PUBLIC__/front/outlink/js/jquery.min.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/front/outlink/js/cufon-yui.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/front/outlink/js/cufon-replace.js" type="text/javascript"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/outlink/js/sprites.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/outlink/js/gSlider.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/outlink/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/outlink/js/jquery.prettyPhoto.js"></script>
+		
+		<!--[if IE 6]>
+		<script language="javascript" type="text/javascript" src="__PUBLIC__/front/js/DD_belatedPNG.js"></script>
+		<script language="javascript" type="text/javascript">
+			DD_belatedPNG.fix('.pngImg,img');
+			DD_belatedPNG.fix('.pngBackground,background');
+			DD_belatedPNG.fix('#showFaqPanel,a:hover');
+		</script>
+		<![endif]-->
+		
+	</head>	
+	<body>
+		<!-- 个人中心菜单结束 -->
+	
+		<include file="Public/head" />
+			
+		<!-- 个人中心菜单结束 -->
+		<!-- 图片轮换特效 -->
+		<div class="tumbvr">
+			<!-- <div class="mask"><img src="__PUBLIC__/front/images/mask.jpg" class="pngImg pngBackground" /></div>  -->
+			<ul>
+				<foreach name="list" item="v">
+				<li><img src="__ROOT__/Uploads/Prevue/c_{$v.picname}" class="videoid"></li>
+				</foreach>
+				<!-- <li><img src="__PUBLIC__/front/outlink/images/01.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/02.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/03.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/04.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/05.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/06.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/07.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/08.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/09.jpg" alt=""></li>
+				<li><img src="__PUBLIC__/front/outlink/images/10.jpg" alt=""></li> -->
+			</ul>
+		</div>
+		<script type="text/javascript">Cufon.now();
+		<!-- 图片特效 -->
+			$(window).load(function(){
+				$('.tumbvr')._fw({ tumbvr:{
+					duration:2000,
+					easing:'easeOutQuart'
+				}});
+				//.bind('click',function(){
+					//location="index-3.html"
+				//});
+			});
+			
+			var video=document.getElementsByClassName("videoid");
+			for(var i=0;i<video.length;i++){
+				video[i].onclick=function(){
+					alert("1");
+				}
+			}
+			
+		</script>
+		<!-- 主体部分开始	-->
+		<div id="main">
+			<div class="video_top">
+				<a href="__APP__/Prevue/index/order/c">最热预告</a> 
+				<a href="__APP__/Prevue/index/order/a">最新预告</a> 
+			</div>
+			<div class="video_list">
+				<foreach name="list" item="v">
+				<div class="video_item">
+					<div class="t"><a href="__APP__/Prevue/play/id/{$v.id}" >{$v.title}</a></div>
+					<div class="c">
+						<a href="__APP__/Prevue/play/id/{$v.id}">
+						<img src="__ROOT__/Uploads/Prevue/b_{$v.picname}"  />
+						<img src="__PUBLIC__/front/images/play.jpg"  class="play"/>
+						</a>
+					<a href="__APP__/Prevue/play/id/{$v.id}" class="gk">立即观看</a>
+					</div>
+				</div>
+				</foreach>
+			</div>
+			<div class="nav"></div>
+			<div class="video_fy"> <span>{$page}</span> </div>
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 页脚部分开始 -->
+		
+		<include file="Public/foot" />
+		
+		<!-- 页脚不封结束 -->
+		
+	</body>
+</html>

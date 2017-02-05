@@ -37,7 +37,7 @@
 					<ul class="right">
 					 	<empty name="Think.session.loginuser">
 						<li class="disuser"><a href="__APP__/Login/ShowLogin.html?height=245;width=600" class="thickbox" style="border-radius:0px 0px 0px 10px"  title="登录">登录</a></li>
-						<li><a href="__APP__/Reqister/reqister" style="border-radius:0px 0px 10px 0px">注册</a></li>
+						<li><a href="__APP__/Register/register" style="border-radius:0px 0px 10px 0px">注册</a></li>
 						<else />
 					
 						<li class="disuser"><a href="__APP__/User/index/uid/{$Think.session.loginuser.id}"  style="color:#fff; border-radius:0px 0px 0px 10px">{$Think.session.loginuser.username}</a></li>
@@ -59,9 +59,6 @@
 							<input type="text" class="inp" placeholder="电影、预告片、分类"/>
 							<input type="submit" class="sub" value=""/>
 						</form>
-					</div>
-					<div class="logoimg">
-						<img src="__PUBLIC__/front/images/logo.jpg" alt="" />
 					</div>
 				</div> 
 			</div>

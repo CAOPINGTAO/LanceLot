@@ -1,13 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/LanceLot/admin.php/Auser/index" method="post">
-    <input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
-    <input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
-    <input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>" />
-    <input type="hidden" name="_sort" value="<?php echo ($_REQUEST['_sort']); ?>" />
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/lancelot/admin.php/Auser/index" method="post">
+	<input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
+	<input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
+	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>"/>
+	<input type="hidden" name="_sort" value="<?php echo ($_REQUEST['_sort']); ?>"/>
 </form>
 
-
 <div class="pageHeader">
-    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="/LanceLot/admin.php/Auser/index2" method="post">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="/lancelot/admin.php/Auser/index2" method="post">
         <div class="searchBar">
             <table class="searchContent">
                 <tr>
@@ -35,16 +34,16 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" href="/LanceLot/admin.php/Auser/add" target="dialog"width="480" height="360" rel="user_msg" title="添加用户信息"><span>添加用户</span></a></li>
+            <li><a class="add" href="/lancelot/admin.php/Auser/add" target="dialog"width="480" height="360" rel="user_msg" title="添加用户信息"><span>添加用户</span></a></li>
 
             <li class="line">line</li>
-            <li><a class="delete" href="/LanceLot/admin.php/Auser/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listuser" target="ajaxTodo" title="确定要删除吗?"><span>删除用户</span></a></li>
+            <li><a class="delete" href="/lancelot/admin.php/Auser/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listuser" target="ajaxTodo" title="确定要删除吗?"><span>删除用户</span></a></li>
 
             <li class="line">line</li>
-            <li><a class="edit" href="/LanceLot/admin.php/Auser/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="360" target="dialog"><span>修改用户信息</span></a></li>
+            <li><a class="edit" href="/lancelot/admin.php/Auser/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="360" target="dialog"><span>修改用户信息</span></a></li>
 
             <li class="line">line</li>
-            <li><a class="add" href="/LanceLot/admin.php/Auser/setRole/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="360" target="dialog"><span>分配角色</span></a></li>
+            <li><a class="add" href="/lancelot/admin.php/Auser/setRole/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" width="480" height="360" target="dialog"><span>分配角色</span></a></li>
 
             <li class="line">line</li>
             <li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>

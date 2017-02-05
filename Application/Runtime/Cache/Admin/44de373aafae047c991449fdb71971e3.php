@@ -170,7 +170,7 @@
                <?php if($numPerPage == 30): ?><option value="30" selected>30</option>
                <?php else: ?>
                <option value="30">30</option><?php endif; ?>
-            </select>
+         </select>
             <span>共<?php echo ($totalCount); ?>条</span>
       </div> 
 

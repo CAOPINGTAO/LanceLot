@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>LanceLot</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+
+		<style type="text/css">
+			h2 {
+				height: 70px;
+				line-height: 70px;
+				width: 100%;
+				font-size: 26px;
+				font-weight: normal;
+			}
+
+			#listheader {
+				border-bottom: 1px solid #ccc;
+				height: 20px;
+				line-height: 20px;
+			}
+			.fl {
+				float: left;
+			}
+			.fr {
+				float: right;
+			}
+
+			#listmain .type {
+				font-size: 16px;
+				height: 36px;
+				line-height: 36px;
+			}
+			#listmain ul li {
+				font-size: 14px;
+				width: 140px;
+			}
+			#listmain ul li a {
+				text-decoration: none;
+				color: #3377aa;
+			}
+
+			#listmain ul li a:hover {
+				text-decoration: underline;
+			}
+
+			.fonti {
+				font-style: italic;
+				color: #c2AAc2;
+			} 
+
+			#searchbox {
+				margin-top: 10px;
+				padding: 10px 0;
+			}
+			#searchbox p {
+				height: 20px;
+				line-height: 20px;
+				padding:5px 0;
+			}
+			#searchbox .txt {
+				width: 200px;
+				height: 20px;
+				line-height: 20px;
+				padding-left: 5px;
+				border:1px solid #ccc;
+			}
+		</style>
+
+		
+	</head>
+	
+	<body>
+		<!-- 个人中心菜单结束 -->
+		
+		<include file="Public/head" />
+			
+		<!-- 个人中心菜单结束 -->
+
+		<!-- 主体部分 -->
+		<div id="main">
+
+			<!-- 主体左边部分 -->
+			<!-- <h2>MyMovie电影标签</h2> -->
+
+			<div id="main_left">
+				<h2>LanceLot电影标签</h2>
+				<div id='listheader'>	
+					<p class="fr">分类浏览</p>	
+				</div>
+				<div class="nav"></div>	
+				<div id="listmain">
+					<foreach name="typelist" item="vo">
+
+						<div class='type'>
+							{$vo['type']}······
+						</div>
+						<ul>
+							<foreach name="vo['list']" item="vlist">
+								<li class="fl"><a href="__APP__/Typelist/tags/id/{$vlist['id']}/tags/{$vlist['typename']}">{$vlist['typename']}<span class="fonti">({$vlist['num']})</sapn></a></li>
+							</foreach>
+						</ul>
+						<div class="nav"></div>	
+					</foreach>
+				</div>
+
+			</div>
+			<!-- 主体左边部分结束 -->
+
+			<!-- 右侧内容 -->
+			<div id="main_right">
+
+				<!-- 右侧经典台词 -->
+				<div class="movie_word">
+					<div class="word_title">
+						经典台词
+					</div>
+					<div class="word_con">
+						<p>{$dialogue.en_dialogue}</p>
+						<p>{$dialogue.cn_dialogue}</p>
+					</div>
+					<div class="source">
+						《{$dialogue.source}》
+					</div>
+				</div>	
+		
+				<div class="nav"></div>
+				<!-- 右侧AD -->
+				
+				<div class='ad'>
+					<img src="__ROOT__/Public/front/images/ad1.png" alt="" />
+				</div>
+
+				<div class="nav"></div>
+
+				<div id="searchbox">
+					<form method="get" action="__APP__/Typelist/tags">
+						<p>标签直达</p>
+						<input type="text" class="txt" name="tags" placeholder="去其他标签" />
+						<input type="submit" value=" 进 入 " />
+						<label>
+					</form>
+				</div>
+				<div class="nav"></div>
+			</div>	
+
+		</div>
+		<!-- 主体部分结束 -->
+
+	
+	<div class="nav"></div>	
+	<!-- 导入页脚部分 -->
+	<include file="Public/foot">
+	
+	</body>
+</html>

@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?>
 <div class="pageContent">
-	<form method="post"  enctype="multipart/form-data" action="/LanceLot/admin.php/Movie/insert/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+	<form method="post"  enctype="multipart/form-data" action="/lancelot/admin.php/Movie/insert/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
 			<p>
 				<label>影 片 名：</label>

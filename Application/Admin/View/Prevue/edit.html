@@ -8,9 +8,11 @@
 					<dd><select name="fid"  style="width:200px;">
 						<option value="">选择影片</option>
 						<foreach name="list" item="v">
-						<if condition="$vo.fid eq $v.id">
+						<eq name="v.id" value="vo.fid">
 						<option value="{$v.id}" selected>{$v.filmname}</option>
-						</if>
+						<else />
+						<option value="{$v.id}">{$v.filmname}</option>
+						</eq>
 						</foreach>
 					</select></dd>
 				</dl>

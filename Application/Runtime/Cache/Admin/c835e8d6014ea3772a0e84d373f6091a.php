@@ -1,10 +1,9 @@
-<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/LanceLot/admin.php/Actors/index" method="post">
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="/lancelot/admin.php/Actors/index" method="post">
 	<input type="hidden" name="pageNum" value="<?php echo ((isset($currentPage) && ($currentPage !== ""))?($currentPage):'1'); ?>" />
 	<input type="hidden" name="numPerPage" value="<?php echo ($numPerPage); ?>" />
 	<input type="hidden" name="_order" value="<?php echo ($_REQUEST['_order']); ?>"/>
 	<input type="hidden" name="_sort" value="<?php echo ($_REQUEST['_sort']); ?>"/>
 </form>
-
 
 <div class="pageHeader">
 	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="" method="post">
@@ -15,7 +14,6 @@
 						<label>搜索演员：</label>
 						<input type="text" name="keyword" value="<?php echo ($_POST['keyword']); ?>"/> [关键字：中文名、外文名]
 					</td>
-				
 					<td>
 						<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
 					</td>	
@@ -28,19 +26,19 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="/LanceLot/admin.php/Actors/add" target="dialog" rel="user_msg" title="添加演员"><span>添加演员</span></a></li>
+			<li><a class="add" href="/lancelot/admin.php/Actors/add" target="dialog" rel="user_msg" title="添加演员"><span>添加演员</span></a></li>
 
 			<li class="line">line</li>			
-			<li><a class="delete" href="/LanceLot/admin.php/Actors/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listactor" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="delete" href="/lancelot/admin.php/Actors/delete/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>/navTabId/listactor" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
 			
 			<li class="line">line</li>			
-			<li><a class="edit" href="/LanceLot/admin.php/Actors/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"  width="480" height="360" target="dialog"><span>修改</span></a></li>
+			<li><a class="edit" href="/lancelot/admin.php/Actors/edit/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"  width="480" height="360" target="dialog"><span>修改</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="add" href="/LanceLot/admin.php/Actors/addActorImgs/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" target="dialog" title="添加演员剧照" ><span>添加演员剧照</span></a></li>
+			<li><a class="add" href="/lancelot/admin.php/Actors/addActorImgs/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" target="dialog" title="添加演员剧照" ><span>添加演员剧照</span></a></li>
 
 			<li class="line">line</li>
-			<li><a class="add" href="/LanceLot/admin.php/Actors/editActorImgs/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" target="dialog" title="修改演员剧照" ><span>修改演员剧照</span></a></li>
+			<li><a class="add" href="/lancelot/admin.php/Actors/editActorImgs/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>" target="dialog" title="修改演员剧照" ><span>修改演员剧照</span></a></li>
 
 			<li class="line">line</li>
 			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
@@ -73,7 +71,7 @@
 			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr target="item_id" rel="<?php echo ($vo["id"]); ?>">
 				<td><?php echo ($vo["id"]); ?></td>
 				<td>
-					<img src="/LanceLot/Uploads/Actor/Photo/s_<?php echo ($vo["picname"]); ?>" />
+					<img src="/lancelot/Uploads/Actor/Photo/s_<?php echo ($vo["picname"]); ?>" />
 				</td>
 				<td><?php echo ($vo["cname"]); ?></td>
 				<td><?php echo ($vo["ename"]); ?></td>
@@ -85,13 +83,13 @@
 				<td><?php echo (date("Y-m-d",$vo["birthday"])); ?></td>
 				<td><?php echo ($vo["bornaddress"]); ?></td>
 				<td><?php echo ($vo["professtion"]); ?></td>
-				<td><a style="color:blue" href="/LanceLot/admin.php/Actors/content/id/<?php echo ($vo["id"]); ?>" target="dialog" width="600" height="480"  rel="listmovie" title="查看简介">
+				<td><a style="color:blue" href="/lancelot/admin.php/Actors/content/id/<?php echo ($vo["id"]); ?>" target="dialog" width="600" height="480"  rel="listmovie" title="查看简介">
 				查看简介</a></td>
 				<td><?php echo (date("Y-m-d / H:i:s",$vo["addtime"])); ?></td>
 				<td>
 					<?php if($vo["num"] > 0): ?><span style="color:red">未上传图片<?php echo ($vo["num"]); ?></span>
 					<?php else: ?>
-					<a style="color:blue" href="/LanceLot/admin.php/Actors/showpics/id/<?php echo ($vo["id"]); ?>" target="dialog" title="查看图片">查看图片 <?php echo ($vo["num"]); ?> </a><?php endif; ?>	
+					<a style="color:blue" href="/lancelot/admin.php/Actors/showpics/id/<?php echo ($vo["id"]); ?>" target="dialog" title="查看图片">查看图片 <?php echo ($vo["num"]); ?> </a><?php endif; ?>	
 				</td>
 			</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		</tbody>

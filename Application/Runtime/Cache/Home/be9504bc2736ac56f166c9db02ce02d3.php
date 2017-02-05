@@ -47,12 +47,12 @@
 						<li><a href="/LanceLot/index.php/Index/index" class="title">LanceLot 电影之家</a></li>
 					</ul>
 					<ul class="right">
-					 	<?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
-						<li><a href="/LanceLot/index.php/Reqister/reqister">注册</a></li>
+					 	<?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox" style="border-radius:0px 0px 0px 10px"  title="登录">登录</a></li>
+						<li><a href="/LanceLot/index.php/Register/register" style="border-radius:0px 0px 10px 0px">注册</a></li>
 						<?php else: ?>
 					
-						<li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>"  style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
-						<li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>
+						<li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>"  style="color:#fff; border-radius:0px 0px 0px 10px"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
+						<li><a href="/LanceLot/index.php/Login/loginout" style="border-radius:0px 0px 10px 0px">退出</a></li><?php endif; ?>
 					</ul>
 				</div>
 			</div>

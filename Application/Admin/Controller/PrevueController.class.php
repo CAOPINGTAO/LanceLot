@@ -116,7 +116,7 @@ class PrevueController extends CommonController{
 			$upload->thumb = true;
 			$upload->thumbMaxWidth = "60,260,586";
 			$upload->thumbMaxHeight = "40,170,390";
-			$upload->thumPrefix = "a_,b_,c_";
+			$upload->thumbPrefix = "a_,b_,c_";
 
 			if (!$upload->upload()) {
 				$this->ajaxReturn(getReturnArray(300,"上传失败".(string)($upload->getErrorMsg()), "closeCurrent", "listprevue"));exit();
@@ -126,12 +126,13 @@ class PrevueController extends CommonController{
 
 			$oldpic = M("Prevue")->find($_POST["id"]);
 			if ($old["picname"] != "无") {
-				unlink("./Uploads/Prevue/a_").$oldpic["picname"];
-				unlink("./Uploads/Prevue/b_").$oldpic["picname"];
-				unlink("./Uploads/Prevue/c_").$oldpic["picname"];
+				unlink("./Uploads/Prevue/a_".$oldpic["picname"]);
+				unlink("./Uploads/Prevue/b_".$oldpic["picname"]);
+				unlink("./Uploads/Prevue/c_".$oldpic["picname"]);
 				unlink("./Uploads/Prevue/".$oldpic["picname"]);
 			}
 
+			unset($_POST['ajax']);
 			//保存更新信息到数据库
 			$_POST["picname"] = $info[0]["savename"];
 			$model = M("Prevue");

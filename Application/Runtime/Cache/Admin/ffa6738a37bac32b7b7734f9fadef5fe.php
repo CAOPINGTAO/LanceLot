@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><div class="pageContent">
 	
-	<form method="post" enctype="multipart/form-data" action="/LanceLot/admin.php/Actors/insert/navTabId/listactor" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone);">
+	<form method="post" enctype="multipart/form-data" action="/lancelot/admin.php/Actors/insert/navTabId/listactor" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
 			<p>
 				<label>中 文 名：</label>

@@ -99,12 +99,12 @@
 						<li><a href="/LanceLot/index.php/Index/index" class="title">LanceLot 电影之家</a></li>
 					</ul>
 					<ul class="right">
-					 	<?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox"  title="登录">登录</a></li>
-						<li><a href="/LanceLot/index.php/Reqister/reqister">注册</a></li>
+					 	<?php if(empty($_SESSION['loginuser'])): ?><li class="disuser"><a href="/LanceLot/index.php/Login/ShowLogin.html?height=245;width=600" class="thickbox" style="border-radius:0px 0px 0px 10px"  title="登录">登录</a></li>
+						<li><a href="/LanceLot/index.php/Register/register" style="border-radius:0px 0px 10px 0px">注册</a></li>
 						<?php else: ?>
 					
-						<li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>"  style="color:#fff;"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
-						<li><a href="/LanceLot/index.php/Login/loginout">退出</a></li><?php endif; ?>
+						<li class="disuser"><a href="/LanceLot/index.php/User/index/uid/<?php echo ($_SESSION['loginuser']['id']); ?>"  style="color:#fff; border-radius:0px 0px 0px 10px"><?php echo ($_SESSION['loginuser']['username']); ?></a></li>
+						<li><a href="/LanceLot/index.php/Login/loginout" style="border-radius:0px 0px 10px 0px">退出</a></li><?php endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -256,27 +256,17 @@
 		<div class="nav"></div>	
 		
 		<!-- 导入页脚部分 -->
-		<!--页脚部分开始-->
-    <div id="footer">
+		    <div id="footer">
         <div class="foot_top">
             <div class="foot_link">
-                <a href="" target="_blank">公司简介</a> |
-                <a href="" target="_blank">合作伙伴</a> |
-                <a href="" target="_blank">诚聘英才</a> |
-                <a href="" target="_blank">广告服务</a> |
-                <a href="/LanceLot/index.php/Map/map" target="_blank">网站地图</a> |
-                <a href="" target="_blank">保护隐私</a> |
+                <a href="" target="_blank">网站地图</a> |
                 <a href="" target="_blank">版权信息</a> |
-                <a href="" target="_blank">客户服务</a> |
                 <a href="" target="_blank">联系我们</a> |
                 <a href="" target="_blank">电影之家</a>
             </div>
         </div>
-        <div class="foot_content">
-            Copyright&#169;1996-2014  LanceLot
-        </div>
     </div>
-<!--页脚部分结束-->
+
 		
 	</body>
 </html>

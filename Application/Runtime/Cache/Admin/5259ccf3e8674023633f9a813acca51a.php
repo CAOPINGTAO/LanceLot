@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><div class="pageContent">
-	<form method="post"  enctype="multipart/form-data" action="/LanceLot/admin.php/Movie/update/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+	<form method="post"  enctype="multipart/form-data" action="/lancelot/admin.php/Movie/update/navTabId/listmovie/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
 			<p>
 				<label>影 片 名：</label>
@@ -37,7 +37,7 @@
 				<input name="minutes" class="digits textInput required" type="text" size="30" value="<?php echo ($vo["minutes"]); ?>" alt="请输入数字影片分钟数" />
 			</p>
 			<p style="height:60px; line-height:60px">
-				<label style="height:60px; line-height:60px">影片封面：<img src="/LanceLot/Uploads/Movie/Cover/a_<?php echo ($vo["picname"]); ?>" /></label>
+				<label style="height:60px; line-height:60px">影片封面：<img src="/lancelot/Uploads/Movie/Cover/a_<?php echo ($vo["picname"]); ?>" /></label>
 				<input type="file" name="picname" />
 				<input type="hidden" name="pname" value="<?php echo ($vo["picname"]); ?>" />
 			</p>
